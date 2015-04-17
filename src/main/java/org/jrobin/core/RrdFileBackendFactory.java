@@ -57,7 +57,15 @@ public class RrdFileBackendFactory extends RrdBackendFactory {
 	 * @return True, if such file exists, false otherwise.
 	 */
 	protected boolean exists(String path) {
-		return Util.fileExists(path);
+		String realPath = path;
+		
+		try {
+			realPath = RrdFileBackend.getCanonicalPath(path);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return Util.fileExists(realPath);
 	}
 
 	/**

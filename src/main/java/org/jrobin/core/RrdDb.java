@@ -246,35 +246,13 @@ public class RrdDb implements RrdUpdater {
 	 */
 	public RrdDb(String path, boolean readOnly, RrdBackendFactory factory)
 			throws FileNotFoundException, IOException, RrdException {
-		// opens existing RRD file - create if not exists
-		String realPath = path;
+		 
+		// opens existing RRD file - throw exception if the file does not exist...
 		if (!factory.exists(path)) {
-			//factory.create(path);
-			{
-				String parentTmp = "rrd.home";
-				try{
-					parentTmp= System.getProperty("rrd.home", System.getProperty("user.dir", System.getProperty("user.home"))+java.io.File.separator+"rrd.home");  
-				}catch(Exception e){}
-				File fileTmp = new File(parentTmp , path); 
-//				if (!fileTmp.exists()){
-//					boolean a = fileTmp.createNewFile();
-//				}
-//				if (!fileTmp.canWrite()){
-//					log.error( "you don't own your HOME! Fix it before using RRDWS. path =["+fileTmp.getCanonicalPath()+"]");
-//					log.error( "System.getProperty( \"rrd.home\" ) =["+System.getProperty("rrd.home"));
-//					log.error( "System.getProperty(\"user.dir\")   =["+System.getProperty("user.dir" ));
-//					log.error( "System.getProperty(\"user.home\")  =["+System.getProperty("user.home"));
-//					fileTmp = File.createTempFile("RRD", path);
-//					File parentDir = fileTmp.getParentFile();
-//					File correctNameInTmpDir = new File ( parentDir, path);
-//					fileTmp.renameTo(  correctNameInTmpDir   ); 
-//					System.out.println(path + correctNameInTmpDir.canWrite() + fileTmp.canWrite());
-//					fileTmp = correctNameInTmpDir;
-//				}
-				realPath =/*return*/ fileTmp.getCanonicalPath();			
-			}
+			throw new FileNotFoundException("Could not open " + path + " [non existent]");
 		}
-		backend = factory.open(realPath, readOnly);
+		
+		backend = factory.open(path, readOnly);
 		try {
 			// restore header
 			header = new Header(this, (RrdDef) null);
