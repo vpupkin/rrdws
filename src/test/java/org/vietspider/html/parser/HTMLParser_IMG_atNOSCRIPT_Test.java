@@ -82,7 +82,8 @@ public class HTMLParser_IMG_atNOSCRIPT_Test  {
 		Diff diff  = new Diff();//System.out.println(textValue);
 		diff.setSAME(true);
 		String[] diffTmp = diff  .diff(expected,actual);//actual
-		assertEquals(diffTmp.length, 11); // TODO : 20 are '<scripttype..' AND '<styletype..' ONLY
+		// TODO : 20 are '<scripttype..' AND '<styletype..' ONLY
+		assertEquals(diffTmp.length, 10); 
 	}
 
 }

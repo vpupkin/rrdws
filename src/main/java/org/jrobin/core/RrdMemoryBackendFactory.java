@@ -101,4 +101,5 @@ public class RrdMemoryBackendFactory extends RrdBackendFactory {
 	public String getFactoryName() {
 		return NAME;
 	}
+
 }

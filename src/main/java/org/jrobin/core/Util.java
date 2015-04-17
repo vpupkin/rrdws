@@ -27,6 +27,8 @@ package org.jrobin.core;
 
 import org.jrobin.core.timespec.TimeParser;
 import org.jrobin.core.timespec.TimeSpec;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -37,6 +39,7 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+
 import java.awt.*;
 import java.io.*;
 import java.text.DecimalFormat;
@@ -54,7 +57,7 @@ import java.util.Locale;
  * @author <a href="mailto:saxon@jrobin.org">Sasa Markovic</a>
  */
 public class Util {
-
+	private static final Logger log = LoggerFactory.getLogger(Util.class .getName());
 	public static final long MAX_LONG = Long.MAX_VALUE;
 	public static final long MIN_LONG = -Long.MAX_VALUE;
 
@@ -696,16 +699,7 @@ public class Util {
 		return (Double.isNaN(x) && Double.isNaN(y)) || (x == y);
 	}
 
-	/**
-	 * Returns canonical file path for the given file path
-	 *
-	 * @param path Absolute or relative file path
-	 * @return Canonical file path
-	 * @throws IOException Thrown if canonical file path could not be resolved
-	 */
-	public static String getCanonicalPath(String path) throws IOException {
-		return new File(path).getCanonicalPath();
-	}
+
 
 	/**
 	 * Returns last modification time for the given file.

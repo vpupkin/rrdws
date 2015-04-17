@@ -25,8 +25,12 @@
 
 package org.jrobin.core;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * JRobin backend which is used to store RRD data to ordinary files on the disk. This was the
@@ -35,6 +39,8 @@ import java.io.RandomAccessFile;
  * This backend is based on the RandomAccessFile class (java.io.* package).
  */
 public class RrdFileBackend extends RrdBackend {
+	
+	private static final Logger log = LoggerFactory.getLogger(RrdFileBackend.class .getName());
 	/**
 	 * read/write file status
 	 */
@@ -54,7 +60,12 @@ public class RrdFileBackend extends RrdBackend {
 	protected RrdFileBackend(String path, boolean readOnly) throws IOException {
 		super(path);
 		this.readOnly = readOnly;
-		this.file = new RandomAccessFile(path, readOnly ? "r" : "rw");
+		String cPath = this.getCanonicalPath(); 
+		try{
+			this.file = new RandomAccessFile(cPath, readOnly ? "r" : "rw");
+		}catch (IOException ex){
+			throw ex;
+		}
 	}
 
 	/**
@@ -74,7 +85,38 @@ public class RrdFileBackend extends RrdBackend {
 	 * @throws IOException Thrown in case of I/O error
 	 */
 	public static String getCanonicalPath(String path) throws IOException {
-		return Util.getCanonicalPath(path);
+
+		String parentTmp = "rrd.home";
+		try {
+			parentTmp = System.getProperty("rrd.home",System.getProperty("user.dir",System.getProperty("user.home"))+java.io.File.separator + "rrd.home");
+			if (path.startsWith( parentTmp )){
+				path = (new File(path)).getName();
+			}
+					
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		}
+		File fileTmp = new File(parentTmp, path);
+//		if (!fileTmp.canWrite()) {
+//			log.error("you don't own your HOME! Fix it before using RRDWS. path =["
+//					+ fileTmp.getCanonicalPath() + "]");
+//			log.error("System.getProperty( \"rrd.home\" ) =["
+//					+ System.getProperty("rrd.home"));
+//			log.error("System.getProperty(\"user.dir\")   =["
+//					+ System.getProperty("user.dir"));
+//			log.error("System.getProperty(\"user.home\")  =["
+//					+ System.getProperty("user.home"));
+//			fileTmp = File.createTempFile("RRD", path);
+//			File parentDir = fileTmp.getParentFile();
+//			File correctNameInTmpDir = new File(parentDir, path);
+//			fileTmp.renameTo(correctNameInTmpDir);
+//			System.out.println(path + correctNameInTmpDir.canWrite()
+//					+ fileTmp.canWrite());
+//			fileTmp = correctNameInTmpDir;
+//		}
+		return fileTmp.getCanonicalPath();
+
 	}
 
 	/**
@@ -84,7 +126,8 @@ public class RrdFileBackend extends RrdBackend {
 	 * @throws IOException Thrown in case of I/O error
 	 */
 	public String getCanonicalPath() throws IOException {
-		return RrdFileBackend.getCanonicalPath(getPath());
+		String pathTmp = getPath();
+		return RrdFileBackend.getCanonicalPath(pathTmp);
 	}
 
 	/**

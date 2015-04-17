@@ -48,6 +48,7 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -127,12 +128,16 @@ public class Server implements MrtgConstants {
 
 	private void createXmlTemplateIfNecessary(String filePath, String fileContent)
 		throws IOException {
-		File file = new File(filePath);
-		if(!file.exists()) {
-			FileWriter writer = new FileWriter(filePath, false);
-			writer.write(fileContent);
-			writer.flush();
-			writer.close();
+		File fileTmp = new File(filePath);
+		if(!fileTmp.exists()) {
+			if (fileTmp.canWrite() && fileTmp.getParentFile().isDirectory()){
+				FileWriter writer = new FileWriter(filePath, false); 
+				writer.write(fileContent);
+				writer.flush();
+				writer.close();
+			}else{ // TODO assumes we are in the ... sandbox...
+				throw new IOException( "assumes we are in the ... sandbox...");
+			}
 		}
 	}
 

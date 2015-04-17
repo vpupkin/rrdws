@@ -112,7 +112,9 @@ public class Registry implements Serializable{
 		synchronized (Cache.class) {
 			Cache cache = Manager.getCache();
 			cache.remove(REGISTRY_CACHE_NAME);
-			cache.put(REGISTRY_CACHE_NAME, new Registry( this.getDb2path() ));
+			Map<String, String> db2path2 = this.getDb2path();
+			Registry registry = new Registry( db2path2 );
+			cache.put(REGISTRY_CACHE_NAME, registry);
 		}
 		lastInitTimeStamp = this.initedAt;
 	}

@@ -81,8 +81,8 @@ public class RrdDbPool {
 	 * @throws RrdException Thrown in case of JRobin specific error
 	 */
 	public synchronized RrdDb requestRrdDb(String path) throws IOException, RrdException {
-		String canonicalPath = Util.getCanonicalPath(path);
-		while (!rrdMap.containsKey(canonicalPath) && rrdMap.size() >= capacity) {
+		String poolKey = path;
+		while (!rrdMap.containsKey(poolKey) && rrdMap.size() >= capacity) {
 			try {
 				Thread.sleep(1000); // wait a bit before cleaning-try
 				if (rrdMap.size() >= capacity){
@@ -96,16 +96,18 @@ public class RrdDbPool {
 				throw new RrdException(e);
 			}
 		}
-		if (rrdMap.containsKey(canonicalPath)) {
+		if (rrdMap.containsKey(poolKey)) {
 			// already open, just increase usage count
-			RrdEntry entry = rrdMap.get(canonicalPath);
+			RrdEntry entry = rrdMap.get(poolKey);
 			entry.count++;
 			return entry.rrdDb;
 		}
 		else {
 			// not open, open it now and add to the map
-			RrdDb rrdDb = new RrdDb(canonicalPath);
-			rrdMap.put(canonicalPath, new RrdEntry(rrdDb));
+			RrdDb rrdDb = new RrdDb(poolKey);
+			// adjust key
+			poolKey = rrdDb.getPath();
+			rrdMap.put(poolKey, new RrdEntry(rrdDb));
 			return rrdDb;
 		}
 	}
@@ -127,8 +129,8 @@ public class RrdDbPool {
 	 * @throws RrdException Thrown in case of JRobin specific error
 	 */
 	public synchronized RrdDb requestRrdDb(RrdDef rrdDef) throws IOException, RrdException {
-		String canonicalPath = Util.getCanonicalPath(rrdDef.getPath());
-		while (rrdMap.containsKey(canonicalPath) || rrdMap.size() >= capacity) {
+		String poolKey = rrdDef.getPath();
+		while (rrdMap.containsKey(poolKey) || rrdMap.size() >= capacity) {
 			try {
 				wait();
 			}
@@ -137,7 +139,7 @@ public class RrdDbPool {
 			}
 		}
 		RrdDb rrdDb = new RrdDb(rrdDef);
-		rrdMap.put(canonicalPath, new RrdEntry(rrdDb));
+		rrdMap.put(poolKey, new RrdEntry(rrdDb));
 		return rrdDb;
 	}
 
@@ -161,8 +163,8 @@ public class RrdDbPool {
 	 */
 	public synchronized RrdDb requestRrdDb(String path, String sourcePath)
 			throws IOException, RrdException {
-		String canonicalPath = Util.getCanonicalPath(path);
-		while (rrdMap.containsKey(canonicalPath) || rrdMap.size() >= capacity) {
+		String poolKey = path;
+		while (rrdMap.containsKey(poolKey) || rrdMap.size() >= capacity) {
 			try {
 				wait();
 			}
@@ -170,8 +172,8 @@ public class RrdDbPool {
 				throw new RrdException(e);
 			}
 		}
-		RrdDb rrdDb = new RrdDb(canonicalPath, sourcePath);
-		rrdMap.put(canonicalPath, new RrdEntry(rrdDb));
+		RrdDb rrdDb = new RrdDb(poolKey, sourcePath);
+		rrdMap.put(poolKey, new RrdEntry(rrdDb));
 		return rrdDb;
 	}
 
@@ -188,15 +190,15 @@ public class RrdDbPool {
 		if (rrdDb == null) {
 			return;
 		}
-		String canonicalPath = Util.getCanonicalPath(rrdDb.getPath());
-		if (!rrdMap.containsKey(canonicalPath)) {
-			throw new RrdException("Could not release [" + canonicalPath + "], the file was never requested");
+		String poolKey = rrdDb.getPath();
+		if (!rrdMap.containsKey(poolKey)) {
+			throw new RrdException("Could not release [" + poolKey + "], the file was never requested");
 		}
-		RrdEntry entry = rrdMap.get(canonicalPath);
+		RrdEntry entry = rrdMap.get(poolKey);
 		--entry.count ;
 		if (entry.count == 0) {
 			// no longer used
-			rrdMap.remove(canonicalPath); 
+			rrdMap.remove(poolKey); 
 			entry.rrdDb.close();
 		}
 		notifyAll();

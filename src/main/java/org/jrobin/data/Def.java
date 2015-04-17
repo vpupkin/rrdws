@@ -56,10 +56,6 @@ class Def extends Source {
 		return path;
 	}
 
-	String getCanonicalPath() throws IOException {
-		return Util.getCanonicalPath(path);
-	}
-
 	String getDsName() {
 		return dsName;
 	}
@@ -73,8 +69,7 @@ class Def extends Source {
 	}
 
 	boolean isCompatibleWith(Def def) throws IOException {
-		return getCanonicalPath().equals(def.getCanonicalPath()) &&
-				getConsolFun().equals(def.consolFun) &&
+		return getConsolFun().equals(def.consolFun) &&
 				((backend == null && def.backend == null) ||
 						(backend != null && def.backend != null && backend.equals(def.backend)));
 	}

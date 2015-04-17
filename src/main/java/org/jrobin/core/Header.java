@@ -201,7 +201,7 @@ public class Header implements RrdUpdater {
 
 	void validateHeader() throws IOException, RrdException {
 		if (!isJRobinHeader()) {
-			String msg = "Invalid file header. File [" + parentDb.getCanonicalPath() + "] is not a JRobin RRD file";
+			String msg = "Invalid file header. File [" + parentDb.getPath() + "] is not a JRobin RRD file";
 			throw new RrdException(msg);
 		}
 	}

@@ -30,6 +30,9 @@ import java.net.URI;
 import java.net.URISyntaxException; 
 import java.util.Date;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import cc.co.llabor.cache.MemoryFileCache;
 import cc.co.llabor.cache.MemoryFileItem;
  
@@ -104,6 +107,7 @@ public class RrdDb implements RrdUpdater {
 	private Archive[] archives;
 
 	private boolean closed = false;
+	private static final Logger log = LoggerFactory.getLogger("org.jrobin.mrtg.server.Server");
 
 	/**
 	 * <p>Constructor used to create new RRD object from the definition. This RRD object will be backed
@@ -242,11 +246,35 @@ public class RrdDb implements RrdUpdater {
 	 */
 	public RrdDb(String path, boolean readOnly, RrdBackendFactory factory)
 			throws FileNotFoundException, IOException, RrdException {
-		// opens existing RRD file - throw exception if the file does not exist...
+		// opens existing RRD file - create if not exists
+		String realPath = path;
 		if (!factory.exists(path)) {
-			throw new FileNotFoundException("Could not open " + path + " [non existent]");
+			//factory.create(path);
+			{
+				String parentTmp = "rrd.home";
+				try{
+					parentTmp= System.getProperty("rrd.home", System.getProperty("user.dir", System.getProperty("user.home"))+java.io.File.separator+"rrd.home");  
+				}catch(Exception e){}
+				File fileTmp = new File(parentTmp , path); 
+//				if (!fileTmp.exists()){
+//					boolean a = fileTmp.createNewFile();
+//				}
+//				if (!fileTmp.canWrite()){
+//					log.error( "you don't own your HOME! Fix it before using RRDWS. path =["+fileTmp.getCanonicalPath()+"]");
+//					log.error( "System.getProperty( \"rrd.home\" ) =["+System.getProperty("rrd.home"));
+//					log.error( "System.getProperty(\"user.dir\")   =["+System.getProperty("user.dir" ));
+//					log.error( "System.getProperty(\"user.home\")  =["+System.getProperty("user.home"));
+//					fileTmp = File.createTempFile("RRD", path);
+//					File parentDir = fileTmp.getParentFile();
+//					File correctNameInTmpDir = new File ( parentDir, path);
+//					fileTmp.renameTo(  correctNameInTmpDir   ); 
+//					System.out.println(path + correctNameInTmpDir.canWrite() + fileTmp.canWrite());
+//					fileTmp = correctNameInTmpDir;
+//				}
+				realPath =/*return*/ fileTmp.getCanonicalPath();			
+			}
 		}
-		backend = factory.open(path, readOnly);
+		backend = factory.open(realPath, readOnly);
 		try {
 			// restore header
 			header = new Header(this, (RrdDef) null);
@@ -1050,23 +1078,6 @@ public class RrdDb implements RrdUpdater {
 		}
 	}
 
-	/**
-	 * Returns canonical path to the underlying RRD file. Note that this method makes sense just for
-	 * ordinary RRD files created on the disk - an exception will be thrown for RRD objects created in
-	 * memory or with custom backends.
-	 *
-	 * @return Canonical path to RRD file;
-	 * @throws IOException Thrown in case of I/O error or if the underlying backend is
-	 *                     not derived from RrdFileBackend.
-	 */
-	public String getCanonicalPath() throws IOException {
-		if (backend instanceof RrdFileBackend) {
-			return ((RrdFileBackend) backend).getCanonicalPath();
-		}
-		else {
-			throw new IOException("The underlying backend has no canonical path");
-		}
-	}
 
 	/**
 	 * Returns path to this RRD.
