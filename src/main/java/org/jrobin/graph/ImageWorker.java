@@ -26,6 +26,9 @@ package org.jrobin.graph;
 
  
 import javax.imageio.ImageIO;
+
+import org.jrobin.core.RrdFileBackend;
+
 import java.awt.*;
 import java.awt.font.LineMetrics;
 import java.awt.geom.AffineTransform;
@@ -176,19 +179,16 @@ class ImageWorker {
 
 	void saveImage(OutputStream stream, String type, float quality) throws IOException {
 		if (type.equalsIgnoreCase("png")) {
-			ImageIO.write(img, "png", stream);
+			ImageIO.write(img, "png", stream); 
 		}
 		else if (type.equalsIgnoreCase("gif")) {
-			GifEncoder gifEncoder = new GifEncoder(img);
-			gifEncoder.encode(stream);
+			ImageIO.write(img, "gif", stream); 
 		}
 		else if (type.equalsIgnoreCase("jpg") || type.equalsIgnoreCase("jpeg")) {
-			if (1==1) throw new RuntimeException("JPG is not supported in this version");
-//			JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(stream);
-//			JPEGEncodeParam param = encoder.getDefaultJPEGEncodeParam(img);
-//			param.setQuality(quality, false);
-//			encoder.setJPEGEncodeParam(param);
-//			encoder.encode(img);
+			ImageIO.write(img, "jpg", stream);
+		}
+		else if (type.equalsIgnoreCase("BMP") ) {
+				ImageIO.write(img, "bmp", stream);
 		}
 		else {
 			throw new IOException("Unsupported image format: " + type);
@@ -198,7 +198,8 @@ class ImageWorker {
 
 	byte[] saveImage(String path, String type, float quality) throws IOException {
 		byte[] bytes = getImageBytes(type, quality);
-		RandomAccessFile f = new RandomAccessFile(path, "rw");
+		String rwPath = RrdFileBackend.getCanonicalPath(path);
+		RandomAccessFile f = new RandomAccessFile(rwPath, "rw");
 		try {
 			f.write(bytes);
 			return bytes;

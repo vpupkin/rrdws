@@ -5,7 +5,8 @@ response.setHeader("Pragma","no-cache"); //HTTP 1.0
 response.setDateHeader ("Expires", 0); //prevents caching at the proxy server
 InputStream inTmp = null;
 try{
-	inTmp = new FileInputStream("speed.gif");
+	String realPathTmp = org.jrobin.core.RrdFileBackend.getCanonicalPath("speed.gif");
+	inTmp = new FileInputStream(realPathTmp);
 }catch(Exception e){e.printStackTrace();}
 if (inTmp == null){
 	inTmp = this.getClass().getClassLoader().getResourceAsStream("speed.gif"); 
