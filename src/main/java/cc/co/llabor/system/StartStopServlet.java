@@ -3,10 +3,16 @@ package cc.co.llabor.system;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.lang.management.RuntimeMXBean; 
+import java.util.Map;
 import java.util.Properties; 
+import java.util.TreeMap;
+
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;    
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.collectd.DataWorker; 
 import org.jrobin.core.RrdDbPool;
 import org.jrobin.core.RrdException;
@@ -25,10 +31,13 @@ import cc.co.llabor.threshold.rrd.Threshold;
 
 public class StartStopServlet extends HttpServlet {
 	
+	private static final String NOT_ENABLED = "NOT_ENABLED";
+	private static final String BROCKEN = "brocken ::";
 	/**
 	 * @author vipup
 	 */
 	private static final long serialVersionUID = -3432681267977857824L;
+	private static final String SUCCESSFUL = "SUCCESSFUL";
 	private static Logger log = LoggerFactory.getLogger(cc.co.llabor.system.StartStopServlet.class);
 
 
@@ -41,39 +50,36 @@ public class StartStopServlet extends HttpServlet {
 		return !(System.getProperty("com.google.appengine.runtime.version")==null);
 	}
 	 
+	static Map<String, String> status = new TreeMap<String, String>(); 
 	
 	public void init(ServletConfig config) throws ServletException{
-		long initResult = -1; 
-		try {
-			initShutdownHook();  
-			initResult *= -2;
+		 
+		try {			  
+			status.put("initShutdownHook", initShutdownHook()); 
 		} catch (Exception e) {
-			initResult += -1;
+			status.put("initShutdownHook", BROCKEN+e.getMessage());
 			log.error("RRD initShutdownHook : ", e);
 		}catch(Throwable e){
-			initResult += -1;
+			status.put("initShutdownHook", BROCKEN+e.getMessage());
+			log.error("RRD initShutdownHook : ", e);			
 			e.printStackTrace();
 		}	
 		if ( !isGAE()){
 			String[] arg0=new String[]{};
 			// collectd SERVER
-			startCollectdServer(arg0);
-			initResult *= -2;
+			status.put("collectd-SERVER", startCollectdServer(arg0) );
 			// collectd CLIENT (agent)
-			startColelctdClient();
-			initResult *= -2;		
+			status.put("collectd-CLIENT", startColelctdClient() );
 			// start collectd queue-worker
-			startCollectdWorker();
-			initResult *= -2;
+			status.put("collectd-Worker", startCollectdWorker() );
 		}		
 		try{
 			 
-				startMrtgServer();
-				initResult *= -2;
-				
-			 
+			status.put("MrtgServer (SNMP-backend)", 	startMrtgServer()  );
+				 
 		}catch(Throwable e){
-			initResult += -1;
+			status.put("MrtgServer (SNMP-backend)", BROCKEN+e.getMessage());
+			log.error("MrtgServer (SNMP-backend)", e.getMessage());		
 			e.printStackTrace();
 		}
 		   
@@ -89,16 +95,19 @@ public class StartStopServlet extends HttpServlet {
 //			ac.register(  watchDog );
 //			lookInsideThold(tholdProps);
 			AlertCaptain ac = AlertCaptain.getInstance(ServletListener.getDefaultThreadGroup());
-			initResult *= -2;
+			
 			ac.init();		
-			initResult *= -2;
+			status.put("AlertCaptain", SUCCESSFUL );
+			 
 		} catch (Throwable e) {
-			initResult += -1;
+			status.put("AlertCaptain", BROCKEN+e.getMessage());
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		System.out.println("................................." );
-		System.out.println(".   initRetval :"+initResult  );
+		System.out.println("................................." );
+		System.out.println(".   status :"+status  );
+		System.out.println("................................." );
 		System.out.println("................................." );
 		super.init(config); 
 	}
@@ -207,20 +216,22 @@ public class StartStopServlet extends HttpServlet {
 		
 	}	
 
-	private void startMrtgServer() { 
+	private String startMrtgServer() throws Exception { 
 		log_info(Repo.getBanner("mrtgServer"));
 		 String[] acceptedClients = new String[]{};
 		//jrobin/mrtg/server/Server
 		try {
-			if (!isMRTGEnabled())return;
+			if (!isMRTGEnabled())return NOT_ENABLED;
 			Server.main(acceptedClients);
 			
 			checkAutodiscoveringRequestSNMP();
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e.printStackTrace();			
+			throw e;
 		}
+		return SUCCESSFUL;
 	}
 	
 	private void initAutoDiscover(String hostPar, String communityPar, String numericOid, String ifDescr) throws IOException{
@@ -240,14 +251,16 @@ public class StartStopServlet extends HttpServlet {
 
 	/**
 	 * @author vipup
+	 * @return 
 	 */
-	private void startCollectdWorker() { 
+	private String startCollectdWorker() { 
 		//rrdDataWorker.dat
 		log_info(Repo.getBanner( "rrdDataWorker"));
 			worker = new DataWorker(); 
 			Thread t1 = new Thread(ServletListener.getDefaultThreadGroup(), worker, "rrd DataWorker");
 			t1.setDaemon(true);
-			t1.start(); 
+			t1.start();
+		return SUCCESSFUL; 	
 	}
 
 	
@@ -255,13 +268,15 @@ public class StartStopServlet extends HttpServlet {
 	 * @author vipup
 	 * @param arg0
 	 */
-	private void startCollectdServer(final String[] arg0) {
+	private String startCollectdServer(final String[] arg0) {
+		String retval = SUCCESSFUL;
 		log_info(Repo.getBanner( "collectServer"));
 		serverLauncher = new ServerLauncher(arg0);
 		ThreadGroup dtgTmp = ServletListener.getDefaultThreadGroup();
 		Thread t1 = new Thread ( dtgTmp , serverLauncher, "jcollectd_Server");
 		t1.setDaemon(true);
-		t1.start();		
+		t1.start();	
+		return retval;
 	}
 
 	private void log_info(String s) {
@@ -277,28 +292,32 @@ public class StartStopServlet extends HttpServlet {
 	ClientLauncher clientLauncher;
 	/**
 	 * @author vipup
+	 * @return 
 	 */
-	private void startColelctdClient() {
+	private String startColelctdClient() {
 		log_info(Repo.getBanner( "collectClient"));
 		clientLauncher = new ClientLauncher() ;
 		ThreadGroup dtgTmp = ServletListener.getDefaultThreadGroup();
 		Thread t1 = new Thread ( dtgTmp , clientLauncher, "collectdCLIENTstater.TMP");
 		t1.setDaemon(true);
 		t1.start();
+		return SUCCESSFUL;
 	}
 
     /**
 	 * This method seths a ShutdownHook to the system
 	 *  This traps the CTRL+C or kill signal and shutdows 
 	 * Correctly the system.
+     * @return 
 	 * @throws Exception
 	 */ 
-	 public void initShutdownHook() throws Exception {
-		Runtime.getRuntime().addShutdownHook(new Thread() {
+	 public String initShutdownHook() throws Exception {
+		Runtime.getRuntime().addShutdownHook(new Thread("rrd.ShutdownHook") {
 			public void run() {
 				doStop();
 			}
 		});
+		return SUCCESSFUL;
 	}
      
     public void destroy() {
@@ -340,9 +359,24 @@ public class StartStopServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-					
+
+		
+		try {
+			RrdKeeper.getInstance().destroy();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 		log_info(Repo.getBanner( "+rrdws"));
 		log_info("Stoped");
+	}
+
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		resp.getWriter().write(""+this.status);
 	}
 }

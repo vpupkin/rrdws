@@ -90,7 +90,7 @@ public class Server implements MrtgConstants {
 
 	public synchronized void start(String[] acceptedClients) throws MrtgException {
 		if(active) {
-			throw new MrtgException("Cannot start Server, already started");
+			throw new MrtgException("Cannot start Server, already started!");
 		}
 		// set default backend factory
 //		try {
@@ -99,22 +99,33 @@ public class Server implements MrtgConstants {
 //			throw new MrtgException("Inavlide backend factory (" + BACKEND_FACTORY_NAME + ")");
 //		}
 		// create template files
+		String rrdTemplateFile = null;
+		String graphTemplateFile = null;
 		try {
-			String rrdTemplateFile = Config.getRrdTemplateFile();
+			  rrdTemplateFile = Config.getRrdTemplateFile();
 			createXmlTemplateIfNecessary(rrdTemplateFile, RRD_TEMPLATE_STR);
-			String graphTemplateFile = Config.getGraphTemplateFile();
+			  graphTemplateFile = Config.getGraphTemplateFile();
 			createXmlTemplateIfNecessary(graphTemplateFile, GRAPH_TEMPLATE_STR);
 		}
 		catch(IOException ioe) {
-			throw new MrtgException(ioe);
+			ioe.printStackTrace();
+			throw new MrtgException("not able to read/write files::  ["
+					+rrdTemplateFile
+					+"\n,"
+					+graphTemplateFile
+					+"\n"
+					,
+					ioe );
 		}
 		// load configuration
 		String hwFile = Config.getHardwareFile();
 		File fileTmp = new File(hwFile);
 		if(fileTmp.exists()) {
+			Thread.currentThread().setContextClassLoader( Server.class.getClassLoader());
 			loadHardware();
 		}
 		else {
+			Thread.currentThread().setContextClassLoader( Server.class.getClassLoader());
 			saveHardware();
 		}
 		// create threads
@@ -130,13 +141,19 @@ public class Server implements MrtgConstants {
 		throws IOException {
 		File fileTmp = new File(filePath);
 		if(!fileTmp.exists()) {
-			if (fileTmp.canWrite() && fileTmp.getParentFile().isDirectory()){
-				FileWriter writer = new FileWriter(filePath, false); 
+			if (fileTmp.getParent().startsWith(System.getProperty("user.dir"))) {
+				System.out.println("there are no configuration in the :"+fileTmp.getCanonicalPath());
+				System.out.println("...trying to fix it.. .");
+				fileTmp = new File (System.getProperty("user.dir") +Config.DELIM + "mrtg" + Config.DELIM+  Config.CONF + Config.DELIM, fileTmp.getName());
+				fileTmp.createNewFile();
+			}
+			if (  fileTmp.canWrite() && fileTmp.getParentFile().isDirectory()){
+				FileWriter writer = new FileWriter(fileTmp, false); 
 				writer.write(fileContent);
 				writer.flush();
 				writer.close();
 			}else{ // TODO assumes we are in the ... sandbox...
-				throw new IOException( "assumes we are in the ... sandbox...");
+				throw new IOException( "assumes we are in the ... sandbox... \n");
 			}
 		}
 	}
@@ -198,7 +215,7 @@ public class Server implements MrtgConstants {
 			
 			synchronized (File.class) {
 				File fout = new File(Config.getHardwareFile());
-				File foutTmp = File.createTempFile("mrtgstage", ".xml", fout.getParentFile());
+				File foutTmp = File.createTempFile("mrtgstag!", ".xml", fout.getParentFile());
 				String msg = "store mrtg.conf into {"+fout.getAbsolutePath()+"}";
 				log.debug( "saveHardware into ["+msg +"].."); 
 				FileOutputStream destination = new FileOutputStream(foutTmp);
@@ -215,6 +232,7 @@ public class Server implements MrtgConstants {
 			}
 
 		} catch (Exception e) {
+			e.printStackTrace();
 			throw new MrtgException(e);
 		}
 	}

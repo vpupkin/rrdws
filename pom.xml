@@ -107,20 +107,22 @@
 			<artifactId>xmlrpc</artifactId>
 			<version>1.2-b1</version>
 		</dependency>
+		<!--  reused from jcollectd-artefact
 
 		<dependency>
 			<groupId>cc.co.llabor</groupId>
 			<artifactId>jcollectd</artifactId>
 			<version>0.1.9</version>
 		</dependency>
-
-		<!--  reused from jcollectd-artefact
+		 -->
+		 
 		<dependency>
 			<groupId>cc.co.llabor</groupId>
 			<artifactId>cachefs</artifactId>
 			<version>0.0.13</version>
-		</dependency>
-		 -->
+		</dependency>		
+		
+		
 		<dependency>
 			<groupId>cc.co.llabor</groupId>
 			<artifactId>jdo</artifactId>
@@ -253,12 +255,13 @@
 			<version>${batik.version}</version>
 			<optional>true</optional>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>xerces</groupId>
 			<artifactId>xercesImpl</artifactId>
 			<version>2.5.0</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>xerces</groupId>
 			<artifactId>xmlParserAPIs</artifactId>
@@ -781,6 +784,60 @@
 			-->
 		</extensions>
 
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.codehaus.mojo
+										</groupId>
+										<artifactId>
+											jspc-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.4.6,)
+										</versionRange>
+										<goals>
+											<goal>compile</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.codehaus.mojo
+										</groupId>
+										<artifactId>
+											gwt-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.2,)
+										</versionRange>
+										<goals>
+											<goal>compile</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build><!-- Specify hard-coded project properties here -->
 
 

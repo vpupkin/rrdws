@@ -97,10 +97,14 @@ public class Registry implements Serializable{
 
 	public static Registry getInstance() {
 		Cache cache = Manager.getCache();
-	    Registry retval = (Registry) cache.get(REGISTRY_CACHE_NAME);
+	    Registry retval = null;
+	    try{
+	    	retval = (Registry) cache.get(REGISTRY_CACHE_NAME);
+	    }catch(Exception e){}
 		if (cache == null) return null ; // GC/destroy-mode
 		if (retval == null){ 
 			retval = new Registry();
+			cache.put(REGISTRY_CACHE_NAME, retval);
 		}else{
 			// exceptional test-DB - alsway registered DB
 			retval.register("test.rrd","test");

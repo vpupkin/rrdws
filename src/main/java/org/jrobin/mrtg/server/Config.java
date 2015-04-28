@@ -30,42 +30,71 @@ import java.io.File;
 
 class Config implements MrtgConstants {
 	// various paths
-	private static final String DELIM = System.getProperty("file.separator");
-	private static final String HOME_DIR = System.getProperty("user.home") + DELIM +
-		"mrtg" + DELIM;
-	private static final String CONF_DIR = HOME_DIR + "conf" + DELIM;
-	private static final String RRD_DIR  = HOME_DIR + "rrd" + DELIM;
-	private static final String HARDWARE_FILE = CONF_DIR + "mrtg.dat";
-	private static final String RRD_DEF_TEMPLATE_FILE = CONF_DIR + "rrd_template.xml";
-	private static final String RRD_GRAPH_DEF_TEMPLATE_FILE = CONF_DIR + "graph_template.xml";
+	public static final String DELIM = System.getProperty("file.separator");  
+	// basic File-Structure is:
+	// ${user.dir}/
+	// ${user.dir}/mrtg
+	// ${user.dir}/mrtg/rrd
+	// ${user.dir}/mrtg/conf	
+	private static final String MRTG = "mrtg";
+	public static final String RRD = "rrd";
+	public static final String CONF = "conf";
+	
+	private static String HOME_DIR  = System.getProperty("user.dir") + DELIM + MRTG;
 
+	public static final String GRAPH_TEMPLATE_XML = "graph_template.xml";
+	public static final String RRD_TEMPLATE_XML = "rrd_template.xml";
+	public static final String MRTG_DAT = "mrtg.dat";
+
+	
+	static boolean isInited = false;
+
+//	
+//	 
+//	public static final String RRD_DIR  = HOME_DIR + RRD + DELIM;
+//	public static final String HARDWARE_FILE = CONF_DIR + MRTG_DAT;
+//	public static final String RRD_DEF_TEMPLATE_FILE = CONF_DIR + RRD_TEMPLATE_XML;
+//	public static final String RRD_GRAPH_DEF_TEMPLATE_FILE = CONF_DIR + GRAPH_TEMPLATE_XML;
+//
+//	
 	static {
 		// create directories if not found
-		new File(CONF_DIR).mkdirs();
-		new File(RRD_DIR).mkdirs();
+		try {
+			new File(getConfDir()).mkdirs();
+			try {
+				new File(getRrdDir()).mkdirs();
+				isInited = true;
+			} catch (Exception e) {
+				e.printStackTrace();
+			}			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		
 	}
 
-	static String getHomeDir() {
+	static String getHomeDir() { 
 		return HOME_DIR;
 	}
 
 	static String getConfDir() {
-		return CONF_DIR;
+		return HOME_DIR + DELIM + CONF;
 	}
 
 	static String getRrdDir() {
-		return RRD_DIR;
+		return  HOME_DIR + DELIM + RRD ;
 	}
 
 	static String getHardwareFile() {
-        return HARDWARE_FILE;
+        return getConfDir() + DELIM + MRTG_DAT;
 	}
 
 	static String getRrdTemplateFile() {
-		return RRD_DEF_TEMPLATE_FILE;
+		return getConfDir() + DELIM + RRD_TEMPLATE_XML;
 	}
 
 	static String getGraphTemplateFile() {
-		return RRD_GRAPH_DEF_TEMPLATE_FILE;
+		return getConfDir() + DELIM + GRAPH_TEMPLATE_XML;
 	}
 }

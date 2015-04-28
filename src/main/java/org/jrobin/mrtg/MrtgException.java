@@ -27,6 +27,15 @@ package org.jrobin.mrtg;
 
 public class MrtgException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6764460296978353378L;
+
+	public MrtgException(String cause, Exception exception) {
+		super(cause,exception);
+	}
+	
 	public MrtgException(String cause) {
 		super(cause);
 	}
