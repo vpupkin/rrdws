@@ -1226,7 +1226,7 @@
 	</profiles>
 
 	<repositories>
-		<!-- We go to mvnsearch.org after latest GAE SDK artifacts -->
+		<!-- We go to mvnsearch.org after latest GAE SDK artifacts 
 		<repository>
 			<id>mvnsearch.org</id>
 			<name>MVN Search</name>
@@ -1244,13 +1244,6 @@
 			<id>DataNucleus_Repos2</id>
 			<name>DataNucleus Repository</name>
 			<url>http://www.datanucleus.org/downloads/maven2</url>
-		</repository>
-		<repository>
-			<id>maven-gae-plugin-repo</id>
-			<name>maven-gae-plugin repository</name>
-			<url>
-				http://maven-gae-plugin.googlecode.com/svn/repository
-			</url>
 		</repository>
 
 		
@@ -1271,9 +1264,16 @@
 			</snapshots>
 		</repository>	
 		
+-->		
+		<repository>
+			<id>maven-gae-plugin-repo</id>
+			<name>maven-gae-plugin repository</name>
+			<url>
+				http://maven-gae-plugin.googlecode.com/svn/repository
+			</url>
+		</repository>
 		
-		
-			<!-- wagon-svn id located here -->
+			<!-- wagon-svn id located here 
 		<repository>
 			<id>ZKgoogle</id>
 			<name>zkossAtGoogleCode</name>
@@ -1282,14 +1282,14 @@
 			</url>
 			<layout>default</layout>
 		</repository>
-		
+-->		
 		
 	</repositories>
 
 	<pluginRepositories>
 	
 
-	
+<!--	
 		<pluginRepository>
 			<id>DataNucleus_2</id>
 			<url>http://www.datanucleus.org/downloads/maven2/</url>
@@ -1300,6 +1300,8 @@
 			<url>
 				http://maven-gae-plugin.googlecode.com/svn/repository
 			</url>
+
 		</pluginRepository>
+-->
 	</pluginRepositories>
 </project>
