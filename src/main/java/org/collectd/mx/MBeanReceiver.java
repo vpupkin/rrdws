@@ -104,7 +104,7 @@ public class MBeanReceiver
             System.out.print("Enabling " + DMX + "...");
             System.setProperty(MX, "true");
             //jdk 6 has a better way, but this works w/ 5 + 6
-            sun.management.Agent.startAgent();
+//TODo!             sun.management.Agent.startAgent();
             hasMx = hasMBeanServer();
             _system_out_println(hasMx ? "ok" : "failed");
             return hasMx;

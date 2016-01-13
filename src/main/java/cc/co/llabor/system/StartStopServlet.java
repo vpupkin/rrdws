@@ -54,7 +54,7 @@ public class StartStopServlet extends HttpServlet {
 	
 	public void init(ServletConfig config) throws ServletException{
 		 
-		try {			  config.
+		try {			  
 			System.getProperty("rrd.home",System.getProperty("user.dir",System.getProperty("user.home"))+java.io.File.separator + "rrd.home");
 		
 			status.put("initShutdownHook", initShutdownHook()); 
