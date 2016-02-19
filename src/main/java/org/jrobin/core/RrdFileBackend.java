@@ -62,6 +62,7 @@ public class RrdFileBackend extends RrdBackend {
 		this.readOnly = readOnly;
 		String cPath = this.getCanonicalPath(); 
 		try{
+			new File(cPath).getParentFile().mkdirs();
 			this.file = new RandomAccessFile(cPath, readOnly ? "r" : "rw");
 		}catch (IOException ex){
 			throw ex;
