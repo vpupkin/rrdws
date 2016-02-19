@@ -55,13 +55,15 @@ import cc.co.llabor.cache.Manager;
 public class RrdKeeper extends NotificationBroadcasterSupport implements NotificationBroadcaster,   DynamicMBean{
 
 	private static final String DOMAIN = "rrdMX";
-	static RrdKeeper me = new RrdKeeper(); // jaja! natuerlich. singleton :-P...  
+	static final RrdKeeper me = new RrdKeeper(); // jaja! natuerlich. singleton :-P...  
 
 	static { 
 		try {
 			me.init();
 		} catch (Exception e) { 
-			e.printStackTrace();
+			// this context will be usually initialized together or even before Logging, so 
+			//- there are no way to print something in another way! :(
+			e.printStackTrace(); 
 		}
 	}
 	static {
@@ -157,7 +159,7 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
     } 
 
     
-	private synchronized void init() throws Exception {
+	private final synchronized void init() throws Exception {
 		MBeanServer bs = ManagementFactory.getPlatformMBeanServer();
 		String nameTmp = DOMAIN + ":type=" + this.getClass().getName();
 		ObjectName oName = new ObjectName(nameTmp);
@@ -188,7 +190,7 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
      * @param name - the string representation of ObjectName
      * @return new instance of ObjectName
      */
-    public static ObjectName buildObjectName(String name){
+    public final static ObjectName buildObjectName(String name){
         ObjectName objName = null;
         try {
             objName = new ObjectName(name);
@@ -208,14 +210,14 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 	 
 	 
 	@Override
-	public Object getAttribute(String attribute)
+	public final Object getAttribute(String attribute)
 			throws AttributeNotFoundException, MBeanException,
 			ReflectionException {
 		syncValues();
 		return _metrics.get(	attribute);
 	}
 	@Override
-	public void setAttribute(Attribute attribute)
+	public final void setAttribute(Attribute attribute)
 			throws AttributeNotFoundException, InvalidAttributeValueException,
 			MBeanException, ReflectionException {
 		// TODO Auto-generated method stub
@@ -224,7 +226,7 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 		}
 	}
 	@Override
-	public AttributeList getAttributes(String[] attributes) {
+	public final AttributeList getAttributes(String[] attributes) {
 		AttributeList  retval = new AttributeList  ();
 		for (String attr:attributes){
 			try {
@@ -241,7 +243,7 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 		return retval;
 	}
 	@Override
-	public AttributeList setAttributes(AttributeList attributes) {
+	public final AttributeList setAttributes(AttributeList attributes) {
 		// TODO Auto-generated method stub
 		if (1==1)throw new RuntimeException("not yet implemented since 07.09.2011");
 		else {
@@ -249,7 +251,7 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 		}
 	}
 	@Override
-	public Object invoke(String actionName, Object[] params, String[] signature)
+	public final Object invoke(String actionName, Object[] params, String[] signature)
 			throws MBeanException, ReflectionException {
 		// TODO Auto-generated method stub
 		if (1==1)throw new RuntimeException("not yet implemented since 07.09.2011");
@@ -258,7 +260,7 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 		}
 	}
 	@Override
-    public MBeanInfo getMBeanInfo() {
+    public final MBeanInfo getMBeanInfo() {
         MBeanInfo info =
             new MBeanInfo(
             	  this.getClass().getName(),
@@ -269,7 +271,7 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 	              1==1?null:getNotificationInfo()); 	//notifications
         return info;
     }
-    private MBeanOperationInfo[] getOperations() { 
+    private final MBeanOperationInfo[] getOperations() { 
     	String descTmp = "resetCouters(...)";
 		Method methodTmp =this.getClass().getMethods()[0];
 		MBeanOperationInfo[] retval = 
@@ -277,7 +279,7 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 		return retval;
 		
 	}
-	private MBeanConstructorInfo[] getConstructors() { 
+	private final MBeanConstructorInfo[] getConstructors() { 
 		Constructor constructor = null;
 		String description = ""+constructor ;
 		MBeanConstructorInfo[] retval  = null;
@@ -291,27 +293,27 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 		return retval ;
 		
 	}
-	protected String getAttributeType(String name) {
+	protected final String getAttributeType(String name) {
         return _metrics.get(name).getClass().getName();
     }
 
-    protected String getAttributeDescription(String name) {
+    protected final String getAttributeDescription(String name) {
         return name + " Attribute";   
     }
     
-    public void update(){
+    public final void update(){
     	updateCounter++;
     }
 
-    public void success(){
+    public final void success(){
     	successCounter++;
     }    
 
-    public void error(){
+    public final void error(){
     	errorCounter++;
     }        
     
-    private Map<String,Number> _metrics = new HashMap<String, Number> ();
+    private final Map<String,Number> _metrics = new HashMap<String, Number> ();
     protected MBeanAttributeInfo[] getAttributeInfo() { 
 		this.syncValues();
         MBeanAttributeInfo[] attrs =
@@ -346,7 +348,7 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
         return attrs;
     }
 
-	public boolean isPID(String name) {
+	public final boolean isPID(String name) {
 		return name.indexOf("::")>0;
 	}
     long lastSyncTimeMilliseconds = -1;
@@ -361,7 +363,7 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 	 * @param newVal
 	 * @return
 	 */
-	double accumulateValue(String namePar, double newVal){
+	final double  accumulateValue(String namePar, double newVal){
 		double retval = 0;
 		try{
 			String s = ""+ _metrics .get(namePar);
@@ -372,7 +374,7 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 		return retval;
 	}
 	
-	private void syncValues() {
+	private final void syncValues() {
     	long startTmp = System.currentTimeMillis();
 
     	health += -100.0 * accumulateValue("loggedFatal",loggedFatal); 
@@ -456,7 +458,7 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
     
     
     
-	private Pid getPid(String name) {
+	private final Pid getPid(String name) {
 		String name2 = Pid.class.getName();
 		Thread currentThread = Thread.currentThread();
 		ClassLoader clBak = currentThread.getContextClassLoader();
@@ -479,7 +481,7 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 		return retval;
 	}
 
-	public void storeVpid( String name, Pid retval) {
+	public final void storeVpid( String name, Pid retval) {
 		
 		/// <push>
 		Thread currentThread = Thread.currentThread();
@@ -497,13 +499,13 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 		/// <pop>		
 	}
 
-	public void warning() {
+	public final void warning() {
 		warningCounter++;
 	}
-	public void create() {
+	public final void create() {
 		createCounter++;
 	}
-	public void fatal() {
+	public final void fatal() {
 		fatalCounter++;
 	}
     long updateCounter = 0;
@@ -515,7 +517,7 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 	private static final Logger log = LoggerFactory.getLogger(RrdKeeper.class .getName());
 
 	//@Override
-	public void handleNotification(Notification notification, final Object handback) { 
+	public final void handleNotification(Notification notification, final Object handback) { 
 		 sendNotification(notification);
 	}
 	private int loggedFatal = 0;
@@ -527,29 +529,29 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 	private int loggedCounter = 0;
 	
 	 
-	public void loggedFATAL() {
+	public final void loggedFATAL() {
 		loggedFatal++;
 	}
-	public void loggedERROR() {
+	public final void loggedERROR() {
 		loggedError++;
 	}
-	public void loggedWARN() {
+	public final void loggedWARN() {
 		loggedWarn++;
 	}
-	public void loggedINFO() {
+	public final void loggedINFO() {
 		loggedInfo++;
 	}
-	public void loggedDEBUG() {
+	public final void loggedDEBUG() {
 		loggedDebug++;
 	}
-	public void loggedTRACE() {
+	public final void loggedTRACE() {
 		loggedTrace++;
 	}
-	public void logged() {
+	public final void logged() {
 		loggedCounter++;
 	}
 
-	public void performNotification(String xpath, long timestamp, String data) {
+	public final void performNotification(String xpath, long timestamp, String data) {
 		Notification notification = new //Notification(data, xpath,  timestamp );
 		Notification("xpath", xpath, this.updateCounter, timestamp, data);
 		super.sendNotification(notification );

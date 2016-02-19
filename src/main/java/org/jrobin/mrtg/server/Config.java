@@ -40,7 +40,12 @@ class Config implements MrtgConstants {
 	public static final String RRD = "rrd";
 	public static final String CONF = "conf";
 	
-	private static String HOME_DIR  = System.getProperty("user.dir") + DELIM + MRTG;
+	private static String HOME_DIR  =
+			System.getProperty("rrd.home",
+			System.getProperty("catalina.base",	
+			System.getProperty("user.dir"))) 
+			+ ( System.getProperty("catalina.base") == null? null: "/work/Catalina/localhost/rrdsaas" )
+			+DELIM + MRTG;
 
 	public static final String GRAPH_TEMPLATE_XML = "graph_template.xml";
 	public static final String RRD_TEMPLATE_XML = "rrd_template.xml";

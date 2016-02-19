@@ -76,7 +76,13 @@ public class RrdFileBackend extends RrdBackend {
 	public void close() throws IOException {
 		file.close();
 	}
-
+	
+	static final String defaultHomeCalc(){
+		return System.getProperty("rrd.home",
+		System.getProperty("catalina.base",	
+		System.getProperty("user.dir"))) 
+		+ ( System.getProperty("catalina.base") == null? null: "/work/Catalina/localhost/rrdsaas" );
+	}
 	/**
 	 * Returns canonical path to the file on the disk.
 	 *
@@ -86,9 +92,12 @@ public class RrdFileBackend extends RrdBackend {
 	 */
 	public static String getCanonicalPath(String path) throws IOException {
 
+
+		
 		String parentTmp = "rrd.home";
-		try {
-			parentTmp = System.getProperty("rrd.home",System.getProperty("user.dir",System.getProperty("user.home"))+java.io.File.separator + "rrd.home");
+		try { 
+			parentTmp = defaultHomeCalc()  
+					+java.io.File.separator + "rrd.home";
 			if (path.startsWith( parentTmp )){
 				path = (new File(path)).getName();
 			}

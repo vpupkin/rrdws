@@ -1,6 +1,525 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
 "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
- 
- 
-<svg  version="1.1" xmlns="http://www.w3.org/2000/svg"><!--   //////////////DISPOSE??????????????  --><!--   //////////////DISPOSE??????????????  --><!-- setPaint (  #FFF  )  --><rect   x="0" y="0" width="557" height="218" style="fill:#FFF; stroke:none ;"/><!-- setPaint (  #FFF  )  --><rect   x="141" y="12" width="400" height="100" style="fill:#FFF; stroke:none ;"/><clipPath id="_X142_Y11_W399_H102"><rect   x="142" y="11" width="399" height="102" style="fill:#FFF; stroke:none ;"/></clipPath><!-- setPaint (  #0F0  )  --><polyline  points="  141.0,112.0  141.0,112.0  174.0,112.0  174.0,112.0  207.0,112.0  207.0,76.0  241.0,76.0  241.0,112.0  274.0,112.0  274.0,112.0  307.0,112.0  307.0,112.0  341.0,112.0  341.0,112.0  374.0,112.0  374.0,112.0  407.0,112.0  407.0,76.0  441.0,76.0  441.0,76.0  474.0,76.0  474.0,76.0  507.0,76.0  507.0,88.0  541.0,88.0" style="fill:#0F0;stroke:none ;stroke-width:null "/><polyline  points="  141.0,112.0  141.0,112.0  174.0,112.0  174.0,112.0  207.0,112.0  207.0,76.0  241.0,76.0  241.0,112.0  274.0,112.0  274.0,112.0  307.0,112.0  307.0,112.0  341.0,112.0  341.0,112.0  374.0,112.0  374.0,112.0  407.0,112.0  407.0,76.0  441.0,76.0  441.0,76.0  474.0,76.0  474.0,76.0  507.0,76.0  507.0,88.0  541.0,88.0" style="fill:none;stroke:#0F0;stroke-width:null "/><!-- setPaint (  #500  )  --><polyline  points="  141.0,112.0  141.0,112.0  174.0,112.0  174.0,62.0  207.0,62.0  207.0,112.0  241.0,112.0  241.0,112.0  274.0,112.0  274.0,112.0  307.0,112.0  307.0,62.0  341.0,62.0  341.0,62.0  374.0,62.0  374.0,62.0  407.0,62.0  407.0,112.0  441.0,112.0  441.0,112.0  474.0,112.0  474.0,112.0  507.0,112.0  507.0,112.0  541.0,112.0" style="fill:#500;stroke:none ;stroke-width:null "/><polyline  points="  141.0,112.0  141.0,112.0  174.0,112.0  174.0,62.0  207.0,62.0  207.0,112.0  241.0,112.0  241.0,112.0  274.0,112.0  274.0,112.0  307.0,112.0  307.0,62.0  341.0,62.0  341.0,62.0  374.0,62.0  374.0,62.0  407.0,62.0  407.0,112.0  441.0,112.0  441.0,112.0  474.0,112.0  474.0,112.0  507.0,112.0  507.0,112.0  541.0,112.0" style="fill:none;stroke:#500;stroke-width:null "/><!-- setPaint (  #F00  )  --><polyline  points="  141.0,112.0  141.0,112.0  174.0,112.0  174.0,40.0  207.0,40.0  207.0,112.0  241.0,112.0  241.0,112.0  274.0,112.0  274.0,112.0  307.0,112.0  307.0,52.0  341.0,52.0  341.0,52.0  374.0,52.0  374.0,52.0  407.0,52.0  407.0,112.0  441.0,112.0  441.0,112.0  474.0,112.0  474.0,112.0  507.0,112.0  507.0,112.0  541.0,112.0" style="fill:#F00;stroke:none ;stroke-width:null "/><polyline  points="  141.0,112.0  141.0,112.0  174.0,112.0  174.0,40.0  207.0,40.0  207.0,112.0  241.0,112.0  241.0,112.0  274.0,112.0  274.0,112.0  307.0,112.0  307.0,52.0  341.0,52.0  341.0,52.0  374.0,52.0  374.0,52.0  407.0,52.0  407.0,112.0  441.0,112.0  441.0,112.0  474.0,112.0  474.0,112.0  507.0,112.0  507.0,112.0  541.0,112.0" style="fill:none;stroke:#F00;stroke-width:null "/><!-- setPaint (  #500  )  --><!-- setStroke(Stroke0.0) --><polyline  points="  141.0,112.0  141.0,112.0  174.0,112.0  174.0,62.0  207.0,62.0  207.0,112.0  241.0,112.0  241.0,112.0  274.0,112.0  274.0,112.0  307.0,112.0  307.0,62.0  341.0,62.0  341.0,62.0  374.0,62.0  374.0,62.0  407.0,62.0  407.0,112.0  441.0,112.0  441.0,112.0  474.0,112.0  474.0,112.0  507.0,112.0  507.0,112.0  541.0,112.0" style="fill:none;stroke:#500;stroke-width:0.0 "/><!-- setTransform(int   )  --><clipPath id="_X0_Y0_W557_H218"><rect   x="0" y="0" width="557" height="218" style="fill:#500; stroke:none ;"/></clipPath><!-- setStroke(Stroke1.0) --><!-- setPaint (  #ccc  )  --> <!-- line ( 0:0 - 556:0) --><polyline  points="  0.0,0.0  556.0,0.0" style="fill:none;stroke:#ccc;stroke-width:1.0 "/><!-- setStroke(Stroke1.0) --><!-- setPaint (  #ccc  )  --> <!-- line ( 1:1 - 555:1) --><polyline  points="  1.0,1.0  555.0,1.0" style="fill:none;stroke:#ccc;stroke-width:1.0 "/><!-- setStroke(Stroke1.0) --><!-- setPaint (  #ccc  )  --> <!-- line ( 0:0 - 0:217) --><polyline  points="  0.0,0.0  0.0,217.0" style="fill:none;stroke:#ccc;stroke-width:1.0 "/><!-- setStroke(Stroke1.0) --><!-- setPaint (  #ccc  )  --> <!-- line ( 1:1 - 1:216) --><polyline  points="  1.0,1.0  1.0,216.0" style="fill:none;stroke:#ccc;stroke-width:1.0 "/><!-- setStroke(Stroke1.0) --><!-- setPaint (  #999  )  --> <!-- line ( 556:0 - 556:217) --><polyline  points="  556.0,0.0  556.0,217.0" style="fill:none;stroke:#999;stroke-width:1.0 "/><!-- setStroke(Stroke1.0) --><!-- setPaint (  #999  )  --> <!-- line ( 0:217 - 556:217) --><polyline  points="  0.0,217.0  556.0,217.0" style="fill:none;stroke:#999;stroke-width:1.0 "/><!-- setStroke(Stroke1.0) --><!-- setPaint (  #999  )  --> <!-- line ( 555:1 - 555:216) --><polyline  points="  555.0,1.0  555.0,216.0" style="fill:none;stroke:#999;stroke-width:1.0 "/><!-- setStroke(Stroke1.0) --><!-- setPaint (  #999  )  --> <!-- line ( 1:216 - 555:216) --><polyline  points="  1.0,216.0  555.0,216.0" style="fill:none;stroke:#999;stroke-width:1.0 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 141:111 - 141:113) --><polyline  points="  141.0,111.0  141.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 141:112 - 141:12) --><polyline  points="  141.0,112.0  141.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 154:111 - 154:113) --><polyline  points="  154.0,111.0  154.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 154:112 - 154:12) --><polyline  points="  154.0,112.0  154.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 167:111 - 167:113) --><polyline  points="  167.0,111.0  167.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 167:112 - 167:12) --><polyline  points="  167.0,112.0  167.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 181:111 - 181:113) --><polyline  points="  181.0,111.0  181.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 181:112 - 181:12) --><polyline  points="  181.0,112.0  181.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 194:111 - 194:113) --><polyline  points="  194.0,111.0  194.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 194:112 - 194:12) --><polyline  points="  194.0,112.0  194.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 207:111 - 207:113) --><polyline  points="  207.0,111.0  207.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 207:112 - 207:12) --><polyline  points="  207.0,112.0  207.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 221:111 - 221:113) --><polyline  points="  221.0,111.0  221.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 221:112 - 221:12) --><polyline  points="  221.0,112.0  221.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 234:111 - 234:113) --><polyline  points="  234.0,111.0  234.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 234:112 - 234:12) --><polyline  points="  234.0,112.0  234.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 247:111 - 247:113) --><polyline  points="  247.0,111.0  247.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 247:112 - 247:12) --><polyline  points="  247.0,112.0  247.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 261:111 - 261:113) --><polyline  points="  261.0,111.0  261.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 261:112 - 261:12) --><polyline  points="  261.0,112.0  261.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 274:111 - 274:113) --><polyline  points="  274.0,111.0  274.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 274:112 - 274:12) --><polyline  points="  274.0,112.0  274.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 287:111 - 287:113) --><polyline  points="  287.0,111.0  287.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 287:112 - 287:12) --><polyline  points="  287.0,112.0  287.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 301:111 - 301:113) --><polyline  points="  301.0,111.0  301.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 301:112 - 301:12) --><polyline  points="  301.0,112.0  301.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 314:111 - 314:113) --><polyline  points="  314.0,111.0  314.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 314:112 - 314:12) --><polyline  points="  314.0,112.0  314.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 327:111 - 327:113) --><polyline  points="  327.0,111.0  327.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 327:112 - 327:12) --><polyline  points="  327.0,112.0  327.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 341:111 - 341:113) --><polyline  points="  341.0,111.0  341.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 341:112 - 341:12) --><polyline  points="  341.0,112.0  341.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 354:111 - 354:113) --><polyline  points="  354.0,111.0  354.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 354:112 - 354:12) --><polyline  points="  354.0,112.0  354.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 367:111 - 367:113) --><polyline  points="  367.0,111.0  367.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 367:112 - 367:12) --><polyline  points="  367.0,112.0  367.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 381:111 - 381:113) --><polyline  points="  381.0,111.0  381.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 381:112 - 381:12) --><polyline  points="  381.0,112.0  381.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 394:111 - 394:113) --><polyline  points="  394.0,111.0  394.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 394:112 - 394:12) --><polyline  points="  394.0,112.0  394.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 407:111 - 407:113) --><polyline  points="  407.0,111.0  407.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 407:112 - 407:12) --><polyline  points="  407.0,112.0  407.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 421:111 - 421:113) --><polyline  points="  421.0,111.0  421.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 421:112 - 421:12) --><polyline  points="  421.0,112.0  421.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 434:111 - 434:113) --><polyline  points="  434.0,111.0  434.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 434:112 - 434:12) --><polyline  points="  434.0,112.0  434.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 447:111 - 447:113) --><polyline  points="  447.0,111.0  447.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 447:112 - 447:12) --><polyline  points="  447.0,112.0  447.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 461:111 - 461:113) --><polyline  points="  461.0,111.0  461.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 461:112 - 461:12) --><polyline  points="  461.0,112.0  461.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 474:111 - 474:113) --><polyline  points="  474.0,111.0  474.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 474:112 - 474:12) --><polyline  points="  474.0,112.0  474.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 487:111 - 487:113) --><polyline  points="  487.0,111.0  487.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 487:112 - 487:12) --><polyline  points="  487.0,112.0  487.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 501:111 - 501:113) --><polyline  points="  501.0,111.0  501.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 501:112 - 501:12) --><polyline  points="  501.0,112.0  501.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 514:111 - 514:113) --><polyline  points="  514.0,111.0  514.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 514:112 - 514:12) --><polyline  points="  514.0,112.0  514.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 527:111 - 527:113) --><polyline  points="  527.0,111.0  527.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 527:112 - 527:12) --><polyline  points="  527.0,112.0  527.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 541:111 - 541:113) --><polyline  points="  541.0,111.0  541.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 541:112 - 541:12) --><polyline  points="  541.0,112.0  541.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #F55  )  --> <!-- line ( 141:110 - 141:114) --><polyline  points="  141.0,110.0  141.0,114.0" style="fill:none;stroke:#F55;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #F55  )  --> <!-- line ( 141:112 - 141:12) --><polyline  points="  141.0,112.0  141.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #F55  )  --> <!-- line ( 207:110 - 207:114) --><polyline  points="  207.0,110.0  207.0,114.0" style="fill:none;stroke:#F55;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #F55  )  --> <!-- line ( 207:112 - 207:12) --><polyline  points="  207.0,112.0  207.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #F55  )  --> <!-- line ( 274:110 - 274:114) --><polyline  points="  274.0,110.0  274.0,114.0" style="fill:none;stroke:#F55;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #F55  )  --> <!-- line ( 274:112 - 274:12) --><polyline  points="  274.0,112.0  274.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #F55  )  --> <!-- line ( 341:110 - 341:114) --><polyline  points="  341.0,110.0  341.0,114.0" style="fill:none;stroke:#F55;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #F55  )  --> <!-- line ( 341:112 - 341:12) --><polyline  points="  341.0,112.0  341.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #F55  )  --> <!-- line ( 407:110 - 407:114) --><polyline  points="  407.0,110.0  407.0,114.0" style="fill:none;stroke:#F55;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #F55  )  --> <!-- line ( 407:112 - 407:12) --><polyline  points="  407.0,112.0  407.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #F55  )  --> <!-- line ( 474:110 - 474:114) --><polyline  points="  474.0,110.0  474.0,114.0" style="fill:none;stroke:#F55;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #F55  )  --> <!-- line ( 474:112 - 474:12) --><polyline  points="  474.0,112.0  474.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #F55  )  --> <!-- line ( 541:110 - 541:114) --><polyline  points="  541.0,110.0  541.0,114.0" style="fill:none;stroke:#F55;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #F55  )  --> <!-- line ( 541:112 - 541:12) --><polyline  points="  541.0,112.0  541.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 "/><!-- setFont(  font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  ) --><!-- setPaint (  #000  )  --><text font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  x="177" y="137"  >11:10</text><!-- setFont(  font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  ) --><!-- setPaint (  #000  )  --><text font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  x="244" y="137"  >11:20</text><!-- setFont(  font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  ) --><!-- setPaint (  #000  )  --><text font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  x="311" y="137"  >11:30</text><!-- setFont(  font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  ) --><!-- setPaint (  #000  )  --><text font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  x="377" y="137"  >11:40</text><!-- setFont(  font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  ) --><!-- setPaint (  #000  )  --><text font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  x="444" y="137"  >11:50</text><!-- setFont(  font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  ) --><!-- setPaint (  #000  )  --><text font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  x="86" y="117"  >   0</text><!-- setStroke(Stroke0.4) --><!-- setPaint (  #F55  )  --> <!-- line ( 139:112 - 143:112) --><polyline  points="  139.0,112.0  143.0,112.0" style="fill:none;stroke:#F55;stroke-width:0.4 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #F55  )  --> <!-- line ( 539:112 - 543:112) --><polyline  points="  539.0,112.0  543.0,112.0" style="fill:none;stroke:#F55;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #F55  )  --> <!-- line ( 141:112 - 541:112) --><polyline  points="  141.0,112.0  541.0,112.0" style="fill:none;stroke:#F55;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 140:102 - 142:102) --><polyline  points="  140.0,102.0  142.0,102.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 540:102 - 542:102) --><polyline  points="  540.0,102.0  542.0,102.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 141:102 - 541:102) --><polyline  points="  141.0,102.0  541.0,102.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 140:92 - 142:92) --><polyline  points="  140.0,92.0  142.0,92.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 540:92 - 542:92) --><polyline  points="  540.0,92.0  542.0,92.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 141:92 - 541:92) --><polyline  points="  141.0,92.0  541.0,92.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 140:82 - 142:82) --><polyline  points="  140.0,82.0  142.0,82.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 540:82 - 542:82) --><polyline  points="  540.0,82.0  542.0,82.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 141:82 - 541:82) --><polyline  points="  141.0,82.0  541.0,82.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 140:72 - 142:72) --><polyline  points="  140.0,72.0  142.0,72.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 540:72 - 542:72) --><polyline  points="  540.0,72.0  542.0,72.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 141:72 - 541:72) --><polyline  points="  141.0,72.0  541.0,72.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setFont(  font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  ) --><!-- setPaint (  #000  )  --><text font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  x="86" y="67"  > 100</text><!-- setStroke(Stroke0.4) --><!-- setPaint (  #F55  )  --> <!-- line ( 139:62 - 143:62) --><polyline  points="  139.0,62.0  143.0,62.0" style="fill:none;stroke:#F55;stroke-width:0.4 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #F55  )  --> <!-- line ( 539:62 - 543:62) --><polyline  points="  539.0,62.0  543.0,62.0" style="fill:none;stroke:#F55;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #F55  )  --> <!-- line ( 141:62 - 541:62) --><polyline  points="  141.0,62.0  541.0,62.0" style="fill:none;stroke:#F55;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 140:52 - 142:52) --><polyline  points="  140.0,52.0  142.0,52.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 540:52 - 542:52) --><polyline  points="  540.0,52.0  542.0,52.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 141:52 - 541:52) --><polyline  points="  141.0,52.0  541.0,52.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 140:42 - 142:42) --><polyline  points="  140.0,42.0  142.0,42.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 540:42 - 542:42) --><polyline  points="  540.0,42.0  542.0,42.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 141:42 - 541:42) --><polyline  points="  141.0,42.0  541.0,42.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 140:32 - 142:32) --><polyline  points="  140.0,32.0  142.0,32.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 540:32 - 542:32) --><polyline  points="  540.0,32.0  542.0,32.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 141:32 - 541:32) --><polyline  points="  141.0,32.0  541.0,32.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 140:22 - 142:22) --><polyline  points="  140.0,22.0  142.0,22.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #aaa  )  --> <!-- line ( 540:22 - 542:22) --><polyline  points="  540.0,22.0  542.0,22.0" style="fill:none;stroke:#aaa;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #aaa  )  --> <!-- line ( 141:22 - 541:22) --><polyline  points="  141.0,22.0  541.0,22.0" style="fill:none;stroke:#aaa;stroke-width:0.2 "/><!-- setFont(  font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  ) --><!-- setPaint (  #000  )  --><text font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  x="86" y="17"  > 200</text><!-- setStroke(Stroke0.4) --><!-- setPaint (  #F55  )  --> <!-- line ( 139:12 - 143:12) --><polyline  points="  139.0,12.0  143.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.4 "/><!-- setStroke(Stroke0.4) --><!-- setPaint (  #F55  )  --> <!-- line ( 539:12 - 543:12) --><polyline  points="  539.0,12.0  543.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.4 "/><!-- setStroke(Stroke0.2) --><!-- setPaint (  #F55  )  --> <!-- line ( 141:12 - 541:12) --><polyline  points="  141.0,12.0  541.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 "/><!-- setStroke(Stroke1.0) --><!-- setPaint (  #aaa  )  --> <!-- line ( 541:112 - 541:12) --><polyline  points="  541.0,112.0  541.0,12.0" style="fill:none;stroke:#aaa;stroke-width:1.0 "/><!-- setStroke(Stroke1.0) --><!-- setPaint (  #aaa  )  --> <!-- line ( 141:12 - 541:12) --><polyline  points="  141.0,12.0  541.0,12.0" style="fill:none;stroke:#aaa;stroke-width:1.0 "/><!-- setStroke(Stroke1.0) --><!-- setPaint (  #000  )  --> <!-- line ( 137:112 - 545:112) --><polyline  points="  137.0,112.0  545.0,112.0" style="fill:none;stroke:#000;stroke-width:1.0 "/><!-- setStroke(Stroke1.0) --><!-- setPaint (  #aaa  )  --> <!-- line ( 141:112 - 141:12) --><polyline  points="  141.0,112.0  141.0,12.0" style="fill:none;stroke:#aaa;stroke-width:1.0 "/><!-- setStroke(Stroke1.0) --><!-- setPaint (  #F00  )  --> <!-- line ( 545:109 - 545:115) --><polyline  points="  545.0,109.0  545.0,115.0" style="fill:none;stroke:#F00;stroke-width:1.0 "/><!-- setStroke(Stroke1.0) --><!-- setPaint (  #F00  )  --> <!-- line ( 545:109 - 550:112) --><polyline  points="  545.0,109.0  550.0,112.0" style="fill:none;stroke:#F00;stroke-width:1.0 "/><!-- setStroke(Stroke1.0) --><!-- setPaint (  #F00  )  --> <!-- line ( 545:115 - 550:112) --><polyline  points="  545.0,115.0  550.0,112.0" style="fill:none;stroke:#F00;stroke-width:1.0 "/><!-- translate(int 10, int86  )  --><!-- rotate(int -1.5707963267948966  )  --><!-- setFont(  font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  ) --><!-- setPaint (  #000  )  --><text font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  x="0" y="10" transform=" rotate(-1.5707963267948966)  translate(10 , 86) " >km/h</text><!-- setTransform(int transform=" rotate(-1.5707963267948966)  translate(10 , 86) "  )  --><clipPath id="_X0_Y0_W557_H218"><rect   x="0" y="0" width="557" height="218" style="fill:#000; stroke:none ;"/></clipPath><!-- setPaint (  #000  )  --><rect   x="24" y="148" width="20" height="20" style="fill:#000; stroke:none ;"/><!-- setPaint (  #00F  )  --><rect   x="25" y="149" width="18" height="18" style="fill:#00F; stroke:none ;"/><!-- setFont(  font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  ) --><!-- setPaint (  #000  )  --><text font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  x="52" y="168" transform=" rotate(-1.5707963267948966)  translate(10 , 86) " >Maximum allowed</text><!-- setPaint (  #000  )  --><rect   x="385" y="148" width="20" height="20" style="fill:#000; stroke:none ;"/><!-- setPaint (  #0F0  )  --><rect   x="386" y="149" width="18" height="18" style="fill:#0F0; stroke:none ;"/><!-- setFont(  font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  ) --><!-- setPaint (  #000  )  --><text font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  x="413" y="168" transform=" rotate(-1.5707963267948966)  translate(10 , 86) " >Good speed</text><!-- setPaint (  #000  )  --><rect   x="24" y="175" width="20" height="20" style="fill:#000; stroke:none ;"/><!-- setPaint (  #500  )  --><rect   x="25" y="176" width="18" height="18" style="fill:#500; stroke:none ;"/><!-- setFont(  font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  ) --><!-- setPaint (  #000  )  --><text font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  x="52" y="195" transform=" rotate(-1.5707963267948966)  translate(10 , 86) " >Too fast</text><!-- setPaint (  #000  )  --><rect   x="172" y="175" width="20" height="20" style="fill:#000; stroke:none ;"/><!-- setPaint (  #F00  )  --><rect   x="173" y="176" width="18" height="18" style="fill:#F00; stroke:none ;"/><!-- setFont(  font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  ) --><!-- setPaint (  #000  )  --><text font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  x="200" y="195" transform=" rotate(-1.5707963267948966)  translate(10 , 86) " >Over speed</text><clipPath id="_X142_Y11_W399_H102"><rect   x="142" y="11" width="399" height="102" style="fill:#000; stroke:none ;"/></clipPath><!-- setStroke(Stroke1.0) --><!-- setPaint (  #00F  )  --> <!-- line ( 141:62 - 541:62) --><polyline  points="  141.0,62.0  541.0,62.0" style="fill:none;stroke:#00F;stroke-width:1.0 "/><!-- setTransform(int transform=" rotate(-1.5707963267948966)  translate(10 , 86) "  )  --><clipPath id="_X0_Y0_W557_H218"><rect   x="0" y="0" width="557" height="218" style="fill:#00F; stroke:none ;"/></clipPath><!-- translate(int 545, int4  )  --><!-- rotate(int 1.5707963267948966  )  --><!-- setFont(  font-family="'Super Sans', Helvetica, sans-serif " font-size="9" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  ) --><!-- setPaint (  #777  )  --><text font-family="'Super Sans', Helvetica, sans-serif " font-size="9" font-style="normal" font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen"  x="0" y="0" transform=" >Created with JRobin</text><!-- setTransform(int transform="  )  --><clipPath id="_X0_Y0_W557_H218"><rect   x="0" y="0" width="557" height="218" style="fill:#777; stroke:none ;"/></clipPath></svg>
+
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"><!-- //////////////DISPOSE?????????????? --><!-- //////////////DISPOSE?????????????? --><!-- setPaint ( #FFF ) -->
+	<rect x="0" y="0" width="557" height="218" style="fill:#FFF; stroke:none ;" /><!-- 
+		setPaint ( #FFF ) -->
+	<rect x="141" y="12" width="400" height="100" style="fill:#FFF; stroke:none ;" />
+	<clipPath id="_X142_Y11_W399_H102">
+		<rect x="142" y="11" width="399" height="102"
+			style="fill:#FFF; stroke:none ;" />
+	</clipPath><!-- setPaint ( #0F0 ) -->
+	<polyline
+		points="  141.0,112.0  141.0,112.0  174.0,112.0  174.0,112.0  207.0,112.0  207.0,76.0  241.0,76.0  241.0,112.0  274.0,112.0  274.0,112.0  307.0,112.0  307.0,112.0  341.0,112.0  341.0,112.0  374.0,112.0  374.0,112.0  407.0,112.0  407.0,76.0  441.0,76.0  441.0,76.0  474.0,76.0  474.0,76.0  507.0,76.0  507.0,88.0  541.0,88.0"
+		style="fill:#0F0;stroke:none ;stroke-width:null " />
+	<polyline
+		points="  141.0,112.0  141.0,112.0  174.0,112.0  174.0,112.0  207.0,112.0  207.0,76.0  241.0,76.0  241.0,112.0  274.0,112.0  274.0,112.0  307.0,112.0  307.0,112.0  341.0,112.0  341.0,112.0  374.0,112.0  374.0,112.0  407.0,112.0  407.0,76.0  441.0,76.0  441.0,76.0  474.0,76.0  474.0,76.0  507.0,76.0  507.0,88.0  541.0,88.0"
+		style="fill:none;stroke:#0F0;stroke-width:null " /><!-- setPaint ( #500 
+		) -->
+	<polyline
+		points="  141.0,112.0  141.0,112.0  174.0,112.0  174.0,62.0  207.0,62.0  207.0,112.0  241.0,112.0  241.0,112.0  274.0,112.0  274.0,112.0  307.0,112.0  307.0,62.0  341.0,62.0  341.0,62.0  374.0,62.0  374.0,62.0  407.0,62.0  407.0,112.0  441.0,112.0  441.0,112.0  474.0,112.0  474.0,112.0  507.0,112.0  507.0,112.0  541.0,112.0"
+		style="fill:#500;stroke:none ;stroke-width:null " />
+	<polyline
+		points="  141.0,112.0  141.0,112.0  174.0,112.0  174.0,62.0  207.0,62.0  207.0,112.0  241.0,112.0  241.0,112.0  274.0,112.0  274.0,112.0  307.0,112.0  307.0,62.0  341.0,62.0  341.0,62.0  374.0,62.0  374.0,62.0  407.0,62.0  407.0,112.0  441.0,112.0  441.0,112.0  474.0,112.0  474.0,112.0  507.0,112.0  507.0,112.0  541.0,112.0"
+		style="fill:none;stroke:#500;stroke-width:null " /><!-- setPaint ( #F00 
+		) -->
+	<polyline
+		points="  141.0,112.0  141.0,112.0  174.0,112.0  174.0,40.0  207.0,40.0  207.0,112.0  241.0,112.0  241.0,112.0  274.0,112.0  274.0,112.0  307.0,112.0  307.0,52.0  341.0,52.0  341.0,52.0  374.0,52.0  374.0,52.0  407.0,52.0  407.0,112.0  441.0,112.0  441.0,112.0  474.0,112.0  474.0,112.0  507.0,112.0  507.0,112.0  541.0,112.0"
+		style="fill:#F00;stroke:none ;stroke-width:null " />
+	<polyline
+		points="  141.0,112.0  141.0,112.0  174.0,112.0  174.0,40.0  207.0,40.0  207.0,112.0  241.0,112.0  241.0,112.0  274.0,112.0  274.0,112.0  307.0,112.0  307.0,52.0  341.0,52.0  341.0,52.0  374.0,52.0  374.0,52.0  407.0,52.0  407.0,112.0  441.0,112.0  441.0,112.0  474.0,112.0  474.0,112.0  507.0,112.0  507.0,112.0  541.0,112.0"
+		style="fill:none;stroke:#F00;stroke-width:null " /><!-- setPaint ( #500 
+		) --><!-- setStroke(Stroke0.0) -->
+	<polyline
+		points="  141.0,112.0  141.0,112.0  174.0,112.0  174.0,62.0  207.0,62.0  207.0,112.0  241.0,112.0  241.0,112.0  274.0,112.0  274.0,112.0  307.0,112.0  307.0,62.0  341.0,62.0  341.0,62.0  374.0,62.0  374.0,62.0  407.0,62.0  407.0,112.0  441.0,112.0  441.0,112.0  474.0,112.0  474.0,112.0  507.0,112.0  507.0,112.0  541.0,112.0"
+		style="fill:none;stroke:#500;stroke-width:0.0 " /><!-- setTransform(int 
+		) -->
+	<clipPath id="_X0_Y0_W557_H218">
+		<rect x="0" y="0" width="557" height="218" style="fill:#500; stroke:none ;" />
+	</clipPath><!-- setStroke(Stroke1.0) --><!-- setPaint ( #ccc ) --> <!-- line ( 0:0 - 556:0) -->
+	<polyline points="  0.0,0.0  556.0,0.0" style="fill:none;stroke:#ccc;stroke-width:1.0 " /><!-- 
+		setStroke(Stroke1.0) --><!-- 
+		setPaint ( #ccc ) --> <!-- line ( 1:1 - 555:1) -->
+	<polyline points="  1.0,1.0  555.0,1.0" style="fill:none;stroke:#ccc;stroke-width:1.0 " /><!-- 
+		setStroke(Stroke1.0) --><!-- 
+		setPaint ( #ccc ) --> <!-- line ( 0:0 - 0:217) -->
+	<polyline points="  0.0,0.0  0.0,217.0" style="fill:none;stroke:#ccc;stroke-width:1.0 " /><!-- 
+		setStroke(Stroke1.0) --><!-- 
+		setPaint ( #ccc ) --> <!-- line ( 1:1 - 1:216) -->
+	<polyline points="  1.0,1.0  1.0,216.0" style="fill:none;stroke:#ccc;stroke-width:1.0 " /><!-- 
+		setStroke(Stroke1.0) --><!-- 
+		setPaint ( #999 ) --> <!-- line ( 556:0 - 556:217) -->
+	<polyline points="  556.0,0.0  556.0,217.0" style="fill:none;stroke:#999;stroke-width:1.0 " /><!-- 
+		setStroke(Stroke1.0) --><!-- 
+		setPaint ( #999 ) --> <!-- line ( 0:217 - 556:217) -->
+	<polyline points="  0.0,217.0  556.0,217.0" style="fill:none;stroke:#999;stroke-width:1.0 " /><!-- 
+		setStroke(Stroke1.0) --><!-- 
+		setPaint ( #999 ) --> <!-- line ( 555:1 - 555:216) -->
+	<polyline points="  555.0,1.0  555.0,216.0" style="fill:none;stroke:#999;stroke-width:1.0 " /><!-- 
+		setStroke(Stroke1.0) --><!-- 
+		setPaint ( #999 ) --> <!-- line ( 1:216 - 555:216) -->
+	<polyline points="  1.0,216.0  555.0,216.0" style="fill:none;stroke:#999;stroke-width:1.0 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 141:111 - 141:113) -->
+	<polyline points="  141.0,111.0  141.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 141:112 - 141:12) -->
+	<polyline points="  141.0,112.0  141.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 154:111 - 154:113) -->
+	<polyline points="  154.0,111.0  154.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 154:112 - 154:12) -->
+	<polyline points="  154.0,112.0  154.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 167:111 - 167:113) -->
+	<polyline points="  167.0,111.0  167.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 167:112 - 167:12) -->
+	<polyline points="  167.0,112.0  167.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 181:111 - 181:113) -->
+	<polyline points="  181.0,111.0  181.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 181:112 - 181:12) -->
+	<polyline points="  181.0,112.0  181.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 194:111 - 194:113) -->
+	<polyline points="  194.0,111.0  194.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 194:112 - 194:12) -->
+	<polyline points="  194.0,112.0  194.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 207:111 - 207:113) -->
+	<polyline points="  207.0,111.0  207.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 207:112 - 207:12) -->
+	<polyline points="  207.0,112.0  207.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 221:111 - 221:113) -->
+	<polyline points="  221.0,111.0  221.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 221:112 - 221:12) -->
+	<polyline points="  221.0,112.0  221.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 234:111 - 234:113) -->
+	<polyline points="  234.0,111.0  234.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 234:112 - 234:12) -->
+	<polyline points="  234.0,112.0  234.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 247:111 - 247:113) -->
+	<polyline points="  247.0,111.0  247.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 247:112 - 247:12) -->
+	<polyline points="  247.0,112.0  247.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 261:111 - 261:113) -->
+	<polyline points="  261.0,111.0  261.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 261:112 - 261:12) -->
+	<polyline points="  261.0,112.0  261.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 274:111 - 274:113) -->
+	<polyline points="  274.0,111.0  274.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 274:112 - 274:12) -->
+	<polyline points="  274.0,112.0  274.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 287:111 - 287:113) -->
+	<polyline points="  287.0,111.0  287.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 287:112 - 287:12) -->
+	<polyline points="  287.0,112.0  287.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 301:111 - 301:113) -->
+	<polyline points="  301.0,111.0  301.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 301:112 - 301:12) -->
+	<polyline points="  301.0,112.0  301.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 314:111 - 314:113) -->
+	<polyline points="  314.0,111.0  314.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 314:112 - 314:12) -->
+	<polyline points="  314.0,112.0  314.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 327:111 - 327:113) -->
+	<polyline points="  327.0,111.0  327.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 327:112 - 327:12) -->
+	<polyline points="  327.0,112.0  327.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 341:111 - 341:113) -->
+	<polyline points="  341.0,111.0  341.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 341:112 - 341:12) -->
+	<polyline points="  341.0,112.0  341.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 354:111 - 354:113) -->
+	<polyline points="  354.0,111.0  354.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 354:112 - 354:12) -->
+	<polyline points="  354.0,112.0  354.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 367:111 - 367:113) -->
+	<polyline points="  367.0,111.0  367.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 367:112 - 367:12) -->
+	<polyline points="  367.0,112.0  367.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 381:111 - 381:113) -->
+	<polyline points="  381.0,111.0  381.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 381:112 - 381:12) -->
+	<polyline points="  381.0,112.0  381.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 394:111 - 394:113) -->
+	<polyline points="  394.0,111.0  394.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 394:112 - 394:12) -->
+	<polyline points="  394.0,112.0  394.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 407:111 - 407:113) -->
+	<polyline points="  407.0,111.0  407.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 407:112 - 407:12) -->
+	<polyline points="  407.0,112.0  407.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 421:111 - 421:113) -->
+	<polyline points="  421.0,111.0  421.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 421:112 - 421:12) -->
+	<polyline points="  421.0,112.0  421.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 434:111 - 434:113) -->
+	<polyline points="  434.0,111.0  434.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 434:112 - 434:12) -->
+	<polyline points="  434.0,112.0  434.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 447:111 - 447:113) -->
+	<polyline points="  447.0,111.0  447.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 447:112 - 447:12) -->
+	<polyline points="  447.0,112.0  447.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 461:111 - 461:113) -->
+	<polyline points="  461.0,111.0  461.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 461:112 - 461:12) -->
+	<polyline points="  461.0,112.0  461.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 474:111 - 474:113) -->
+	<polyline points="  474.0,111.0  474.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 474:112 - 474:12) -->
+	<polyline points="  474.0,112.0  474.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 487:111 - 487:113) -->
+	<polyline points="  487.0,111.0  487.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 487:112 - 487:12) -->
+	<polyline points="  487.0,112.0  487.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 501:111 - 501:113) -->
+	<polyline points="  501.0,111.0  501.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 501:112 - 501:12) -->
+	<polyline points="  501.0,112.0  501.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 514:111 - 514:113) -->
+	<polyline points="  514.0,111.0  514.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 514:112 - 514:12) -->
+	<polyline points="  514.0,112.0  514.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 527:111 - 527:113) -->
+	<polyline points="  527.0,111.0  527.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 527:112 - 527:12) -->
+	<polyline points="  527.0,112.0  527.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 541:111 - 541:113) -->
+	<polyline points="  541.0,111.0  541.0,113.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 541:112 - 541:12) -->
+	<polyline points="  541.0,112.0  541.0,12.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 141:110 - 141:114) -->
+	<polyline points="  141.0,110.0  141.0,114.0" style="fill:none;stroke:#F55;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 141:112 - 141:12) -->
+	<polyline points="  141.0,112.0  141.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 207:110 - 207:114) -->
+	<polyline points="  207.0,110.0  207.0,114.0" style="fill:none;stroke:#F55;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 207:112 - 207:12) -->
+	<polyline points="  207.0,112.0  207.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 274:110 - 274:114) -->
+	<polyline points="  274.0,110.0  274.0,114.0" style="fill:none;stroke:#F55;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 274:112 - 274:12) -->
+	<polyline points="  274.0,112.0  274.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 341:110 - 341:114) -->
+	<polyline points="  341.0,110.0  341.0,114.0" style="fill:none;stroke:#F55;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 341:112 - 341:12) -->
+	<polyline points="  341.0,112.0  341.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 407:110 - 407:114) -->
+	<polyline points="  407.0,110.0  407.0,114.0" style="fill:none;stroke:#F55;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 407:112 - 407:12) -->
+	<polyline points="  407.0,112.0  407.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 474:110 - 474:114) -->
+	<polyline points="  474.0,110.0  474.0,114.0" style="fill:none;stroke:#F55;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 474:112 - 474:12) -->
+	<polyline points="  474.0,112.0  474.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 541:110 - 541:114) -->
+	<polyline points="  541.0,110.0  541.0,114.0" style="fill:none;stroke:#F55;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 541:112 - 541:12) -->
+	<polyline points="  541.0,112.0  541.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 " /><!-- 
+		setFont( font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" 
+		font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen" ) --><!-- 
+		setPaint ( #000 ) -->
+	<text font-family="Lucida Sans Typewriter" font-size="10"
+		font-style="normal" font-weight="normal" fill="black" stroke-width="0"
+		stroke="darkgreen" x="177" y="137">11:10</text><!-- setFont( font-family="Lucida 
+		Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" 
+		fill="black" stroke-width="0" stroke="darkgreen" ) --><!-- setPaint ( #000 ) -->
+	<text font-family="Lucida Sans Typewriter" font-size="10"
+		font-style="normal" font-weight="normal" fill="black" stroke-width="0"
+		stroke="darkgreen" x="244" y="137">11:20</text><!-- setFont( font-family="Lucida 
+		Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" 
+		fill="black" stroke-width="0" stroke="darkgreen" ) --><!-- setPaint ( #000 ) -->
+	<text font-family="Lucida Sans Typewriter" font-size="10"
+		font-style="normal" font-weight="normal" fill="black" stroke-width="0"
+		stroke="darkgreen" x="311" y="137">11:30</text><!-- setFont( font-family="Lucida 
+		Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" 
+		fill="black" stroke-width="0" stroke="darkgreen" ) --><!-- setPaint ( #000 ) -->
+	<text font-family="Lucida Sans Typewriter" font-size="10"
+		font-style="normal" font-weight="normal" fill="black" stroke-width="0"
+		stroke="darkgreen" x="377" y="137">11:40</text><!-- setFont( font-family="Lucida 
+		Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" 
+		fill="black" stroke-width="0" stroke="darkgreen" ) --><!-- setPaint ( #000 ) -->
+	<text font-family="Lucida Sans Typewriter" font-size="10"
+		font-style="normal" font-weight="normal" fill="black" stroke-width="0"
+		stroke="darkgreen" x="444" y="137">11:50</text><!-- setFont( font-family="Lucida 
+		Sans Typewriter" font-size="10" font-style="normal" font-weight="normal" 
+		fill="black" stroke-width="0" stroke="darkgreen" ) --><!-- setPaint ( #000 ) -->
+	<text font-family="Lucida Sans Typewriter" font-size="10"
+		font-style="normal" font-weight="normal" fill="black" stroke-width="0"
+		stroke="darkgreen" x="86" y="117"> 0</text><!-- setStroke(Stroke0.4) --><!-- setPaint ( #F55 ) --> <!-- line ( 139:112 - 143:112) -->
+	<polyline points="  139.0,112.0  143.0,112.0" style="fill:none;stroke:#F55;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 539:112 - 543:112) -->
+	<polyline points="  539.0,112.0  543.0,112.0" style="fill:none;stroke:#F55;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 141:112 - 541:112) -->
+	<polyline points="  141.0,112.0  541.0,112.0" style="fill:none;stroke:#F55;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 140:102 - 142:102) -->
+	<polyline points="  140.0,102.0  142.0,102.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 540:102 - 542:102) -->
+	<polyline points="  540.0,102.0  542.0,102.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 141:102 - 541:102) -->
+	<polyline points="  141.0,102.0  541.0,102.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 140:92 - 142:92) -->
+	<polyline points="  140.0,92.0  142.0,92.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 540:92 - 542:92) -->
+	<polyline points="  540.0,92.0  542.0,92.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 141:92 - 541:92) -->
+	<polyline points="  141.0,92.0  541.0,92.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 140:82 - 142:82) -->
+	<polyline points="  140.0,82.0  142.0,82.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 540:82 - 542:82) -->
+	<polyline points="  540.0,82.0  542.0,82.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 141:82 - 541:82) -->
+	<polyline points="  141.0,82.0  541.0,82.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 140:72 - 142:72) -->
+	<polyline points="  140.0,72.0  142.0,72.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 540:72 - 542:72) -->
+	<polyline points="  540.0,72.0  542.0,72.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 141:72 - 541:72) -->
+	<polyline points="  141.0,72.0  541.0,72.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setFont( font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" 
+		font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen" ) --><!-- 
+		setPaint ( #000 ) -->
+	<text font-family="Lucida Sans Typewriter" font-size="10"
+		font-style="normal" font-weight="normal" fill="black" stroke-width="0"
+		stroke="darkgreen" x="86" y="67"> 100</text><!-- setStroke(Stroke0.4) --><!-- setPaint ( #F55 ) --> <!-- line ( 139:62 - 143:62) -->
+	<polyline points="  139.0,62.0  143.0,62.0" style="fill:none;stroke:#F55;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 539:62 - 543:62) -->
+	<polyline points="  539.0,62.0  543.0,62.0" style="fill:none;stroke:#F55;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 141:62 - 541:62) -->
+	<polyline points="  141.0,62.0  541.0,62.0" style="fill:none;stroke:#F55;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 140:52 - 142:52) -->
+	<polyline points="  140.0,52.0  142.0,52.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 540:52 - 542:52) -->
+	<polyline points="  540.0,52.0  542.0,52.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 141:52 - 541:52) -->
+	<polyline points="  141.0,52.0  541.0,52.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 140:42 - 142:42) -->
+	<polyline points="  140.0,42.0  142.0,42.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 540:42 - 542:42) -->
+	<polyline points="  540.0,42.0  542.0,42.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 141:42 - 541:42) -->
+	<polyline points="  141.0,42.0  541.0,42.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 140:32 - 142:32) -->
+	<polyline points="  140.0,32.0  142.0,32.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 540:32 - 542:32) -->
+	<polyline points="  540.0,32.0  542.0,32.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 141:32 - 541:32) -->
+	<polyline points="  141.0,32.0  541.0,32.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 140:22 - 142:22) -->
+	<polyline points="  140.0,22.0  142.0,22.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 540:22 - 542:22) -->
+	<polyline points="  540.0,22.0  542.0,22.0" style="fill:none;stroke:#aaa;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 141:22 - 541:22) -->
+	<polyline points="  141.0,22.0  541.0,22.0" style="fill:none;stroke:#aaa;stroke-width:0.2 " /><!-- 
+		setFont( font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" 
+		font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen" ) --><!-- 
+		setPaint ( #000 ) -->
+	<text font-family="Lucida Sans Typewriter" font-size="10"
+		font-style="normal" font-weight="normal" fill="black" stroke-width="0"
+		stroke="darkgreen" x="86" y="17"> 200</text><!-- setStroke(Stroke0.4) --><!-- setPaint ( #F55 ) --> <!-- line ( 139:12 - 143:12) -->
+	<polyline points="  139.0,12.0  143.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.4) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 539:12 - 543:12) -->
+	<polyline points="  539.0,12.0  543.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.4 " /><!-- 
+		setStroke(Stroke0.2) --><!-- 
+		setPaint ( #F55 ) --> <!-- line ( 141:12 - 541:12) -->
+	<polyline points="  141.0,12.0  541.0,12.0" style="fill:none;stroke:#F55;stroke-width:0.2 " /><!-- 
+		setStroke(Stroke1.0) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 541:112 - 541:12) -->
+	<polyline points="  541.0,112.0  541.0,12.0" style="fill:none;stroke:#aaa;stroke-width:1.0 " /><!-- 
+		setStroke(Stroke1.0) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 141:12 - 541:12) -->
+	<polyline points="  141.0,12.0  541.0,12.0" style="fill:none;stroke:#aaa;stroke-width:1.0 " /><!-- 
+		setStroke(Stroke1.0) --><!-- 
+		setPaint ( #000 ) --> <!-- line ( 137:112 - 545:112) -->
+	<polyline points="  137.0,112.0  545.0,112.0" style="fill:none;stroke:#000;stroke-width:1.0 " /><!-- 
+		setStroke(Stroke1.0) --><!-- 
+		setPaint ( #aaa ) --> <!-- line ( 141:112 - 141:12) -->
+	<polyline points="  141.0,112.0  141.0,12.0" style="fill:none;stroke:#aaa;stroke-width:1.0 " /><!-- 
+		setStroke(Stroke1.0) --><!-- 
+		setPaint ( #F00 ) --> b<!-- line ( 545:109 - 545:115) -->
+	<polyline points="  545.0,109.0  545.0,115.0" style="fill:none;stroke:#F00;stroke-width:1.0 " /><!-- 
+		setStroke(Stroke1.0) --><!-- 
+		setPaint ( #F00 ) --> <!-- line ( 545:109 - 550:112) -->
+	<polyline points="  545.0,109.0  550.0,112.0" style="fill:none;stroke:#F00;stroke-width:1.0 " /><!-- 
+		setStroke(Stroke1.0) --><!-- 
+		setPaint ( #F00 ) --> <!-- line ( 545:115 - 550:112) -->
+	<polyline points="  545.0,115.0  550.0,112.0" style="fill:none;stroke:#F00;stroke-width:1.0 " /><!-- 
+		translate(int 10, int86 ) --><!-- 
+		rotate(int -1.5707963267948966 ) --><!-- 
+		setFont( font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" 
+		font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen" ) --><!-- 
+		setPaint ( #000 ) -->
+	<text font-family="Lucida Sans Typewriter" font-size="10"
+		font-style="normal" font-weight="normal" fill="black" stroke-width="0"
+		stroke="darkgreen" x="0" y="10"
+		transform=" rotate(-1.5707963267948966)  translate(10 , 86) ">km/h</text><!-- 
+		setTransform(int transform=" rotate(-1.5707963267948966) translate(10 , 86) 
+		" ) -->
+	<clipPath id="_X0_Y0_W557_H218x">
+		<rect x="0" y="0" width="557" height="218" style="fill:#000; stroke:none ;" />
+	</clipPath><!-- setPaint ( #000 ) -->
+	<rect x="24" y="148" width="20" height="20" style="fill:#000; stroke:none ;" /><!-- 
+		setPaint ( #00F ) -->
+	<rect x="25" y="149" width="18" height="18" style="fill:#00F; stroke:none ;" /><!-- 
+		setFont( font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" 
+		font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen" ) --><!-- 
+		setPaint ( #000 ) -->
+	<text font-family="Lucida Sans Typewriter" font-size="10"
+		font-style="normal" font-weight="normal" fill="black" stroke-width="0"
+		stroke="darkgreen" x="52" y="168"
+		transform=" rotate(-1.5707963267948966)  translate(10 , 86) ">Maximum
+		allowed</text><!-- setPaint ( #000 ) -->
+	<rect x="385" y="148" width="20" height="20" style="fill:#000; stroke:none ;" /><!-- 
+		setPaint ( #0F0 ) -->
+	<rect x="386" y="149" width="18" height="18" style="fill:#0F0; stroke:none ;" /><!-- 
+		setFont( font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" 
+		font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen" ) --><!-- 
+		setPaint ( #000 ) -->
+	<text font-family="Lucida Sans Typewriter" font-size="10"
+		font-style="normal" font-weight="normal" fill="black" stroke-width="0"
+		stroke="darkgreen" x="413" y="168"
+		transform=" rotate(-1.5707963267948966)  translate(10 , 86) ">Good
+		speed</text><!-- setPaint ( #000 ) -->
+	<rect x="24" y="175" width="20" height="20" style="fill:#000; stroke:none ;" /><!-- 
+		setPaint ( #500 ) -->
+	<rect x="25" y="176" width="18" height="18" style="fill:#500; stroke:none ;" /><!-- 
+		setFont( font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" 
+		font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen" ) --><!-- 
+		setPaint ( #000 ) -->
+	<text font-family="Lucida Sans Typewriter" font-size="10"
+		font-style="normal" font-weight="normal" fill="black" stroke-width="0"
+		stroke="darkgreen" x="52" y="195"
+		transform=" rotate(-1.5707963267948966)  translate(10 , 86) ">Too fast</text><!-- 
+		setPaint ( #000 ) -->
+	<rect x="172" y="175" width="20" height="20" style="fill:#000; stroke:none ;" /><!-- 
+		setPaint ( #F00 ) -->
+	<rect x="173" y="176" width="18" height="18" style="fill:#F00; stroke:none ;" /><!-- 
+		setFont( font-family="Lucida Sans Typewriter" font-size="10" font-style="normal" 
+		font-weight="normal" fill="black" stroke-width="0" stroke="darkgreen" ) --><!-- 
+		setPaint ( #000 ) -->
+	<text font-family="Lucida Sans Typewriter" font-size="10"
+		font-style="normal" font-weight="normal" fill="black" stroke-width="0"
+		stroke="darkgreen" x="200" y="195"
+		transform=" rotate(-1.5707963267948966)  translate(10 , 86) ">Over
+		speed</text>
+	<clipPath id="_X142_Y11_W399_H102xxx">
+		<rect x="142" y="11" width="399" height="102" style="fill:#000; stroke:none ;" />
+	</clipPath><!-- setStroke(Stroke1.0) --><!-- setPaint ( #00F ) --> <!-- line ( 141:62 - 541:62) -->
+	<polyline points="  141.0,62.0  541.0,62.0" style="fill:none;stroke:#00F;stroke-width:1.0 " /><!-- 
+		setTransform(int transform=" rotate(-1.5707963267948966) translate(10 , 86) 
+		" ) -->
+	<clipPath id="_X0_Y0_W557_H218a">
+		<rect x="0" y="0" width="557" height="218" style="fill:#00F; stroke:none ;" />
+	</clipPath><!-- translate(int 545, int4 ) --><!-- rotate(int 1.5707963267948966 ) --><!-- setFont( font-family="'Super Sans', Helvetica, sans-serif 
+		" font-size="9" font-style="normal" font-weight="normal" fill="black" stroke-width="0" 
+		stroke="darkgreen" ) --><!-- setPaint ( #777 ) -->
+	<text font-family="'Super Sans', Helvetica, sans-serif "
+		font-size="9" font-style="normal" font-weight="normal" fill="black"
+		stroke-width="0" stroke="darkgreen" x="0" y="0"
+		transform=" >Created with JRobin</text><!-- setTransform(int transform=" )>
+		<clipPath id="_X0_Y0_W557_H218">
+			<rect x="0" y="0" width="557" height="218" style="fill:#777; stroke:none ;" />
+		</clipPath>
+</svg>

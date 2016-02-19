@@ -55,7 +55,12 @@ public class StartStopServlet extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException{
 		 
 		try {			  
-			System.getProperty("rrd.home",System.getProperty("user.dir",System.getProperty("user.home"))+java.io.File.separator + "rrd.home");
+			System.getProperty("rrd.home",
+			System.getProperty("catalina.base",
+			System.getProperty("user.dir",
+			System.getProperty("user.home")))
+			+( System.getProperty("catalina.base") == null? null: "/work/Catalina/localhost/rrdsaas" )
+			+java.io.File.separator + "rrd.home");
 		
 			status.put("initShutdownHook", initShutdownHook()); 
 		} catch (Exception e) {
@@ -66,8 +71,9 @@ public class StartStopServlet extends HttpServlet {
 			log.error("RRD initShutdownHook : ", e);			
 			e.printStackTrace();
 		}	
+		if ("CollectD".equals("Enabled"))
 		if ( !isGAE()){
-			String[] arg0=new String[]{};
+				String[] arg0=new String[]{};
 			// collectd SERVER
 			status.put("collectd-SERVER", startCollectdServer(arg0) );
 			// collectd CLIENT (agent)
@@ -75,6 +81,7 @@ public class StartStopServlet extends HttpServlet {
 			// start collectd queue-worker
 			status.put("collectd-Worker", startCollectdWorker() );
 		}		
+		
 		try{
 			 
 			status.put("MrtgServer (SNMP-backend)", 	startMrtgServer()  );

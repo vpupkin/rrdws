@@ -46,11 +46,11 @@ public class AlertCaptain implements Runnable, NotificationListener {
 	private static final String TO_DO_PROPERTIES = "ToDo.properties";
 	static boolean inited = false;
 
-	public static AlertCaptain getInstance() {
+	public final static AlertCaptain getInstance() {
 		ThreadGroup groupTmp = Thread.currentThread().getThreadGroup();
 		return getInstance(groupTmp );
 	}
-	public static AlertCaptain getInstance(ThreadGroup groupTmp) {
+	public final static AlertCaptain getInstance(ThreadGroup groupTmp) {
 		if (!inited) {
 			synchronized (Thread.class) {
 				if (!inited) {
@@ -251,7 +251,7 @@ public class AlertCaptain implements Runnable, NotificationListener {
 		
 	}
 	
-	public void init(){
+	public final void init(){
 		try {
 			load();
 		} catch (TholdException e) {
@@ -259,7 +259,7 @@ public class AlertCaptain implements Runnable, NotificationListener {
 			e.printStackTrace();
 		}
 	}
-	private void load() throws TholdException{
+	private final void load() throws TholdException{
 		Cache cTmp = Manager.getCache(cacheNS);
 		Object tholdProps = cTmp.get(TO_DO_PROPERTIES); 
 		// same as at the StartStopServet.init(...)
@@ -450,8 +450,8 @@ public class AlertCaptain implements Runnable, NotificationListener {
  
 	}
 
-	static AlertCaptain myself = new AlertCaptain();
-	public Threshold unregister(Threshold activist) {
+	static final AlertCaptain myself = new AlertCaptain();
+	public final Threshold unregister(Threshold activist) {
 		try {
 			if (ToDo.indexOf(activist) > -1) {// ToDo.add(activist)
 				boolean o = unpersist(activist);
@@ -469,7 +469,7 @@ public class AlertCaptain implements Runnable, NotificationListener {
 
 	
 	
-	public Threshold unregister(CompositeAlerter activist) {
+	public final Threshold unregister(CompositeAlerter activist) {
 		Threshold retval = null;
 		for (Threshold actToDel :activist.chainOfAlerters){
 			retval = unregister(actToDel);
@@ -478,10 +478,10 @@ public class AlertCaptain implements Runnable, NotificationListener {
 	}
 	
 	
-	public Collection<Threshold> list(){
+	public final Collection<Threshold> list(){
 		return unmodifiableCollection;
 	}
-	synchronized void  syncUC() {
+	final synchronized void  syncUC() {
 		unmodifiableCollection = Collections.unmodifiableCollection(  new HashSet<Threshold>( this.ToDo ));
 		//System.out.println(unmodifiableCollection);
 	}
@@ -511,25 +511,25 @@ public class AlertCaptain implements Runnable, NotificationListener {
 	
 	public static final String cacheNS = AlertCaptain.class.getName();
 	
-	public static Threshold restoreByName(String namePar) throws TholdException{
+	public final static Threshold restoreByName(String namePar) throws TholdException{
 		Cache c = Manager.getCache(cacheNS);
  		Object storedProps = c.get(namePar+".properties");
 		Threshold outTmp = toThreshold(storedProps) ;
 		return outTmp;
 	}
 	
-	public static void storeToName(String namePar, Threshold toStorePar) throws TholdException{ 
+	public final static void storeToName(String namePar, Threshold toStorePar) throws TholdException{ 
 		Properties properties = toStorePar.toProperties();
 		String fnTmp = namePar+".properties";
 		storeToName(fnTmp, properties); 		
 	}
-	public static void storeToName(String namePar, Properties propsPar) throws TholdException{
+	public final static void storeToName(String namePar, Properties propsPar) throws TholdException{
 		Cache c = Manager.getCache(cacheNS);
  		String fnTmp = namePar.endsWith(".properties")?namePar:namePar+".properties";
 		c.put(fnTmp, propsPar); 		
 	}	
 	
-	public static Threshold toThreshold(Object thTmp) throws TholdException {
+	public final static Threshold toThreshold(Object thTmp) throws TholdException {
 		try {
 			if (thTmp instanceof Properties) {
 				Properties p = (Properties) thTmp;
@@ -561,13 +561,13 @@ public class AlertCaptain implements Runnable, NotificationListener {
 		}
 	}
 	@Override
-	public void handleNotification(Notification notification, Object handback) {
+	public final void handleNotification(Notification notification, Object handback) {
 		long ts = notification.getTimeStamp();
 		//System.out.println(""+notification+handback);
 		//log.error("#"+ts+"::"+notification+handback);
 		this.tick(ts /1000);
 	}
-	public static String toNICK(String namePar) { 
+	public final static String toNICK(String namePar) { 
 			String retval = "";
 			String accu = "";
 			String theLast = "LeaSt";

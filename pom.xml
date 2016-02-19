@@ -115,13 +115,13 @@
 			<version>0.1.9</version>
 		</dependency>
 		 -->
-		 
+		 <!-- 
 		<dependency>
 			<groupId>cc.co.llabor</groupId>
 			<artifactId>cachefs</artifactId>
 			<version>0.0.13</version>
 		</dependency>		
-		
+		 -->
 		
 		<dependency>
 			<groupId>cc.co.llabor</groupId>
@@ -450,6 +450,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
+			<scope>test</scope>  
             <version>1.5.6</version>
             
         </dependency>
@@ -566,8 +567,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.0</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 
@@ -1135,6 +1136,18 @@
 							</include> 
 						</includes>
 						<targetPath>./</targetPath>
+					</resource>
+					<resource>
+						<filtering>true</filtering>
+						<directory>
+							${basedir}/src/main/profiles
+						</directory>
+						<includes> 
+							<include>
+								net.sf.jsr107cache.CacheFactory
+							</include>
+						</includes>
+						<targetPath>${basedir}/target/${pom.artifactId}-${pom.version}/META-INF/services</targetPath>
 					</resource>
 					<resource>
 						<filtering>true</filtering>
