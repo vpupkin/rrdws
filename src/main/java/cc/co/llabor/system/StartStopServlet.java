@@ -17,6 +17,7 @@ import org.collectd.DataWorker;
 import org.jrobin.core.RrdDbPool;
 import org.jrobin.core.RrdException;
 import org.jrobin.mrtg.MrtgException;
+import org.jrobin.mrtg.server.Config;
 import org.jrobin.mrtg.server.IfDsicoverer;
 import org.jrobin.mrtg.server.Server;
 import org.slf4j.Logger;
@@ -54,14 +55,7 @@ public class StartStopServlet extends HttpServlet {
 	
 	public void init(ServletConfig config) throws ServletException{
 		 
-		try {			  
-			System.getProperty("rrd.home",
-			System.getProperty("catalina.base",
-			System.getProperty("user.dir",
-			System.getProperty("user.home")))
-			+( System.getProperty("catalina.base") == null? null: "/work/Catalina/localhost/rrdsaas" )
-			+java.io.File.separator + "rrd.home");
-		
+		try {
 			status.put("initShutdownHook", initShutdownHook()); 
 		} catch (Exception e) {
 			status.put("initShutdownHook", BROCKEN+e.getMessage());
@@ -71,7 +65,7 @@ public class StartStopServlet extends HttpServlet {
 			log.error("RRD initShutdownHook : ", e);			
 			e.printStackTrace();
 		}	
-		if ("CollectD".equals("Enabled"))
+		
 		if ( !isGAE()){
 				String[] arg0=new String[]{};
 			// collectd SERVER

@@ -28,6 +28,7 @@ import java.util.logging.Logger;
 
 import org.apache.commons.codec.EncoderException;
 import org.apache.commons.codec.net.QuotedPrintableCodec;
+import org.jrobin.mrtg.server.Config;
 
 import cc.co.llabor.cache.opt.ListenDispatcher;
 import cc.co.llabor.cache.opt.TheVeryBasicStatistics;
@@ -77,7 +78,7 @@ public class FileCache implements Cache,Serializable {
 		String baseDirName = ".filecache";
 		String namespace = toName (""+ arg0.get(NAMESPACE));
 		//System.getProperty("user.home");
-		basedir = new File(baseDirName+File.separator+namespace);
+		basedir = new File( Config.CALC_DEFAULT_WORKDIR()+File.separator+ baseDirName+File.separator+namespace);
 		if (!basedir.exists()){
 			basedir.mkdirs();
 			System.out.println("BASEDIR [" + basedir +"] creted.");

@@ -28,7 +28,7 @@ import org.jrobin.mrtg.MrtgConstants;
 
 import java.io.File;
 
-class Config implements MrtgConstants {
+public class Config implements MrtgConstants {
 	// various paths
 	public static final String DELIM = System.getProperty("file.separator");  
 	// basic File-Structure is:
@@ -41,10 +41,7 @@ class Config implements MrtgConstants {
 	public static final String CONF = "conf";
 	
 	private static String HOME_DIR  =
-			System.getProperty("rrd.home",
-			System.getProperty("catalina.base",	
-			System.getProperty("user.dir"))) 
-			+ ( System.getProperty("catalina.base") == null? null: "/work/Catalina/localhost/rrdsaas" )
+			CALC_DEFAULT_WORKDIR()
 			+DELIM + MRTG;
 
 	public static final String GRAPH_TEMPLATE_XML = "graph_template.xml";
@@ -81,6 +78,14 @@ class Config implements MrtgConstants {
 
 	static String getHomeDir() { 
 		return HOME_DIR;
+	}
+
+	public static final String CALC_DEFAULT_WORKDIR() {
+		return  System.getProperty( "rrd.home",
+				System.getProperty("catalina.base", 
+				System.getProperty("user.dir")))
+				+ (System.getProperty("catalina.base") == null ? null
+						: "/work/Catalina/localhost/rrdsaas");
 	}
 
 	static String getConfDir() {

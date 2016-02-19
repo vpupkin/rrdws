@@ -32,6 +32,8 @@ import java.io.RandomAccessFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.jrobin.mrtg.server.Config;
+
 /**
  * JRobin backend which is used to store RRD data to ordinary files on the disk. This was the
  * default factory before 1.4.0 version<p>
@@ -77,13 +79,7 @@ public class RrdFileBackend extends RrdBackend {
 	public void close() throws IOException {
 		file.close();
 	}
-	
-	static final String defaultHomeCalc(){
-		return System.getProperty("rrd.home",
-		System.getProperty("catalina.base",	
-		System.getProperty("user.dir"))) 
-		+ ( System.getProperty("catalina.base") == null? null: "/work/Catalina/localhost/rrdsaas" );
-	}
+	 
 	/**
 	 * Returns canonical path to the file on the disk.
 	 *
@@ -91,14 +87,12 @@ public class RrdFileBackend extends RrdBackend {
 	 * @return Canonical file path
 	 * @throws IOException Thrown in case of I/O error
 	 */
-	public static String getCanonicalPath(String path) throws IOException {
-
-
-		
+	public static String getCanonicalPath(String path) throws IOException { 
 		String parentTmp = "rrd.home";
 		try { 
-			parentTmp = defaultHomeCalc()  
-					+java.io.File.separator + "rrd.home";
+			parentTmp = Config.CALC_DEFAULT_WORKDIR() 
+					+java.io.File.separator 
+					+ "rrd.home";
 			if (path.startsWith( parentTmp )){
 				path = (new File(path)).getName();
 			}
