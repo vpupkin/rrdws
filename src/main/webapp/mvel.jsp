@@ -6,7 +6,6 @@
 	import="java.net.URLDecoder"%><%@page 
 	import="java.net.URLEncoder"%><%@page 
 	import="java.util.Date"%><%@page 
-	import="jmxlogger.tools.ToolBox"%><%@page 
 	import="org.mvel2.MVEL"%><%@page 
 	import="java.util.HashMap"%><%@page 
 	import="java.util.Map"%><%@page 
@@ -29,12 +28,12 @@ vars.put("names", names);
 
 //
         Map<String, Long> stats = new HashMap<String,Long>();
-        stats.put(ToolBox.KEY_EVENT_START_TIME, new Long(new Date().getTime()));
-        stats.put(ToolBox.KEY_EVENT_LOG_COUNTED, new Long(12345678));
-        stats.put(ToolBox.KEY_EVENT_LOG_COUNT_ATTEMPTED, new Long(87654321));
+//        stats.put(ToolBox.KEY_EVENT_START_TIME, new Long(new Date().getTime()));
+//        stats.put(ToolBox.KEY_EVENT_LOG_COUNTED, new Long(12345678));
+//        stats.put(ToolBox.KEY_EVENT_LOG_COUNT_ATTEMPTED, new Long(87654321));
         stats.put("INFO", new Long(12345));
         stats.put("DEBUG", new Long(1234567));
-vars.put(ToolBox.KEY_EVENT_LOG_STAT, stats);
+//vars.put(ToolBox.KEY_EVENT_LOG_STAT, stats);
 
 
 //reuse prev result if any

@@ -48,18 +48,21 @@
 		<version>2.6</version>
 	</dependency>
 	
-		<!-- JMX logging -->
+	<!-- uncomment it if you really know what you do!!! :) JMX logging 
+	
 	<dependency>
 		<groupId>jmxlogger</groupId>
 		<artifactId>jmx-logger-log4j</artifactId>
 		<version>0.3.1</version>
 	</dependency>
-		<!-- JMX logging -->
+		 
 	<dependency>
 		<groupId>jmxlogger</groupId>
 		<artifactId>jmxlogger</artifactId>
 		<version>0.3.0</version>
 	</dependency>
+	
+	-->
 	
 	<dependency>
 		<groupId>org.mvel</groupId>
