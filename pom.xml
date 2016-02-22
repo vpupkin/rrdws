@@ -449,13 +449,13 @@
 			<version>0.9.15</version>
 		</dependency>
   -->
-          <!-- lets use log4j! -->
+          <!-- lets use log4j!
+          @see http://www.slf4j.org/codes.html#StaticLoggerBinder for details 
+          -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
-			<scope>test</scope>  
-            <version>1.5.6</version>
-            
+            <version>1.5.6</version> 
         </dependency>
 		<!-- Test scope -->
 		<dependency>
