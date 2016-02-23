@@ -30,7 +30,7 @@ public class HTMLParser2TestIMG {
 			HDOC = p2.createDocument(HTML);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}
 	@Test

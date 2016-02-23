@@ -63,7 +63,7 @@ public class StartStopServlet extends HttpServlet {
 		}catch(Throwable e){
 			status.put("initShutdownHook", BROCKEN+e.getMessage());
 			log.error("RRD initShutdownHook : ", e);			
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}	
 		
 		if ( !isGAE()){
@@ -83,7 +83,7 @@ public class StartStopServlet extends HttpServlet {
 		}catch(Throwable e){
 			status.put("MrtgServer (SNMP-backend)", BROCKEN+e.getMessage());
 			log.error("MrtgServer (SNMP-backend)", e.getMessage());		
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		   
 		 
@@ -105,7 +105,7 @@ public class StartStopServlet extends HttpServlet {
 		} catch (Throwable e) {
 			status.put("AlertCaptain", BROCKEN+e.getMessage());
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		} 
 		System.out.println("................................." );
 		System.out.println("................................." );
@@ -213,7 +213,7 @@ public class StartStopServlet extends HttpServlet {
 			String strTmp = System.getProperty("mrtg4j", "true");
 			retval = Boolean.parseBoolean(strTmp );
 		}catch(Exception e){ // ignore any errors
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		return retval;
 		
@@ -231,7 +231,7 @@ public class StartStopServlet extends HttpServlet {
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();			
+			// e.  printStackTrace();			
 			throw e;
 		}
 		return SUCCESSFUL;
@@ -345,7 +345,7 @@ public class StartStopServlet extends HttpServlet {
 			Server.getInstance().stop();
 		} catch (MrtgException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		
 		try {
@@ -353,14 +353,14 @@ public class StartStopServlet extends HttpServlet {
 			AlertCaptain.getInstance(mythreads ).setAlive(false);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		
 		try {
 			clientLauncher.killProcessTree();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 
 		
@@ -368,7 +368,7 @@ public class StartStopServlet extends HttpServlet {
 			RrdKeeper.getInstance().destroy();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		
 		

@@ -94,7 +94,7 @@ public abstract class CfgReader extends LinkedList<CfgReader> {
 			cfgTmp = readFromCfg( cfgPar);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		String retval = null;   
 		//retval = cfgRepo.get(  cfgPar.getCfgName() ).get( index ).get(key);
@@ -126,7 +126,7 @@ public abstract class CfgReader extends LinkedList<CfgReader> {
 				
 			}
 		}catch(NullPointerException e){
-			//e.printStackTrace();
+			//// e.  printStackTrace();
 			//throw new IOException("EOF at line "+linecount);
 			return null;
 		}

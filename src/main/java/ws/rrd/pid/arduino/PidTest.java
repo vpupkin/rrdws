@@ -70,7 +70,7 @@ public class PidTest extends TestCase {
 				Thread.sleep(10);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				// e.  printStackTrace();
 			}
 		}
 		assertTrue("" + (Setpoint - Input), Math.abs(Setpoint - Input) < 6);

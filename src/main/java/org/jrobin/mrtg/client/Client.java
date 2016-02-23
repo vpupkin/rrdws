@@ -326,7 +326,7 @@ class Client extends JFrame {
 		try {
 			setIconImage(Resources.getImage(ICON));
 		} catch (MrtgException e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		setJMenuBar(menuBar);
 		clearUI();
@@ -374,7 +374,7 @@ class Client extends JFrame {
 			mrtgData.reload();
 			reloadData();
 		} catch (Exception e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 			clearUI();
 			handleException("Could not reload data from host", e);
 		}
@@ -389,7 +389,7 @@ class Client extends JFrame {
 				mainTree.expandRow(i);
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 			clearUI();
 			handleException("Could not reload data from host", e);
 		}

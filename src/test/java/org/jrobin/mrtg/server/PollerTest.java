@@ -56,7 +56,7 @@ public class PollerTest {
 			retvLTmp = p.getSNMPv2(numericOid);
 			fail("root of jvmMgtMIB have to throw at least NoNumberException for :"+numericOid+" == "+retvLTmp);
 		}catch(Exception e){
-			//e.printStackTrace();
+			//// e.  printStackTrace();
 			retvLTmp = p.getNextSNMPv2(numericOid);
 			
 		}
@@ -123,13 +123,13 @@ public class PollerTest {
 				try{
 					retvLTmp = p.getNextSNMPv2( numericOid);
 				}catch(Throwable e){
-	//				/e.printStackTrace();
+	//				/// e.  printStackTrace();
 					break;
 				}
 				System.out.print("");
 			}
 		}catch(Throwable e){
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 
 	}
@@ -175,13 +175,13 @@ public class PollerTest {
 				try{
 					retvLTmp = p.getNextSNMPv2(numericOid);
 				}catch(Throwable e){
-	//				/e.printStackTrace();
+	//				/// e.  printStackTrace();
 					break;
 				}
 				System.out.print("");
 			}
 		}catch(Throwable e){
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	
 	}

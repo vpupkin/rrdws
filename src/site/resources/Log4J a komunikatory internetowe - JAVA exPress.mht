@@ -190,7 +190,7 @@ Content-Transfer-Encoding: 8bit
       try {
         loginService.login(loginContext);
       } catch (Exception e) {
-        e.printStackTrace();
+        // e.  printStackTrace();
       }
     }
 </pre>
@@ -203,7 +203,7 @@ Content-Transfer-Encoding: 8bit
       try {
         messageService.sendMessage(outMessage);
       } catch (GGException e) {
-        e.printStackTrace();
+        // e.  printStackTrace();
       }
     }
 </pre>
@@ -215,7 +215,7 @@ Content-Transfer-Encoding: 8bit
         try {
           connect();
         } catch (GGException e) {
-          e.printStackTrace();
+          // e.  printStackTrace();
         }
         while (!isReady) {
 

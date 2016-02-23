@@ -92,10 +92,10 @@ public abstract class RddUpdateAlerter extends AbstractActionist {
 			init(this.rrdName + ".Thold.RRD");
 		} catch (RrdException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}
 	
@@ -132,10 +132,10 @@ public abstract class RddUpdateAlerter extends AbstractActionist {
 			this.sample.setAndUpdate("" + (timestampSec) + ":" + valTmp);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			//  e.printStackTrace();
+			//  // e.  printStackTrace();
 		} catch (RrdException e) {
 			// TODO Auto-generated catch block
-			//  e.printStackTrace();
+			//  // e.  printStackTrace();
 		}
 	} 
 	public static int ACTIVE_VALUE = 100;
@@ -162,7 +162,7 @@ public abstract class RddUpdateAlerter extends AbstractActionist {
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}
 	

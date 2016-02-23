@@ -71,7 +71,7 @@ public class   DataWorker implements Runnable{
     					Thread.sleep(100);
     				} catch (InterruptedException e) {
     					// TODO Auto-generated catch block
-    					e.printStackTrace();
+    					// e.  printStackTrace();
     				}
     			}else{
 					try {
@@ -82,7 +82,7 @@ public class   DataWorker implements Runnable{
 						queue.remove(data);
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
-						e.printStackTrace();
+						// e.  printStackTrace();
 					} finally{
 						
 					}
@@ -99,7 +99,7 @@ public class   DataWorker implements Runnable{
     					Thread.sleep(1001);
     				} catch (InterruptedException e) {
     					// TODO Auto-generated catch block
-    					e.printStackTrace();
+    					// e.  printStackTrace();
     				}
     			}
 

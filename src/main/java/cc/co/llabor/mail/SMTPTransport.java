@@ -46,7 +46,7 @@ public class SMTPTransport extends com.sun.mail.smtp.SMTPTransport{
     		host = host==null? p.getProperty("mail.smtp.host"):host;
     		//port = port== -1 ? Integer.parseInt( p.getProperty("mail.smtp.port")):port;
     	}catch(Exception e){
-    		e.printStackTrace();
+    		// e.  printStackTrace();
     	}
     	//host = host==null? p.getProperty("mail.smtp.host"):host;
     	return super.protocolConnect(host, port, user, passwd);

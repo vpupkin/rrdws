@@ -25,10 +25,10 @@ public class ServerLauncher implements Runnable {
 
 				org.collectd.mx.MBeanReceiver.main(arg0);
 			} catch (Exception e1) {
-				e1.printStackTrace();
+				//e1. printStackTrace();
 			} catch (Throwable e1) {
 				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				//e1. printStackTrace();
 			}
 		}
 

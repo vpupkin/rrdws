@@ -81,7 +81,7 @@ public class JSStore {
 				bin.reset();
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				//e1. printStackTrace();
 			} 
 			String value =  readFully((InputStream)bin);
 //			/String cacheKey = scriptURL;
@@ -91,7 +91,7 @@ public class JSStore {
 			retval  .addReffer(refPar);  
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		} 	 
 		if (objectTmp instanceof Item){ 
 			retval =(Item ) objectTmp;
@@ -110,7 +110,7 @@ public class JSStore {
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		return sb.toString();
 	}
@@ -154,7 +154,7 @@ public class JSStore {
 			// TODO Refactor for gae-cache
 			chekIn(cacheKey, jsItem);
 		}catch(Throwable e){
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		return jsItem;
 	}
@@ -181,7 +181,7 @@ public class JSStore {
 							final String cachedVTmp = ((Item) o).getValue();
 							changed = !cachedVTmp.equals(valTmp);
 						} catch (NullPointerException e) {
-							e.printStackTrace();
+							// e.  printStackTrace();
 						}
 					if (changed) {
 						scriptStore.remove(cacheKey);
@@ -233,9 +233,9 @@ public class JSStore {
 			jsValue  =  performFormatJS(cacheKey, jsValue ); 
 			jsItem.setValue( jsValue );
 		}catch(IOException e){
-			e.printStackTrace();
+			// e.  printStackTrace();
 		} catch (Throwable e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}
 
@@ -253,7 +253,7 @@ public class JSStore {
 					formattedJS = b.fire(scriptValue);
 				}catch (Exception e) {
 					// TODO: handle exception
-					e.printStackTrace();
+					// e.  printStackTrace();
 				}
 			}
 		}

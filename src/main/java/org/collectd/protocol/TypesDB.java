@@ -61,7 +61,7 @@ public class TypesDB {
                _instance.load(); 
                _instance.load(Network.getProperty("typesdb"));
             } catch (IOException e) {
-                e.printStackTrace();
+                // e.  printStackTrace();
             }
         }
         return _instance;

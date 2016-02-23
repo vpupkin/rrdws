@@ -519,7 +519,7 @@ private static final Logger log = LoggerFactory.getLogger(LServlet.class .getNam
 			value  = swapServletUrl2 + new String (Base64Coder.encode(  value.getBytes("utf-8") ));
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 			value  = swapServletUrl2 + new String (Base64Coder.encode(  value.getBytes() ));
 		}
 		return value;
@@ -539,13 +539,13 @@ private static final Logger log = LoggerFactory.getLogger(LServlet.class .getNam
 				final byte[] decodedTmp = Base64Coder.decode(charArray);
 				urlStr = ""+ new String(decodedTmp);//+decodedUrl.substring(indexOfSLASH+1);
 			}catch (Throwable e1 ){
-				e1.printStackTrace();
+				// e1. printStackTrace();
 				try {
 					String lastChanse =  checkGOTO(urlStr);
 					urlStr = lastChanse;
 				} catch (MalformedURLException e2) {
 					// TODO Auto-generated catch block
-					e2.printStackTrace();
+					// e2. printStackTrace();
 				}
 				
 			}
@@ -748,7 +748,7 @@ private static final Logger log = LoggerFactory.getLogger(LServlet.class .getNam
 					node.addChild(rootNode.getChild(1).getChild(0) );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					// e.  printStackTrace();
 				} 
 			}
 		}

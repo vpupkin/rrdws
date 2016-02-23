@@ -82,7 +82,7 @@ class Timer  implements Runnable , MrtgConstants {
 		try {
 			deviceList = Server.getInstance().getDeviceList();
 		} catch (MrtgException e1) { 
-			e1.printStackTrace();
+			// e1. printStackTrace();
 			return;
 		}
 		Debug.print("Scheduler started");
@@ -119,7 +119,9 @@ class Timer  implements Runnable , MrtgConstants {
     	this.readerTpp.kill();
 		try {
 			rrdWriter.terminate();
-		} catch (Exception e) {e.printStackTrace();		}    	
+		} catch (Exception e) {
+			// e.  printStackTrace();		}    	
+		}
     	
 		synchronized(this) {
 			notify();

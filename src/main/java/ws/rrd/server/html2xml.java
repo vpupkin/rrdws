@@ -831,7 +831,7 @@ public class html2xml {
 	   } catch (FileNotFoundException e) {
 			System.out.println("file not found");
 	   } catch (IOException e) {
-		   e.printStackTrace();
+		   // e.  printStackTrace();
 	   }
    }
 }

@@ -24,7 +24,7 @@ public class SystemOutPrintlnAction implements Action {
 					return cmdTmp;
 				} catch (ParseException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					// e.  printStackTrace();
 					return e;
 				}
 			}

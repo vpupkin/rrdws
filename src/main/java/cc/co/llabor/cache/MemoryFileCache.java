@@ -172,7 +172,7 @@ public class MemoryFileCache {
 				try {
 					cache.put(nameTmp, itemNext);
 				} catch (Throwable e) {
-					e.printStackTrace();
+					// e.  printStackTrace();
 					throw new IOException(e.getMessage());
 				}
 			}
@@ -266,7 +266,7 @@ public class MemoryFileCache {
 				 try{
 					 cache.put(nameTmp,itemNext);
 				 }catch(Throwable e){
-					 e.printStackTrace();
+					 // e.  printStackTrace();
 					 throw new IOException (e.getMessage());
 				 }
 			 }
@@ -295,7 +295,7 @@ public class MemoryFileCache {
 		} catch (NullPointerException e) {
 			initDir(dirTmp);
 		} catch (Throwable e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		return list.toArray(new String[] {});
 	}
@@ -327,7 +327,9 @@ public class MemoryFileCache {
 		int endIndex = name.length()-1;
 		try{
 			name.substring(0,name.length()-3).lastIndexOf("/");
-		}catch(Exception e){e.printStackTrace();}
+		}catch(Exception e){
+			// e.  printStackTrace();
+		}
 		Cache cache = Manager.getCache(cachename);
 		final String parentName = name.substring(beginIndex, endIndex)+"/.!";
 		Properties parent = (Properties)cache.get(parentName);

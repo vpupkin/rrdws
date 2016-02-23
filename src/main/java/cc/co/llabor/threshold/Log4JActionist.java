@@ -45,10 +45,10 @@ public class Log4JActionist extends MVELActionist{
 			System.out.println("l4j::"+rrdName);	
 		}catch (java.lang.NullPointerException e) {
 			// TODO: handle exception
-			//e.printStackTrace();
+			//// e.  printStackTrace();
 		}catch (Exception e) {
 			// TODO: handle exception
-			//e.printStackTrace();
+			//// e.  printStackTrace();
 		}
 		this.dsName = "speed";
 		this.action =  LOG4J;

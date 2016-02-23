@@ -50,7 +50,7 @@ public class Convertor {
 			RrdDb.setDefaultFactory(FACTORY_NAME);
 		}
 		catch (RrdException e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 			System.exit(-1);
 		}
 		this.files = files;

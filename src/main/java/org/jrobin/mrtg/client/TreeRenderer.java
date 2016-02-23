@@ -46,7 +46,7 @@ class TreeRenderer extends DefaultTreeCellRenderer {
 			INACTIVE_ROUTER_ICON = Resources.getImageIcon(Client.RESOURCE_PATH + "router_inactive.png");
 			INACTIVE_LINK_ICON = Resources.getImageIcon(Client.RESOURCE_PATH + "link_inactive.png");
 		} catch (MrtgException e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}
 

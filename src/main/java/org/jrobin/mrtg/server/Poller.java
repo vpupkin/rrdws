@@ -150,7 +150,7 @@ class Poller {
 					log.trace( "update2(): PduException {}", exc.getMessage());
 				} catch (SNMPBadValueException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					// e.  printStackTrace();
 				}
 
 			} else {
@@ -198,7 +198,7 @@ class Poller {
 					log.trace( "update2(): PduException {}", exc.getMessage());
 				} catch (SNMPBadValueException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					// e.  printStackTrace();
 				}
 
 			} else {
@@ -269,7 +269,7 @@ class Poller {
 				} catch (SNMPBadValueException e) {
 					System.out.println("update(): PduException "							+ e.getMessage());
 					isFinished = true;
-					e.printStackTrace();
+					// e.  printStackTrace();
 				}
 			} else {
 				isFinished = true;
@@ -617,7 +617,7 @@ class Poller {
 		}
 
 		catch (Exception e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		return map;
 	}
@@ -658,7 +658,7 @@ class Poller {
 				}
 			} catch (MibLoaderException e1) {
 				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				// e1. printStackTrace();
 
 				File file = new File(
 						"src/resources/snmp/JVM-MANAGEMENT-MIB.mib");
@@ -666,7 +666,7 @@ class Poller {
 					mib = mibloader.load(file);
 				} catch (MibLoaderException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					// e.  printStackTrace();
 				}
 			}
 			System.out.println("MIB loaded:" + mib);
@@ -707,7 +707,7 @@ class Poller {
 			OID = ((MibValueSymbol) mib.getSymbol("jvmClassesLoadedCount"))
 					.getValue().toString();
 		} catch (Exception e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		Object o = map.get(OID);
 		int retval = -1;

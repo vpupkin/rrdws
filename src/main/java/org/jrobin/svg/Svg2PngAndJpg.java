@@ -21,7 +21,7 @@ public class Svg2PngAndJpg
       //Svg2Jpg( args[0] );
       System.exit( 0 );
     } catch( Exception ex ) {
-      ex.printStackTrace();
+      // ex. printStackTrace();
       System.exit( 2 );
     }
   }

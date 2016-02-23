@@ -84,7 +84,7 @@ public class RedAndLogActionist extends CompositeAlerter {
  			AlertCaptain.storeToName(retval, props);
 		} catch (TholdException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		return retval;
 	}
@@ -141,7 +141,7 @@ public class RedAndLogActionist extends CompositeAlerter {
 			AlertCaptain.storeToName(namePar , l4Tmp);
 		} catch (TholdException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		return namePar;
 	}
@@ -162,7 +162,7 @@ public class RedAndLogActionist extends CompositeAlerter {
 			AlertCaptain .storeToName(retval, rwTmp);
 		} catch (TholdException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		return retval;
 	} 
@@ -182,7 +182,7 @@ public class RedAndLogActionist extends CompositeAlerter {
 					instance.register( theNext );
 				} catch (TholdException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					// e.  printStackTrace();
 				} 
 			}
 		}catch(Exception e){}

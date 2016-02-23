@@ -228,7 +228,7 @@ public class MBeanSender implements Dispatcher {
         	hookToVictim.stop();
         }catch (Exception e) {
 			// TODO: handle exception
-        	e.printStackTrace();
+        	// e.  printStackTrace();
 		}
         
     }

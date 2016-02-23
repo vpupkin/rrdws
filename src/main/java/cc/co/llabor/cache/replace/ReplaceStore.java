@@ -78,7 +78,7 @@ public class ReplaceStore {
 				//System.out.println(pUrl);
 			}while(pUrl.getHost()!=null);  
 		} catch (URISyntaxException e) { 
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		
 
@@ -162,7 +162,7 @@ public class ReplaceStore {
 			try{
 				o = replaceStore.remove(cacheKey);// if (o.hashCode() == jsItem.hashCode());
 			}catch(NullPointerException e){
-				e.printStackTrace();
+				// e.  printStackTrace();
 			}
 			if (1==2)System.out.println(o);
 			
@@ -170,7 +170,7 @@ public class ReplaceStore {
 			try{
 				changed = !((Properties)o).toString().equals(value.toString()) ;
 			}catch(NullPointerException e){
-				//e.printStackTrace();
+				//// e.  printStackTrace();
 			}
 			if (changed){
 				replaceStore.put(cacheKey, value );
@@ -197,7 +197,7 @@ public class ReplaceStore {
 			repTmp.load(in);  
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}
 

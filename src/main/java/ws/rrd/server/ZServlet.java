@@ -57,7 +57,7 @@ public class ZServlet extends LServlet {
 			textValue = out.toString();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		return textValue;
 	}

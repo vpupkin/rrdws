@@ -53,7 +53,7 @@ public class XPathContentHandler implements ContentHandler {
 								trim = Punycode.encode(trim);Punycode.decode(trim+"--");  
 							} catch (PunycodeException e) {
 								// TODO Auto-generated catch block
-								e.printStackTrace();
+								// e.  printStackTrace();
 							}
 							//import org.apache.geronimo.mail.util.QuotedPrintable;
 							//trim = new String(QuotedPrintable.encode( trim .getBytes()));

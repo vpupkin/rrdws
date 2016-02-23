@@ -41,7 +41,7 @@ public class LogChecker implements Runnable{
 			chTmp.interrupted = true;
 			System.out.println("-- stopped --");
 		}catch(Exception e){
-			e.printStackTrace();
+			// e.  printStackTrace();
 			System.out.println("Missing parameter!?\nUsage: java eu.blky.logparser.LogChecker fileName");
 		}
 				
@@ -86,10 +86,10 @@ public class LogChecker implements Runnable{
 		      input.close();
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			// e1. printStackTrace();
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}		      
 	}
  

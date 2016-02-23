@@ -34,15 +34,17 @@ public class ClientLauncher implements Runnable, Instrumentation {
 			try{ // in case, when it is started from Servlet-JVM
 				// -Djcd.dest=udp://239.192.74.66:25826 
 				args = System.getProperty("jcd.dest","udp://"+Network.DEFAULT_V4_ADDR+":"+Network.DEFAULT_PORT+"")+"#rrd#javalang#tomcat";
-			}catch(Exception e){e.printStackTrace();}
+			}catch(Exception e){// e.  printStackTrace();
+				 
+			}
 			Instrumentation iTmp =  this; 
 			org.collectd.mx.RemoteMBeanSender.premain(args , iTmp );
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			//e1. printStackTrace();
 		} catch (Throwable e1) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			//e1. printStackTrace();
 		}
 	}
 

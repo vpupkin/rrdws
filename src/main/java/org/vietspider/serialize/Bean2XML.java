@@ -286,7 +286,7 @@ public class Bean2XML implements XMLMapper {
         toXML(value, valueNode);
         node.getChildren().add(child);
       }catch (Exception e) {
-        e.printStackTrace();
+        // e.  printStackTrace();
       }
     }
     return length;
@@ -299,7 +299,7 @@ public class Bean2XML implements XMLMapper {
       method = reflectUtil.getGetterMethod(bean.getClass(), field);
       if(method != null) value = method.invoke(bean);
     } catch (Exception e) {
-      e.printStackTrace();
+      // e.  printStackTrace();
     }
     if(value != null)  return value;
     try {
@@ -315,7 +315,7 @@ public class Bean2XML implements XMLMapper {
       Method method = reflectUtil.getGetterMethod(bean.getClass(), field);
       if(method != null) return String.valueOf(method.invoke(bean));
     }catch (Exception e) {
-      e.printStackTrace();
+      // e.  printStackTrace();
     }
     if(type == boolean.class) return String.valueOf(field.getBoolean(bean));
     if(type == byte.class) return String.valueOf(field.getByte(bean));

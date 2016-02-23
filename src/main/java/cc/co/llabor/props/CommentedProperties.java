@@ -72,7 +72,7 @@ public class CommentedProperties extends java.util.Properties {
 				this.put(keyTmp, valTmp); 
 			}
 		}catch(Exception e){
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 
 	}

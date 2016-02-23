@@ -202,7 +202,7 @@ public class MemoryFileItem implements FileItem, Serializable {
 				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				// e.  printStackTrace();
 			}
 			
 			

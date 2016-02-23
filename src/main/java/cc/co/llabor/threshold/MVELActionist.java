@@ -70,7 +70,9 @@ public abstract class MVELActionist extends AbstractActionist {
 				Serializable exprTmp = getExpression(expression); 
 				result  = MVEL.executeExpression(exprTmp, ctx  );
 			}catch(Throwable e){
-				if (TRACE)e.printStackTrace();
+				if (TRACE){
+					// e.  printStackTrace();
+				}
 			}
 			boolean retval = false;
 			if ((result instanceof Boolean)){
@@ -111,10 +113,14 @@ public abstract class MVELActionist extends AbstractActionist {
 			ctxCache.put(thisO.rrdName , ctx);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			if (TRACE)e.printStackTrace();
+			if (TRACE){
+				// e.  printStackTrace();
+			}
 		} catch (RrdException e) {
 			// TODO Auto-generated catch block
-			if (TRACE)e.printStackTrace();
+			if (TRACE){
+				// e.  printStackTrace();
+			}
 		} 
 		return ctx;
 	} 

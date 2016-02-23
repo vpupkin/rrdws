@@ -83,7 +83,7 @@ public class SNMPv1CommunicationInterface
 			dSocket = new DatagramSocket();
 		}catch(java.net.BindException e){
 			System.out.println("java.net.BindException:"+this.port);
-			e.printStackTrace();
+			// e.  printStackTrace();
 			dSocket = new DatagramSocket();
 		}
 		dSocket.setSoTimeout(15000);	//15 seconds

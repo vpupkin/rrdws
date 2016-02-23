@@ -106,14 +106,14 @@ public class UdpReceiver implements Mortal{
     					Thread.sleep(100);
     				} catch (InterruptedException e) {
     					// TODO Auto-generated catch block
-    					e.printStackTrace();
+    					//// e.  printStackTrace();
     				}
     			}else{
     				byte[] data = queue.poll();
     				try {
 						UdpReceiver.this.parse(data);
 					} catch (IOException e) {
-						e.printStackTrace();
+						// e.  printStackTrace();
 					}catch(Throwable e){
 						_log.debug("run", e );
 					}

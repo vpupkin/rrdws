@@ -43,7 +43,7 @@ class Util {
 	}
 
 	static void error(Component parent, Exception e) {
-		e.printStackTrace();
+		// e.  printStackTrace();
 		error(parent, e.toString());
 	}
 

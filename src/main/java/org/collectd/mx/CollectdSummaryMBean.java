@@ -81,7 +81,7 @@ public class CollectdSummaryMBean extends CollectdMBean {
         try {
             return getAverage(key);
         } catch (Throwable e) {
-            e.printStackTrace();
+            // e.  printStackTrace();
             return null;
         }
     }

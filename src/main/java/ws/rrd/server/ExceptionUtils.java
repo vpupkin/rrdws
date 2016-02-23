@@ -21,7 +21,7 @@ public final class ExceptionUtils {
 
 		ByteArrayOutputStream osBytes = new ByteArrayOutputStream();
 
-		e.printStackTrace(new PrintStream(osBytes, true));
+		// e.  printStackTrace(new PrintStream(osBytes, true));
 
 		return osBytes.toString();
 	}

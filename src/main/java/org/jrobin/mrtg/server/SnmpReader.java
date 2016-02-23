@@ -172,7 +172,7 @@ class SnmpReader   {
 			log.error("deactivateLink(IOException e)" ,  e2);
 		}catch (Throwable  e2) {
 			// TODO Auto-generated catch block
-			e2.printStackTrace();
+			// e2. printStackTrace();
 			log.error("deactivateLink(IOException e)" ,  e2);
 		}
 	}

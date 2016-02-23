@@ -233,7 +233,7 @@ class GraphFrame extends JFrame {
 		try {
 			setIconImage(Resources.getImage(Client.ICON));
 		} catch (MrtgException e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		Util.centerOnScreen(this);
 	}

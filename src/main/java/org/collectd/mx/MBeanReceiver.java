@@ -68,7 +68,7 @@ public class MBeanReceiver
         try {
             setup();
         } catch (Exception e){
-            e.printStackTrace();
+            // e.  printStackTrace();
         }
     }
 
@@ -120,7 +120,7 @@ public class MBeanReceiver
 			me = new MBeanReceiver();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
     }
     

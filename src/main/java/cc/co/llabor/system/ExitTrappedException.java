@@ -27,7 +27,7 @@ public class ExitTrappedException extends SecurityException {
 			smOld = System.getSecurityManager();
 			forbidSystemExitCall(); 
 		}catch(Throwable e){
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}
 	public static void forbidSystemExitCall() {
@@ -51,7 +51,7 @@ public class ExitTrappedException extends SecurityException {
 		}catch(Throwable e){
 			String msg = e.getMessage();
 			log.warning(msg);
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}
 	public static void enableSystemExitCall() {
@@ -61,7 +61,7 @@ public class ExitTrappedException extends SecurityException {
 		}catch(Throwable e){
 			String msg = e.getMessage();
 			log.warning(msg);
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}		
 	}
 	public static boolean isReseted() {

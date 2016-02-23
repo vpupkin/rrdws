@@ -67,10 +67,10 @@ public class Config implements MrtgConstants {
 				new File(getRrdDir()).mkdirs();
 				isInited = true;
 			} catch (Exception e) {
-				e.printStackTrace();
+				// e.  printStackTrace();
 			}			
 		} catch (Exception e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 
 		

@@ -65,10 +65,10 @@ public class DrivenRrdWriter extends RddUpdateAlerter implements Threshold {
 			this.sample.setAndUpdate("" + (timestampSec) + ":" + valTmp);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			//  e.printStackTrace();
+			//  // e.  printStackTrace();
 		} catch (RrdException e) {
 			// TODO Auto-generated catch block
-			//  e.printStackTrace();
+			//  // e.  printStackTrace();
 		}
 	} 
 

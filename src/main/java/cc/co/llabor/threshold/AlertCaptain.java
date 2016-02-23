@@ -77,7 +77,7 @@ public class AlertCaptain implements Runnable, NotificationListener {
 			inited = true;
 		}catch(Throwable e){
 			if (groupTmp !=null)init(null); 
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}
 
@@ -223,7 +223,7 @@ public class AlertCaptain implements Runnable, NotificationListener {
  			AlertCaptain.storeToName(childTmp, props);
 		} catch (TholdException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}	 
 		return retval;
 	}
@@ -237,14 +237,14 @@ public class AlertCaptain implements Runnable, NotificationListener {
 				 
 			} catch (TholdException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				// e.  printStackTrace();
 			}
 			try {
 			 
 				storeWrapped( theNext);
 			} catch ( Exception e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				// e.  printStackTrace();
 			}			
 			counterTmp++;
 		}
@@ -256,7 +256,7 @@ public class AlertCaptain implements Runnable, NotificationListener {
 			load();
 		} catch (TholdException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}
 	private final void load() throws TholdException{
@@ -367,7 +367,7 @@ public class AlertCaptain implements Runnable, NotificationListener {
 			}catch(Exception e){
 				
 				// TODO ???????
-				if (1==2)e.printStackTrace();
+				if (1==2)// e.  printStackTrace();
 				unregister(activist);
 			}
 		}
@@ -421,7 +421,7 @@ public class AlertCaptain implements Runnable, NotificationListener {
 		try {
 			Thread.sleep(100);
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}
 	//Async
@@ -462,7 +462,7 @@ public class AlertCaptain implements Runnable, NotificationListener {
 					
 			}
 		} catch (Throwable e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		return null;
 	}

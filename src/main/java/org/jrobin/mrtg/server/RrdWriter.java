@@ -72,7 +72,7 @@ class RrdWriter  implements Runnable, MrtgConstants {
 					log.trace( "rrdWriter processing error", e);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block - has to react to the error and deactivate invalid SNMP-Ports.
-					e.printStackTrace();
+					// e.  printStackTrace();
 					if (e.getMessage().contains("Bad sample timestamp"))
 					try {						
 						String host = rawSample.getHost();
@@ -83,12 +83,12 @@ class RrdWriter  implements Runnable, MrtgConstants {
 						link.deactivate();
 						
 					} catch (MrtgException e1) { 
-						e1.printStackTrace();
+						// e1. printStackTrace();
 					} catch (Throwable e2) {
-						e2.printStackTrace();
+						// e2. printStackTrace();
 					}
 				} catch (Throwable e) {
-					e.printStackTrace();
+					// e.  printStackTrace();
 				}
 			}else{ // if passivated || empty queue
 				System.out.println(" store statisctiv for RddWorker....");

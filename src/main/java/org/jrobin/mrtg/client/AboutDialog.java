@@ -59,7 +59,7 @@ class AboutDialog extends JDialog {
 			box.add(Box.createVerticalStrut(GAP));
 		}
 		catch(MrtgException e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		JLabel versionLabel = new JLabel(Client.TITLE);
 		versionLabel.setHorizontalAlignment(JLabel.CENTER);

@@ -164,17 +164,17 @@ public class MailHandlerServlet extends HttpServlet {
 				    	
 				    	 
 			    	}catch(Exception e){
-			    			e.printStackTrace();
+			    			// e.  printStackTrace();
 			    			include(resp, "uploadform.html");
 			    	}
 			    }
 			} catch(FileUploadException e){	
 				resp.sendError(501, e.getMessage());
-				e.printStackTrace( resp.getWriter());
+				// e.  printStackTrace( resp.getWriter());
 				throw new IOException("Unable to handle uploaded file"); 
 			} catch(Throwable e){ 
 				resp.sendError(502, e.getMessage());
-				e.printStackTrace( resp.getWriter()); 
+				// e.  printStackTrace( resp.getWriter()); 
 			}
 			
 		}
@@ -198,7 +198,9 @@ public class MailHandlerServlet extends HttpServlet {
 				strBodyTmp += "\n";
 				log.finer(strBodyTmp);
 			}
-		}catch(Exception e){e.printStackTrace();}
+		}catch(Exception e){
+			// e.  printStackTrace();}
+		}
 		return strBodyTmp;
 		
 	}
@@ -222,7 +224,7 @@ public class MailHandlerServlet extends HttpServlet {
 			out.print( newVal );
 			out.flush();
 		} catch (IOException e) { 
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}  	
 	}
  
@@ -231,13 +233,13 @@ public class MailHandlerServlet extends HttpServlet {
 		try {
 			this.log("Init ...");
 		} catch (Throwable e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		super.init(config);
 		try {
 			log.info("init compleet");
 		} catch (Throwable e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}	
 }

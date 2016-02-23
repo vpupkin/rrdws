@@ -33,7 +33,7 @@ public class Manager {
 			 gooTmp = System.getProperty("com.google.appengine.runtime.version");
 		 }catch(Throwable e){
 			 log.warning(e.getMessage());
-			 e.printStackTrace();
+			 // e.  printStackTrace();
 		 }
 		 
 		 try{
@@ -97,17 +97,17 @@ public class Manager {
 				//java.lang.NullPointerException	 
 				 }catch(java.lang.NullPointerException e){
 					 log.severe( e.getMessage() ); 
-					 e.printStackTrace();
+					 // e.  printStackTrace();
 				 }catch(Exception e){
 					 log.severe( e.getMessage() ); 
-					 e.printStackTrace();
+					 // e.  printStackTrace();
 				 } 
 			 }else{
 				 log.info("<GAE v"+gooTmp+ " CM="+CacheManager.getInstance() +"/>");
 			 }
 		 }catch(Throwable e){
 			 log.severe(  e.getMessage() ); 
-			 e.printStackTrace();
+			 // e.  printStackTrace();
 		 }
 		 log.info("</INITCACHE>");
 	}
@@ -172,7 +172,7 @@ public class Manager {
 							
 						} catch (CacheException e) {	
 							log.severe("!"+e.getMessage());
-							e.printStackTrace();
+							// e.  printStackTrace();
 							throw new RuntimeException(e);
 						}
 					}else{
@@ -202,7 +202,7 @@ public class Manager {
 				retval = cacheTmp;
 			} catch (CacheException e) {
 				log.severe(e.getMessage());
-				e.printStackTrace();
+				// e.  printStackTrace();
 				throw new RuntimeException(e);
 			}
 		}

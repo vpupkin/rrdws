@@ -396,7 +396,7 @@ public class RrdDbPool {
 //				close();
 //			}
 //			catch (IOException e) {
-//				e.printStackTrace();
+//				// e.  printStackTrace();
 //			}
 //		}
 //	};
@@ -690,7 +690,7 @@ public class RrdDbPool {
 ////						debug("GC: closing " + rrdEntry.dump());
 //						removeRrdEntry(canonicalPath, rrdEntry);
 //					} catch (IOException e) {
-//						e.printStackTrace();
+//						// e.  printStackTrace();
 //					}
 //					notifyAll();
 //				}
@@ -700,7 +700,7 @@ public class RrdDbPool {
 //						wait();
 ////						debug("GC: running");
 //					} catch (InterruptedException e) {
-//						e.printStackTrace();
+//						// e.  printStackTrace();
 //					}
 //				}
 //			}

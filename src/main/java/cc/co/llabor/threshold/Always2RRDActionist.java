@@ -86,7 +86,7 @@ public class Always2RRDActionist extends CompositeAlerter {
  			AlertCaptain.storeToName(childTmp, props);
 		} catch (TholdException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}	 
 		return retval;
 	}
@@ -112,13 +112,13 @@ public class Always2RRDActionist extends CompositeAlerter {
 					instance.register(theNext);
 				} catch (TholdException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					// e.  printStackTrace();
 				}
 			}
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		String namePar = storeRRDWRITER(this.rrdName);
 		
@@ -126,7 +126,7 @@ public class Always2RRDActionist extends CompositeAlerter {
 			this.rrdwriter = (DrivenRrdWriter) AlertCaptain.restoreByName(namePar);
 		} catch (TholdException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 
 	}
@@ -144,7 +144,7 @@ public class Always2RRDActionist extends CompositeAlerter {
 			AlertCaptain .storeToName(retval, rwTmp);
 		} catch (TholdException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		
 		return retval;

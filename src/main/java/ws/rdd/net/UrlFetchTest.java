@@ -141,7 +141,7 @@ public class UrlFetchTest implements Serializable{
 			toFetchKey = toKey(toFetchStr);
 		} catch (PunycodeException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}			
 		if (statusTmp.indexOf("200 OK") > 0) { 
 			System_out_println("Authorisation is succesful. Store success..." + statusLine); 
@@ -511,7 +511,7 @@ public class UrlFetchTest implements Serializable{
 					} catch (IllegalArgumentException iae) {
 						// should print a warning
 						// for now just bail
-						iae.printStackTrace();
+						// e.  printStackTrace();
 						break;
 					}
 				} else {

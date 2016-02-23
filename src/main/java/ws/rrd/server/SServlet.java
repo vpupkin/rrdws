@@ -24,7 +24,7 @@ public class SServlet extends HttpServlet{ /* SCRIPT-mastering servlet*/
 		try{
 			uriTmp = uriTmp.replace(aliasURL, baseURL);
 		}catch(Throwable e){
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		System.out.println("sendback "+uriTmp+" ...");
 		
@@ -43,7 +43,7 @@ public class SServlet extends HttpServlet{ /* SCRIPT-mastering servlet*/
 				// DECODE BASE64 -> plain URL
 				refererTmp   = ""+ refererTmp   ;
 			}catch(Throwable e){
-				e.printStackTrace();
+				// e.  printStackTrace();
 			}
 			String newValue = replacerTmp.replaceByRules(uriTmp,scriptValue, refererTmp);
 			
@@ -66,7 +66,7 @@ public class SServlet extends HttpServlet{ /* SCRIPT-mastering servlet*/
 			log .trace("uriTmp -|{}", e);
 		}catch(Exception e){
 			System.out.println("NOSCRIPT in the store! URL=["+uriTmp+"]");
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}
 

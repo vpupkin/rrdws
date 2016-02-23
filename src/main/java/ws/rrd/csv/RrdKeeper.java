@@ -63,14 +63,14 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 		} catch (Exception e) { 
 			// this context will be usually initialized together or even before Logging, so 
 			//- there are no way to print something in another way! :(
-			e.printStackTrace(); 
+			// e.  printStackTrace(); 
 		}
 	}
 	static {
 		try{ 
 			me.setupHeartbeatThread();
 		}catch(Throwable e){
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		
 	}
@@ -172,14 +172,14 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 			System.out.println(""+oTmp);
 			
 		} catch (javax.management.InstanceNotFoundException e) {
-			//e.printStackTrace();
+			//// e.  printStackTrace();
 			System.err.println("ERROR unregistering!" + oName +" ------------------ ignored.");
 		}
 		try {
 			bs.registerMBean(this, oName);
 			assert bs.getObjectInstance(oName) != null : "RRDKeeper MBean is not registered";
 		} catch (InstanceAlreadyExistsException e) {
-			e.printStackTrace(); 
+			// e.  printStackTrace(); 
 		}
 		 
 	}
@@ -471,7 +471,10 @@ public class RrdKeeper extends NotificationBroadcasterSupport implements Notific
 		Pid retval = null;
 		try{
 			 retval  = new Pid (pVpid);
-		}catch(Exception e){e.printStackTrace();}
+		}catch(Exception e){
+			// e.  printStackTrace();
+			
+		}
 		
 		if (retval==null){
  

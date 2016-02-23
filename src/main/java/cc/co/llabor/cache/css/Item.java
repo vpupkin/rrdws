@@ -47,7 +47,7 @@ public class Item implements Serializable{
 			linkPar = new URL(linkPar.getProtocol() ,linkPar.getHost(), linkPar.getPort(),  linkPar.getPath() );
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e. printStackTrace();
 		}
 		// TODO - parce all possible DOC-location-modifications 
 		String encodeLink = HyperLinkUtil.encodeLink(linkPar, homeLinkPar   );

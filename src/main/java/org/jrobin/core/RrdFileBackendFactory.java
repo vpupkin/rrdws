@@ -63,7 +63,7 @@ public class RrdFileBackendFactory extends RrdBackendFactory {
 			realPath = RrdFileBackend.getCanonicalPath(path);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		return Util.fileExists(realPath);
 	}

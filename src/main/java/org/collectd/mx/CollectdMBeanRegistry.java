@@ -196,7 +196,7 @@ public class CollectdMBeanRegistry
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            // e.  printStackTrace();
         }
 
         return metrics;

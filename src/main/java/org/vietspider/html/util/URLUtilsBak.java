@@ -78,7 +78,7 @@ public class URLUtilsBak {
       query = uri.getQuery();
     }catch (URISyntaxException e) {
       if(!expire) return createURL(replaceSpace(address), link, true);
-//      e.printStackTrace();
+//      // e.  printStackTrace();
       LogService.getInstance().setMessage(e, "URLUtils 76: ");
     }catch (Exception e) {
       LogService.getInstance().setThrowable(e);
@@ -102,7 +102,7 @@ public class URLUtilsBak {
       builder.append(link);
     }catch (URISyntaxException e) {
       if(!expire) return createURL(address, replaceSpace(link), true);
-//      e.printStackTrace();
+//      // e.  printStackTrace();
       LogService.getInstance().setMessage(e, "URLUtils 99: ");
     }catch (Exception e) {
       LogService.getInstance().setThrowable(e);

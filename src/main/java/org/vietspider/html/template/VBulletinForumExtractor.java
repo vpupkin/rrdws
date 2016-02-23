@@ -114,7 +114,7 @@ public class VBulletinForumExtractor {
               int indexUser = Integer.parseInt(userPath.substring(start+3, end));
               postPath = userPath.substring(0, start) +"TD[" + String.valueOf(indexUser+1)+"]";
             } catch (Exception e) {
-              e.printStackTrace();
+              // e.  printStackTrace();
             }
           }
            

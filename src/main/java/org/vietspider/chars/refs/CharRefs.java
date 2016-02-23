@@ -328,7 +328,7 @@ final class CharRefs {
       if(idx < 0) return null;
       return charRefs[idx];
     }catch(Exception exp){
-      exp.printStackTrace();   
+      // exp. printStackTrace();   
       return null;
     }
   }

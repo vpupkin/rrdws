@@ -254,7 +254,7 @@ public class TestSNMP
 		}
 		catch(Exception e)
 		{
-			e.printStackTrace();
+			// e.  printStackTrace();
 			System.out.println("Exception during SNMP operation:  " + e + "\n");
 		}
 		

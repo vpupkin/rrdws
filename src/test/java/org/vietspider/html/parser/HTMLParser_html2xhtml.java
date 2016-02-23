@@ -46,14 +46,14 @@ public class HTMLParser_html2xhtml {
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		try {
 			HTMLParser2 p2 = new HTMLParser2();
 			HDOC = p2.createDocument(HTML);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}
 	@Test
@@ -153,7 +153,7 @@ public class HTMLParser_html2xhtml {
 			fout.close();
 
 		} catch (Exception e) {
-			e.printStackTrace();			 
+			// e.  printStackTrace();			 
 		}
 
 		XMLReader reader = XMLReaderFactory.createXMLReader();

@@ -156,20 +156,20 @@ public void setServerAddress(String addr){
 		try {
 			configure(); 
 		} catch (Throwable e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		try {
 			if (!jmxLogService.isStarted()) {
 				jmxLogService.start();
 			}
 		} catch (Throwable e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		try {
 
 			ServletListener.registerToKilling(this);
 		} catch (Throwable e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 
 	}
@@ -471,7 +471,7 @@ private MBeanServer createServerInstance(String domain) {
 			System.out.println("*************************************************************************");
 			System.out.println("*************************************************************************");
 			System.out.println("*************************************************************************");
-			e.printStackTrace();
+			// e.  printStackTrace();
 			System.out.println("*************************************************************************");
 			System.out.println("*****************************              ******************************");
 			System.out.println("***************************** error@jmxlog ******************************");

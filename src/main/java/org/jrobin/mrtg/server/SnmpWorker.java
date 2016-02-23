@@ -55,7 +55,7 @@ public class   SnmpWorker implements Runnable{
     					Thread.sleep(1001);
     				} catch (InterruptedException e) {
     					// TODO Auto-generated catch block
-    					e.printStackTrace();
+    					// e.  printStackTrace();
     				}
     			}else{ 
 						try{
@@ -66,7 +66,7 @@ public class   SnmpWorker implements Runnable{
 							queue.remove(data); 
 						}catch(Throwable e){
 							ERROR_COUNT ++;
-							e.printStackTrace();
+							// e.  printStackTrace();
 						}
     			} 
     			if (ERROR_COUNT > MAX_ERRORS_ALLOWED ){

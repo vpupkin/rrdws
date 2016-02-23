@@ -42,14 +42,14 @@ public class HTMLParser_SEARCH_Test  {
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}		
 		try {
 			HTMLParser2 p2 =  new HTMLParser2();
 			HDOC = p2.createDocument(HTML);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}	 
 	@Test

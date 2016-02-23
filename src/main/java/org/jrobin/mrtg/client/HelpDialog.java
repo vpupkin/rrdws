@@ -55,7 +55,7 @@ class HelpDialog extends JDialog {
 			textPane.setCaretPosition(0);
 		}
 		catch(MrtgException e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		JScrollPane scrollPane = new JScrollPane(textPane);
 		scrollPane.setPreferredSize(SIZE);

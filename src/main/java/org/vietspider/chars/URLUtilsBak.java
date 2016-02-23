@@ -61,7 +61,7 @@ public class URLUtilsBak {
       path = uri.getPath();
       query = uri.getQuery();
     } catch (URISyntaxException e) {
-//    e.printStackTrace();
+//    // e.  printStackTrace();
       if(SWProtocol.isHttp(address)) {
         LogService.getInstance().setMessage(e, "URLUtils 76: ");
       }
@@ -90,7 +90,7 @@ public class URLUtilsBak {
 
       builder.append(link);
     } catch (URISyntaxException e) {
-//    e.printStackTrace();
+//    // e.  printStackTrace();
       if(SWProtocol.isHttp(link)) {
         LogService.getInstance().setMessage(e, "URLUtils 99: ");
       }

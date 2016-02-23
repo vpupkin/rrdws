@@ -269,7 +269,7 @@ public class SNMPObjectIdentifier extends SNMPObject
 			digits = returnDigits;
 			
 		}catch (NumberFormatException e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 			throw new SNMPBadValueException(" Object IdentifiRr: bad string supplied for object identifier value ");
 		}
 		

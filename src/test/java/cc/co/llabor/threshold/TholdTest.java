@@ -189,7 +189,7 @@ public class TholdTest extends TestCase {
 				Thread.sleep(1111);
 			} catch (InterruptedException e1) {
 				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				//e1. printStackTrace();
 			}// setAsync
 				// Thread.yield();//setAsync
 				// capTmp.wait(1000);
@@ -228,10 +228,10 @@ public class TholdTest extends TestCase {
 			}
 			// } catch (Exception e) {//Interrupted
 			// // TODO Auto-generated catch block
-			// e.printStackTrace();
+			// // e.  printStackTrace();
 			// }catch (Throwable e) {//Interrupted
 			// // TODO Auto-generated catch block
-			// e.printStackTrace();
+			// // e.  printStackTrace();
 			// }
 		}
 	}

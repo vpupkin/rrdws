@@ -69,7 +69,7 @@ public abstract class Sender implements Dispatcher {
             write(values);
         } catch (IOException e) {
             //XXX
-            e.printStackTrace();
+            // e.  printStackTrace();
         }
     }
 
@@ -79,7 +79,7 @@ public abstract class Sender implements Dispatcher {
             write(notification);
         } catch (IOException e) {
             //XXX
-            e.printStackTrace();
+            // e.  printStackTrace();
         }
     }
 }

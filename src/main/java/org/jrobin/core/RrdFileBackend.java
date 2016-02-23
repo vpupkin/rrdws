@@ -98,7 +98,7 @@ public class RrdFileBackend extends RrdBackend {
 			}
 					
 		} catch (Exception e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 			
 		}
 		File fileTmp = new File(parentTmp, path);

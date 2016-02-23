@@ -220,7 +220,7 @@ public class NodeImpl extends HTMLNode {
 //        System.out.println(new String(getValue()));
         return;
       } catch (Exception e) {
-//        e.printStackTrace();
+//        // e.  printStackTrace();
       }
     }
     this.value = chars;
@@ -384,7 +384,7 @@ public StringBuilder builXHTML(StringBuilder builder, int LEVEL) {
 					   suffixTmp;
 		}catch(java.lang.StringIndexOutOfBoundsException e){
 			System.out.println("!!!!!!!!!"+cutStart+">>>"+cutEnd+">>>"+startUp);
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		builder.append(startUp);
 		builder.append('>');

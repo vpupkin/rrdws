@@ -43,7 +43,7 @@ public class Beauty {
 			cssScript = new String(buf);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}
 	private static long jsInBytes = 0;

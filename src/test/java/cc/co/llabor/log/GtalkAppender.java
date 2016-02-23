@@ -75,7 +75,7 @@ public class GtalkAppender extends AppenderSkeleton {
         try {
           connection.connect();
         } catch (XMPPException ex) {
-        	ex.printStackTrace();
+        	// ex. printStackTrace();
         }
         while (!connection.isConnected()) {
         	try {
@@ -85,10 +85,10 @@ public class GtalkAppender extends AppenderSkeleton {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				// e.  printStackTrace();
 			} catch (XMPPException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				// e.  printStackTrace();
 			}
         }
         isFirst = !isFirst;

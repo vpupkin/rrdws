@@ -43,7 +43,7 @@ public class CollectDTest extends TestCase{
 			assertTrue(out, out.indexOf("rrdtool update X-779976225.rrd 1301583247:3.5815424E7")>0);
  
 		}catch(Exception e){
-			e.printStackTrace();
+			// e.  printStackTrace();
 			assertTrue(a.toString(), e instanceof ArrayIndexOutOfBoundsException);
 		}
 	}
@@ -64,7 +64,7 @@ public class CollectDTest extends TestCase{
 			assertTrue(out, out.indexOf("rrdtool update X-779614068.rrd 1302694515:1.5527576E7")>0);
 			assertTrue(out, out.indexOf("rrdtool update X1191353274.rrd 1302694515:2.5952256E8")>0);
 		}catch(Exception e){
-			e.printStackTrace();
+			// e.  printStackTrace();
 			assertTrue(a.toString(), e instanceof ArrayIndexOutOfBoundsException);
 		}
 	}

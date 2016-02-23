@@ -66,7 +66,7 @@ public class TextLineIterator {
 				perform (a, xpath, timestamp ,data );
 				
 			}catch(Exception e){
-				//e.printStackTrace();
+				//// e.  printStackTrace();
 				log.warn( "perform sample exception:{} at line #"+lineCounter+". {} ", e , line );
 				//throw new ArrayIndexOutOfBoundsException(lineCounter);
 			}

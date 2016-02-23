@@ -67,7 +67,7 @@ public abstract class Cfg implements Cloneable{
 			 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		return retval;
 	}

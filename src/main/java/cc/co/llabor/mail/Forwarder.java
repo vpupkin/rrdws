@@ -126,10 +126,10 @@ public class Forwarder {
             Transport.send(msg);	
         } catch (UnsupportedEncodingException e) {
         	log.throwing(this.getClass().getName(), "doPost", e); 
-			e.printStackTrace();
+			// e.  printStackTrace();
 		} catch (MessagingException e) { 
 			log.throwing(this.getClass().getName(), "doPost", e);
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}finally{
 			System.out.println("eOf"+strTo+strToMemo+strFrom+strFromMemo+strSubject+strBody);
         } 
@@ -199,16 +199,16 @@ public class Forwarder {
 			
 		} catch (UnsupportedEncodingException e) { 
 			log.throwing(this.getClass().getName(), "doPost", e);
-			e.printStackTrace();
+			// e.  printStackTrace();
 		} catch (MessagingException e) { 
 			log.throwing(this.getClass().getName(), "doPost", e);
-			e.printStackTrace();
+			// e.  printStackTrace();
 		} catch (Exception e) { 
 			log.throwing(this.getClass().getName(), "doPost", e);
-			e.printStackTrace();
+			// e.  printStackTrace();
 		} catch (Throwable e) { 
 			log.throwing(this.getClass().getName(), "doPost", e);
-			e.printStackTrace();
+			// e.  printStackTrace();
 		} finally { // session.getTransport("smtp")// OK!!! :
 					// session.getTransport("smtp")
 			log.warning("--------------------eOf" + strTo + "|" + strToMemo
@@ -309,12 +309,12 @@ public class Forwarder {
 
                        Transport.send(msg);
                } catch (AddressException e) {
-                       e.printStackTrace();
+                       // e.  printStackTrace();
                } catch (MessagingException e) {
-                       e.printStackTrace();
+                       // e.  printStackTrace();
                        // c.sep("sfe: "+e.getInvalidAddresses()[0].toString());
                } catch (UnsupportedEncodingException e) { 
-                       e.printStackTrace();
+                       // e.  printStackTrace();
                }
        } 		
 	
@@ -360,12 +360,12 @@ public class Forwarder {
 
                        Transport.send(msg);
                } catch (AddressException e) {
-                       e.printStackTrace();
+                       // e.  printStackTrace();
                } catch (MessagingException e) {
-                       e.printStackTrace();
+                       // e.  printStackTrace();
                        // c.sep("sfe: "+e.getInvalidAddresses()[0].toString());
                } catch (UnsupportedEncodingException e) { 
-                       e.printStackTrace();
+                       // e.  printStackTrace();
                }
        } 		
  

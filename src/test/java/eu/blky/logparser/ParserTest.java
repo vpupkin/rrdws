@@ -69,7 +69,7 @@ public class ParserTest extends TestCase {
 				System.out.println(e);
 			}
 		}catch(IOException e){
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		
 	}
@@ -103,7 +103,7 @@ public class ParserTest extends TestCase {
 				
 			}
 		}catch(IOException e){
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 		System.out.println(ln);
 		Set<String> set = EventLog.getUaSet();

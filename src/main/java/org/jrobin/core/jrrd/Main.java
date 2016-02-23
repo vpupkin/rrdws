@@ -27,7 +27,7 @@ public class Main {
 			rrd = new RRDatabase(rrdFile);
 			chunk = rrd.getData(ConsolidationFunctionType.AVERAGE);
 		} catch (Exception e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 
 			return;
 		}
@@ -40,7 +40,7 @@ public class Main {
 		try {
 			rrd.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			// e.  printStackTrace();
 		}
 	}
 
