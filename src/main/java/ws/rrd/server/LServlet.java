@@ -771,6 +771,7 @@ public class LServlet extends HttpServlet {
 		.replace("url(", "url  (    "+SwapServletUrl.replace("/l/",undescoredProtocol(urlStr))+stripFileName(  stripProtocol(urlStr)))
 		;
 		xCSS = xCSS.replace(" url  (    http", "url(http");
+		xCSS = xCSS.replace("hTtPs://http://localhost","HTTP://lOcAlHoSt"); 
 		return xCSS;
 	}
 

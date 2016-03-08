@@ -471,6 +471,13 @@
 			GAE libraries for local testing as described here:
 			http://code.google.com/appengine/docs/java/howto/unittesting.html
 		-->
+<dependency>
+	<groupId>com.google.appengine</groupId>
+	<artifactId>appengine-api-1.0-sdk</artifactId>
+	<version>1.6.2.1</version>
+</dependency>
+		
+		
 		<dependency>
 			<groupId>com.google.appengine</groupId>
 			<artifactId>appengine-api-labs</artifactId>
@@ -964,7 +971,7 @@
 				</property>
 			</activation>
 			<properties>
-		  		<gae.api.scope>provided</gae.api.scope>
+		  		<gae.api.scope>compile</gae.api.scope>
 				<gae.application.version>xxx</gae.application.version>
 			</properties>
 			<build> 

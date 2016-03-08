@@ -1,13 +1,17 @@
 package ws.rdd.net;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import gnu.inet.encoding.Punycode;
 import gnu.inet.encoding.PunycodeException;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -25,6 +29,7 @@ import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.ProtocolVersion;
 import org.apache.http.StatusLine;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -38,6 +43,9 @@ import org.apache.http.conn.scheme.PlainSocketFactory;
 import org.apache.http.conn.scheme.Scheme;
 import org.apache.http.conn.scheme.SchemeRegistry;
 import org.apache.http.conn.ssl.SSLSocketFactory; 
+import org.apache.http.entity.AbstractHttpEntity;
+import org.apache.http.entity.ByteArrayEntity;
+import org.apache.http.entity.InputStreamEntity;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntity;
 import org.apache.http.entity.mime.content.ContentBody;
@@ -47,6 +55,7 @@ import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
 import org.apache.http.message.BasicHttpResponse;
+import org.apache.http.message.BasicStatusLine;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpParams;
 import org.esxx.js.protocol.GAEConnectionManager;
@@ -141,7 +150,7 @@ public class UrlFetchTest implements Serializable{
 			toFetchKey = toKey(toFetchStr);
 		} catch (PunycodeException e) {
 			// TODO Auto-generated catch block
-			// e.  printStackTrace();
+			e.printStackTrace();
 		}			
 		if (statusTmp.indexOf("200 OK") > 0) { 
 			System_out_println("Authorisation is succesful. Store success..." + statusLine); 
@@ -308,12 +317,35 @@ public class UrlFetchTest implements Serializable{
 			
 		}
 		
-		System.out.println(fetchUrl);
-		HttpResponse respTmp = httpClient.execute(m);
-			
-		
-		respTmp = makeAuth(toFetchStr, httpClient, m, respTmp);
-		this.parseCookies(m, respTmp);
+		System.out.println("try to fetch:["+fetchUrl+"]..");
+		HttpResponse respTmp = null;
+		try{
+			 respTmp = httpClient.execute(m); 
+			respTmp = makeAuth(toFetchStr, httpClient, m, respTmp);
+			this.parseCookies(m, respTmp);
+		}catch(Exception e){
+			e.printStackTrace(); 
+	        URL oracle = new URL(toFetchStr);
+	        InputStream instream = oracle.openStream(); 
+			int statusCode = 200;
+			ProtocolVersion version = new ProtocolVersion(oracle.getProtocol(), 1, 1);
+			String reasonPhrase = "oracle url fetcher";
+			StatusLine statusline = new BasicStatusLine(version, statusCode, reasonPhrase );
+			respTmp = new BasicHttpResponse(statusline );
+			ByteArrayOutputStream buf = new ByteArrayOutputStream();
+			  
+
+	        byte[] b= new byte[1024]; 
+	         
+	        for (int readedTmp = instream.read(b); readedTmp > 0;  readedTmp = instream.read(b)){ 
+	        	buf.write(b, 0, readedTmp )  ;
+	        }		
+	        instream.close();
+			HttpEntity data = new ByteArrayEntity(buf.toByteArray());
+			((AbstractHttpEntity)data).setContentType("image/jpeg");
+//			((AbstractHttpEntity)data).setContentEncoding( "image/jpeg");
+			respTmp.setEntity(data ); 
+		}
 		return respTmp;
 	}
 
@@ -511,7 +543,7 @@ public class UrlFetchTest implements Serializable{
 					} catch (IllegalArgumentException iae) {
 						// should print a warning
 						// for now just bail
-						// e.  printStackTrace();
+						iae.printStackTrace();
 						break;
 					}
 				} else {

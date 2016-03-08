@@ -1,3 +1,19 @@
+<script>
+var original_createElement = document.createElement;
+var carantin = [];
+document.createElement = function (tag) {
+  if ("script" == tag)	{
+	alert("WTF!?"+tag); 
+	console.log("carantined:"+tag);
+	var newWTF = original_createElement.call(document, "pre id='wtf'");
+	carantin.push (newWTF);
+	return newWTF;
+  }else{ 
+	  // Do something
+  	return original_createElement.call(document, tag);
+  }
+};
+</script>
 <script src="B8b8B8Bbbb888B/AI/jquery.js" type="text/javascript"></script>
 <script src="B8b8B8Bbbb888B/AI/ai.js" type="text/javascript"></script>
 <script type="text/javascript">
