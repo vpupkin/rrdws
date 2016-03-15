@@ -1,0 +1,106 @@
+<html>
+<head><title>Realtime JavaScript Evaluator</title></head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+
+<script language="JavaScript" type="text/javascript">
+
+var timer;
+var buffer = "";
+
+function evalSwitchClicked(e) {
+    if (e.checked) {
+        evalStart();
+    } else {
+        evalStop();
+    }
+}
+
+function evalStart() {
+    var o = document.getElementById("eval_time");
+    timer = setTimeout(timerHandler, o.value);
+}
+
+function evalStop() {
+    clearTimeout(timer);
+}
+
+function timerHandler() {
+    clearTimeout(timer);
+    var sw = document.getElementById("eval_switch");
+    if (sw.checked) {
+        evalOnce();
+        evalStart();
+    }
+}
+
+function evalOnce() {
+    try {
+        var code = document.getElementById("code").value;
+        var result = eval(code);
+        buffer += result;
+        flush();
+    } catch (ex) {
+        buffer = ex;
+        flush();
+    }
+}
+
+function clear()  {
+    var out = document.getElementById("out");
+    out.value = "";
+}
+
+function print(str)  {
+    buffer += str + "\n";
+}
+
+function flush()  {
+    var out = document.getElementById("out");
+    out.value = buffer;
+    buffer = "";
+}
+
+</script>
+<body>
+<h1>Realtime JavaScript Evaluator</h1>
+
+<form>
+
+<p>
+eval <input type="checkbox" id="eval_switch" onClick="evalSwitchClicked(this)">
+<input type="text" id="eval_time" size="6" value="200"> ms
+<input type="button" value="only once" onClick="evalOnce();">
+</p>
+<textarea id="code" rows="20" cols="50">print(new Date());
+print(new Date().getTime());
+Math.random();
+</textarea>
+
+<textarea id="out" rows="20" cols="50"></textarea>
+
+</form> 
+
+<div id="test"></div>
+
+<div class="examplecode">
+<h2>Example Code</h2>
+
+<p>Copy & paste to the above left text area, and check 'eval'.</p>
+
+<textarea name="example" rows="20" cols="80">
+// Regular expression editor
+var pat = /.+/;
+"abc\ndef".match(pat);
+
+// Selection 
+var textarea = document.getElementById("code");
+textarea.selectionStart + ":" + textarea.selectionEnd;
+
+</textarea>
+
+</div>
+
+</body>
+</html>
+
+
