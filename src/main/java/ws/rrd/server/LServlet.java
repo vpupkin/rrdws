@@ -2,6 +2,8 @@ package ws.rrd.server;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream; 
 import java.io.PrintWriter; 
@@ -18,7 +20,7 @@ import java.util.HashMap;
 import java.util.List; 
 import java.util.Map;  
 import java.util.zip.GZIPInputStream;
- 
+
 import javax.servlet.ServletOutputStream; 
 import javax.servlet.http.*;
 
@@ -40,12 +42,13 @@ import org.vietspider.token.attribute.Attribute;
 import cc.co.llabor.cache.css.CSStore;
 import cc.co.llabor.cache.js.Item;
 import cc.co.llabor.cache.js.JSStore;
+import cc.co.llabor.script.Beauty;
 import cc.co.llabor.system.ExitTrappedException;
-
 import cc.co.llabor.cache.Manager;
 import cc.co.llabor.cache.MemoryFileItem;
 import cc.co.llabor.cache.MemoryFileItemFactory;
-
+import eu.blky.css.BaseURLRegexpReplacer;
+import eu.blky.css.ReplacerException;
 import ws.rdd.net.UrlFetchTest;  
 
 @SuppressWarnings("serial")
@@ -750,29 +753,41 @@ public class LServlet extends HttpServlet {
 			String contextTypeStr) {
 		 cacheIt(urlStr, getCache() , bytesTmp, contextTypeStr);
 	}
-	public static String justifyCSS(String urlStr, String cssInPar) {// , ByteArrayOutputStream oaos
-		String xCSS;
-		String lBAK_GIF = "URL (/l.gif?";
-		String FSservletURL = "url ( hTtP://"+SwapServletUrl.replace("/l/","/F/h_t_t_p_://");
-		String FSSservletURL = "url  ( hTtPs://"+SwapServletUrl.replace("/l/","/F/h_t_t_p_s_://");
-		
-		// ROOT OF SERVER
-		xCSS = cssInPar.replace("url(/", lBAK_GIF)
-		.replace("url (/", lBAK_GIF)
-		.replace("URL(/", lBAK_GIF)
-		.replace("Url(/", lBAK_GIF)
-		.replace("url ( /", lBAK_GIF)
-		.replace(lBAK_GIF, FSservletURL ) //.replace(lBAK_GIF, "url(/l.gif?")
-		// ABSOLUTE-ref like: 
-		// url(http://maps.gstatic.com
-		.replace("url(http://", FSservletURL)
-		.replace("url(https://", FSSservletURL)
-		// 	rel-ref from './'	
-		.replace("url(", "url  (    "+SwapServletUrl.replace("/l/",undescoredProtocol(urlStr))+stripFileName(  stripProtocol(urlStr)))
-		;
-		xCSS = xCSS.replace(" url  (    http", "url(http");
-		xCSS = xCSS.replace("hTtPs://http://localhost","HTTP://lOcAlHoSt"); 
-		return xCSS;
+//	public static String justifyCSS(String urlStr, String cssInPar) {// , ByteArrayOutputStream oaos
+//		String xCSS;
+//		String lBAK_GIF = "URL (/l.gif?";
+//		String FSservletURL = "url ( hTtP://"+SwapServletUrl.replace("/l/","/F/h_t_t_p_://");
+//		String FSSservletURL = "url  ( hTtPs://"+SwapServletUrl.replace("/l/","/F/h_t_t_p_s_://");
+//		//(new FileWriter(File.createTempFile("inPUT", "css"))).write(cssInPar);
+//		// ROOT OF SERVER
+//		xCSS = cssInPar.replace("url(/", lBAK_GIF)
+//		.replace("url (/", lBAK_GIF)
+//		.replace("URL(/", lBAK_GIF)
+//		.replace("Url(/", lBAK_GIF)
+//		.replace("url ( /", lBAK_GIF)
+//		.replace(lBAK_GIF, FSservletURL ) //.replace(lBAK_GIF, "url(/l.gif?")
+//		// ABSOLUTE-ref like: 
+//		// url(http://maps.gstatic.com
+//		.replace("url(http://", FSservletURL)
+//		.replace("url(https://", FSSservletURL)
+//		// 	rel-ref from './'	
+//		.replace("url(", "url  (    "+SwapServletUrl.replace("/l/",undescoredProtocol(urlStr))+stripFileName(  stripProtocol(urlStr)))
+//		;
+//		xCSS = xCSS.replace(" url  (    http", "url(http");
+//		xCSS = xCSS.replace("hTtPs://http://localhost","HTTP://lOcAlHoSt");  //(new FileWriter(File.createTempFile("IN_PUT", "css"))).write( (new Beauty()).cleanCSS(  cssInPar ));
+//		return xCSS; //(new FileWriter(File.createTempFile("outPUT", "css"))).write( (new Beauty()).cleanCSS(  xCSS ));
+//	}
+	public static String justifyCSS(String baseUrlPar, String cssInPar){
+		BaseURLRegexpReplacer repl = new BaseURLRegexpReplacer("  url  ( \'%1$2s\' )", baseUrlPar  );
+		String cssTmp = cssInPar;//outTmp.toString();//readAll(this.getClass().getPackage().getName().replace(".", "/")+"/css_with_urls.css");
+		String retval = cssTmp ;
+	    try {
+			retval = repl.replaceAll(BaseURLRegexpReplacer.URL_PATTERN,  retval );
+		} catch (ReplacerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    return retval;
 	}
 
 	private static String undescoredProtocol(String urlStr) {

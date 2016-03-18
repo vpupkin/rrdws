@@ -75,7 +75,14 @@ public class Beauty {
 	        return retval;
 	}
 	
-	
+	/**
+	 * almost easiesy way to beautify the CSS - format it by JS-Engine-Call ;)  
+	 * 
+	 * @param styleIn
+	 * @return
+	 * @throws IOException
+	 * @throws ScriptException
+	 */
 	public  String fireCSS(String styleIn) throws IOException, ScriptException{
 		
 		String retval = "";
