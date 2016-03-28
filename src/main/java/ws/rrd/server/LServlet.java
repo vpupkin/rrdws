@@ -778,8 +778,9 @@ public class LServlet extends HttpServlet {
 //		return xCSS; //(new FileWriter(File.createTempFile("outPUT", "css"))).write( (new Beauty()).cleanCSS(  xCSS ));
 //	}
 	public static String justifyCSS(String baseUrlPar, String cssInPar){
-		BaseURLRegexpReplacer repl = new BaseURLRegexpReplacer("  url  ( \'%1$2s\' )", baseUrlPar  );
-		String cssTmp = cssInPar;//outTmp.toString();//readAll(this.getClass().getPackage().getName().replace(".", "/")+"/css_with_urls.css");
+		// 1st pass:  url("xxx.css") >> url ( 'http://base.host.srv/css/xxx.css" )
+		BaseURLRegexpReplacer repl = new BaseURLRegexpReplacer("  url  ( \'%1$2s\' )", baseUrlPar ); 
+		String cssTmp = cssInPar; 
 		String retval = cssTmp ;
 	    try {
 			retval = repl.replaceAll(BaseURLRegexpReplacer.URL_PATTERN,  retval );
@@ -787,6 +788,18 @@ public class LServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	    // 2nd pass: url ( 'http://base.host.srv/css/xxx.css" ) >>> URL ('https://swap-host-server.name/F/h_t_t_p_s_://base.host.srv/css/xxx.css')
+	    String u_Tmp_u = SwapServletUrl.replace("/l/",undescoredProtocol(baseUrlPar));
+		String strippedTmp  = stripFileName(  stripProtocol(baseUrlPar));
+		BaseURLRegexpReplacer repl2 = new BaseURLRegexpReplacer("url(\'" +u_Tmp_u+ "%1$2s\')", strippedTmp  ); 
+	    try {
+			retval = repl2.replaceAll(BaseURLRegexpReplacer.URL_PATTERN,  retval );
+		} catch (ReplacerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+	    retval = retval.replace("F/h_t_t_p_s_://https://", "F/h_t_t_p_s_://");
+	    retval = retval.replace("F/h_t_t_p_://http://", "F/h_t_t_p_://");
 	    return retval;
 	}
 
