@@ -1,0 +1,267 @@
+@import url("http://www.domain.com/cross/css/external-style.css?STA=sd31&JSEID=0xCafeBabe");
+
+	/**
+	http://www.cssnewbie.com/css-import-rule/#.VuAK00Kwe1E
+	TODO  ::@import "mystyle.css";
+	**/
+	@import url('../../../../css/layout.css?a=asdfjuh&&&b=&csdfadf%23423,,,///...///.././/../../sadfasfdppq.xaa.css)'  )
+	@import url('../../..\../css/layout.css'  )
+	@import url('../../../../css/layout.css'  )
+	@import  url ( '../crAZyDir/../crAZyDir/../crAZyDir/../../crAZyDir/../crAZyDir/c../crAZyDir/../crAZyD../crAZyDir/ir/rAZyDir/../crAZyDir/../crAZyDir/../../../../../../css/layout.css'  )
+	@import  url ( '../crAZyDir/../../css/layout.css'  )
+	@import  url("mystyle.css");
+	@import url  ( '/css/typography.css');
+	@import url('/css/layout.css'  );
+	@import url("/css/color.css");
+	/* All three CSS files above will be loaded from
+	   this single document. */   
+	  @import   url (      '/css/header.css') screen;
+	@import url(' css/content.css') screen;
+	@import url('..css/sidebar.css') screen;
+	@import url('../css/print.css') print;
+	@import url('../../css/print.css') print;
+	@import url('http://do.main/css/print.css') print;
+	@import url('hTTpS://do.main/css/print.css') print;
+	
+	
+	/*
+	http://stackoverflow.com/questions/4872592/multiple-font-face-in-css
+	*/
+	@font-face {
+	  font-family: 'Bumble Bee';
+	  src: url('bumblebee-webfont.eot');
+	  src: local('☺'), 
+	       url('bumblebee-webfont.woff') format('woff'), 
+	       url('bumblebee-webfont.ttf') format('truetype'), 
+	       url('bumblebee-webfont.svg#webfontg8dbVmxj') format('svg');
+	}
+	
+	@font-face {
+	  font-family: 'GestaReFogular';
+	  src: url('gestareg-webfont.eot');
+	  src: local('☺'), 
+	       url('gestareg-webfont.woff') format('woff'), 
+	       url('gestareg-webfont.ttf') format('truetype'), 
+	       url('gestareg-webfont.svg#webfontg8dbVmxj') format('svg');
+	}
+	
+	body {
+	  background: #fff url(../images/body-bg-corporate.gif) repeat-x;
+	  padding-bottom: 10px;
+	  font-family: 'GestaRegular', Arial, Helvetica, sans-serif;
+	}
+	
+	h1 {
+	  font-family: "Bumble Bee", "Times New Roman", Georgia, Serif;
+	}
+	
+	/*
+	view-source:https://dl.dropboxusercontent.com/u/39519/webfontsdemo/index.html
+	*/
+	
+	body {	font-family:"Lucida Grande",Verdana, Arial, Helvetica, sans-serif;	font-size:14px;	}
+	#wrapper { 	width:800px; 	margin:40px;}
+	a {    color:#CC0000; }
+	.fontdesc {   border-bottom:1px solid; 	margin:0;	padding:0;}
+	.example { font-size: 40px; margin-bottom: 30px; 	color:#999; 	  white-space: pre; margin-top: -10px;}
+	.example:hover {   	text-shadow: #ccc 2px 2px 5px;	color:#E20074;}
+	
+	
+	
+	@font-face {
+	    font-family: bulletproof;
+	    src: url('fonts/yanone.eot');    
+	    src: local('Yanone'), url('fonts/yanone.ttf') format("truetype");
+	}
+	.bulletproof {
+	  font-family:bulletproof,Verdana, Arial, Helvetica, sans-serif;
+	}
+	
+	
+	/* no quotes on local */
+	@font-face {
+	    font-family: bulletproofnoquotes;
+	    src: url('fonts/yanone.eot');    
+	    src: local(Yanone), url('fonts/yanone.ttf') format("truetype");
+	}
+	.bulletproofnoquotes {
+	  font-family:bulletproofnoquotes,Verdana, Arial, Helvetica, sans-serif;
+	}
+	
+	
+	
+	@font-face{
+	  font-family:mobulletproofer;
+	  src:url(fonts/yanone.eot);
+	}
+	@font-face { 
+	  font-family:mobulletproofer;
+	  src:url(//:) format("No-IE-404"),url(fonts/yanone.ttf) format("truetype");
+	}
+	.mobulletproofer {
+	  font-family:mobulletproofer,Verdana, Arial, Helvetica, sans-serif;
+	}
+	
+	
+	
+	
+	
+	/* no quotes on url */
+	@font-face {
+	    font-family: bulletproofnoquotes2;
+	    src: url('fonts/yanone.eot');    
+	    src: local('Yanone'), url(fonts/yanone.ttf) format("truetype");
+	}
+	.bulletproofnoquotes2 {
+	  font-family:bulletproofnoquotes2,Verdana, Arial, Helvetica, sans-serif;
+	}
+	
+	
+	
+	
+	/* no format */
+	@font-face {
+	    font-family: noformat;
+	    src: url(fonts/yanone.eot);    
+	    src: local('Yanone'), url(fonts/yanone.ttf);
+	}
+	.noformat {
+	  font-family:noformat,Verdana, Arial, Helvetica, sans-serif;
+	}
+	
+	
+	/* local reference if its installed */
+	@font-face {
+	    font-family: localref;
+	    src: url(fonts/yanone.eot);    
+	    src: local('Yanone Tagesschrift'), url(fonts/nottherealpath.ttf) format('truetype');
+	}
+	.localref {
+	  font-family:localref,Verdana, Arial, Helvetica, sans-serif;
+	}
+	
+	
+	
+	
+	@font-face {
+	    font-family: basic;
+	    src: local(Yanone), url('fonts/yanone.ttf') format("truetype");
+	}
+	.basic {
+	  font-family:basic,Verdana, Arial, Helvetica, sans-serif;
+	}
+	
+	
+	
+	/* only the eot */
+	@font-face {
+	    font-family: onlyeot;
+	    src: url('fonts/yanone.eot');    
+	}
+	.onlyeot {
+	  font-family:onlyeot,Verdana, Arial, Helvetica, sans-serif;
+	}
+	
+	
+	/* smiley bulletproof */
+	@font-face {
+	    font-family: bulletproofsmiley;
+	    src: url('fonts/yanone.eot');    
+	    src: local('☺'), url('fonts/yanone.ttf') format("truetype");
+	}
+	.bulletproofsmiley {
+	  font-family:bulletproofsmiley,Verdana, Arial, Helvetica, sans-serif;
+	}
+	
+	
+	
+	/* cross domain */
+	@font-face {
+	    font-family: crossdomain;
+	    src: url('http://paulirish.com/tagesschrift.eot');    
+	    src: local('☺'), url('http://paulirish.com/tagesschrift.ttf') format("truetype");
+	}
+	.crossdomain {
+	  font-family:crossdomain,Verdana, Arial, Helvetica, sans-serif;
+	}
+	
+	
+	
+	
+	
+	@media screen and (max-device-width: 480px) {
+	
+	 body { background: papayawhip;}
+	 
+	    @font-face {
+	        font-family: bulletproofsmiley;   
+	        src: url('fonts/yanone.ttf') format("truetype");
+	    }
+	
+	}
+	product-row {
+		background: #ABC123;
+		border: 1px black solid;
+		border: none;
+		background: url(http://www.domain.com/img/jpg/image.jpg);
+	}
+	  product2-row {
+		background: #ABC123;
+		border: 1px black solid;
+		border: none;
+		background: url('http://www.domain.com/img/jpg/image.jpg');
+	}
+	  product2-row {
+		background: #ABC123;
+		border: 1px black solid;
+		border: none;
+		background: url("http://www.domain.com/img/jpg/image.jpg");
+	}
+	  product2-row {
+		background: #ABC123;
+		border: 1px black solid;
+		border: none;
+		background: url('image.jpg');
+	}
+	  product2-row {
+		background: #ABC123;
+		border: 1px black solid;
+		border: none;
+		background: url('some/dirto/image.jpg');
+	}
+	  product2-row {
+		background: #ABC123;
+		border: 1px black solid;
+		border: none;
+		background: url(../../relative/dir/to/image.jpg);
+	}
+	  product2-row {
+		background: #ABC123;
+		border: 1px black solid;
+		border: none;
+		background: url('../../relative/dir/to/image.jpg');
+	}
+	  product2-row {
+		background: #ABC123;
+		border: 1px black solid;
+		border: none;
+		background: url(´../../relative/dir/to/image.jpg´);
+	}
+	  product2-row {
+		background: #ABC123;
+		border: 1px black solid;
+		border: none;
+		background: url('../../relative/dir/to/image.jpg´);
+	}
+	  product2-row {
+		background: #ABC123;
+		border: 1px black solid;
+		border: none;
+		background: url(´../../relative/dir/to/image.jpg');
+	}
+	  product2-row {
+		background: #ABC123;
+		border: 1px black solid;
+		border: none;
+		background: url(/absolute/path/from/root/of/www.domain.com/to/image.jpg);
+	}
