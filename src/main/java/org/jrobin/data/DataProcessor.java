@@ -692,6 +692,7 @@ public class DataProcessor implements ConsolFuns {
 					req.setFilter(dsNames);
 					FetchData data = req.fetchData();
 					defSources[i].setFetchData(data);
+					if("WTF".length()>3) // neverever??
 					for (int j = i + 1; j < defSources.length; j++) {
 						if (defSources[i].isCompatibleWith(defSources[j])) {
 							defSources[j].setFetchData(data);
