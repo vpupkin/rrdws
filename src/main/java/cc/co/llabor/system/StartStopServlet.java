@@ -78,7 +78,7 @@ public class StartStopServlet extends HttpServlet {
 		
 		try{
 			 
-			status.put("MrtgServer (SNMP-backend)", 	startMrtgServer()  );
+			status.put("MrtgServer (SNMP-backend)", startMrtgServer()  );
 				 
 		}catch(Throwable e){
 			status.put("MrtgServer (SNMP-backend)", BROCKEN+e.getMessage());
@@ -224,17 +224,22 @@ public class StartStopServlet extends HttpServlet {
 		 String[] acceptedClients = new String[]{};
 		//jrobin/mrtg/server/Server
 		try {
-			if (!isMRTGEnabled())return NOT_ENABLED;
-			Server.main(acceptedClients);
-			
-			checkAutodiscoveringRequestSNMP();
-			
+			if (!isMRTGEnabled()){
+				return NOT_ENABLED;
+			}else{
+				Server.main(acceptedClients);
+				checkAutodiscoveringRequestSNMP();
+			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			// e.  printStackTrace();			
 			throw e;
 		}
 		return SUCCESSFUL;
+	}
+	
+	private void killAllAutoDiscoverers( ) {
+		IfDsicoverer.stopAll();
 	}
 	
 	private void initAutoDiscover(String hostPar, String communityPar, String numericOid, String ifDescr) throws IOException{
@@ -346,6 +351,12 @@ public class StartStopServlet extends HttpServlet {
 		} catch (MrtgException e) {
 			// TODO Auto-generated catch block
 			// e.  printStackTrace();
+		}
+		
+		try{
+			killAllAutoDiscoverers();
+		}catch (Exception e){
+			
 		}
 		
 		try {

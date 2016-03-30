@@ -34,7 +34,7 @@ public class   SnmpWorker implements Runnable{
 
 		java.util.Queue<SnmpReader> queue;
 		private boolean isAlive = true;
-		private static Logger log = LoggerFactory.getLogger(SnmpWorker.class);
+		private static Logger log = LoggerFactory.getLogger(SnmpWorker.class.getName());
     	SnmpWorker ( Queue<SnmpReader> q){
     		this.queue = q;
     	}

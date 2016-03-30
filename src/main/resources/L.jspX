@@ -1,16 +1,30 @@
 <script>
 var original_createElement = document.createElement;
 var carantin = [];
-document.createElement = function (tag) {
-  if ("script" == tag)	{
-	alert("WTF!?"+tag); 
-	console.log("carantined:"+tag);
-	var newWTF = original_createElement.call(document, "pre id='wtf'");
-	carantin.push (newWTF);
-	return newWTF;
+document.createElement = function (tagPar) {
+  if ("script" == tagPar)	{
+	try{  
+		alert("WTF!?"+tagPar); 
+		console.log("carantined:"+tagPar);
+		var newWTF = original_createElement.call(document, "pre");
+		newWTF.id =  "wtf"+carantin.length;
+		newWTF.textContent = arguments.callee.caller.toString();
+		
+		carantin.push (newWTF);
+		// hide all carantinized
+		for(i=0;i<carantin.length;i++){
+			var preTMP = carantin[i];
+			preTMP.hidden = true;
+			console.log("carantined["+i+"] =={"+ preTMP +"}:" +  preTMP.textContent);
+		}
+		return newWTF;
+	}catch (ERR){
+		console.log("!!! document.createElement IGNORED! Reason::"+ERR+":"+ERR.lineNumber+" \n\nSRC:"+arguments.callee.caller.toString());
+		return ERR;
+	}
   }else{ 
 	  // Do something
-  	return original_createElement.call(document, tag);
+  	return original_createElement.call(document, tagPar);
   }
 };
 </script>
@@ -91,7 +105,7 @@ window.onload = initPage;
 						<iframe src="B8b8B8Bbbb888B/annotator.jsp" height="32" width="32" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
 					</td> 	
 					<td align="left">
-						<iframe src="B8b8B8Bbbb888B/blacklister.jspx" height="32" width="32" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+						<iframe src="B8b8B8Bbbb888B/blacklister.jsp" height="32" width="32" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
 					</td> 										
 				</tr>
 			</table>		

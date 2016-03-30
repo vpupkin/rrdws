@@ -147,7 +147,7 @@ public class Server implements MrtgConstants {
 				fileTmp = new File (System.getProperty("user.dir") +Config.DELIM + "mrtg" + Config.DELIM+  Config.CONF + Config.DELIM, fileTmp.getName());
 				fileTmp.createNewFile();
 			}
-			if (  fileTmp.canWrite() && fileTmp.getParentFile().isDirectory()){
+			if (  fileTmp.getParentFile().isDirectory()){
 				FileWriter writer = new FileWriter(fileTmp, false); 
 				writer.write(fileContent);
 				writer.flush();

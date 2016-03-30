@@ -24,22 +24,23 @@ public class Repo {
 	 * @return
 	 */
 	public static String getBanner(String namePar){
-		
-		ClassLoader classLoader = Repo.class.getClassLoader();
-		String namaTmp = BASE+namePar+".dat";
-		InputStream resourceAsStream = classLoader.getResourceAsStream(namaTmp); 
-		BufferedInputStream in = new BufferedInputStream ( resourceAsStream);
-		byte[] buf = null;
+		String retval = ";)";
 		try {
+			ClassLoader classLoader = Repo.class.getClassLoader();
+			
+			String namaTmp = BASE+namePar+".dat";
+			InputStream resourceAsStream = classLoader.getResourceAsStream(namaTmp); 
+			BufferedInputStream in = new BufferedInputStream ( resourceAsStream);
+			byte[] buf = null;
 			buf = new byte[in.available()];
 			in.read(buf);
-		} catch (IOException e) {
+			retval = new String(buf);
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			// e.  printStackTrace();
-			buf = ("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"+namePar+"|||||||||||||||||||||||||||||||||||||||||").getBytes();
+			retval = ("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"+namePar+"|||||||||||||||||||||||||||||||||||||||||") ;
 		}
 		
-		String retval = new String(buf);
 		return retval;
 	}
 }

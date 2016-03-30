@@ -1,6 +1,7 @@
 package org.jrobin.mrtg.server;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -55,7 +56,20 @@ public class IfDsicoverer implements Runnable{
 	} 
 	public final static int MAX_CHECK_QUEUE = 123;// (sec) 2 Minutes should be enough for 1 try?
 	private int checkCounter = 0;
+	
+	/**
+	 * gives back progress state in percents
+	 * 
+	 * @return
+	 */
+	public int getProgressStatus(){
+		return checkCounter / MAX_CHECK_QUEUE * 100;
+	}
+	
 	boolean isAlive = true;
+	/**
+	 * finish discovering automatically after fixed number of tries..
+	 */
 	public void run() {
 		while(isAlive ){ 
 			if (queue.isEmpty()){
@@ -166,7 +180,7 @@ public class IfDsicoverer implements Runnable{
 	
 	private static int dCounter = 0;
 
-	final static Map<String, Thread> discovererPool = new HashMap<String, Thread>();
+	final static Map<String, IfDsicoverer > discovererPool = new HashMap<String, IfDsicoverer>();
 	/**
 	 * initiate the new Discovery-Thread for given host/comunity
 	 * 
@@ -181,7 +195,7 @@ public class IfDsicoverer implements Runnable{
 	public static void startDiscoverer(ThreadGroup tgPar, String hostPar, String communityPar,	String numericOid, String ifDescrPar) throws IOException {
 		String keyTmp = hostPar +"::"+communityPar;
 		synchronized (discovererPool) {
-			Thread theT  =  discovererPool.get(keyTmp );
+			IfDsicoverer theT  =  discovererPool.get(keyTmp );
 			if (theT  == null){
 				IfDsicoverer newDiscoverer = new IfDsicoverer(hostPar, communityPar, numericOid, ifDescrPar);
 				dCounter++;
@@ -190,7 +204,7 @@ public class IfDsicoverer implements Runnable{
 				String sDiscNameTmp = "Discoverer#"+newDiscoverer.getId()+" :"+hostPar;
 				Thread t2Run = new Thread(tgPar, newDiscoverer, sDiscNameTmp);
 				t2Run.setDaemon(true);
-				discovererPool.put(keyTmp, t2Run);
+				discovererPool.put(keyTmp, newDiscoverer );
 				synchronized (keyTmp) {
 					t2Run.start();
 				}
@@ -199,12 +213,25 @@ public class IfDsicoverer implements Runnable{
 			}
 		}		
 	}
+	
+	public static void stopAll(){
+		for(IfDsicoverer next:discovererPool.values()){
+			next.terminate();
+		}
+	}
+	
+	private void terminate() {
+		 this.isAlive = false;
+	}
+	
+	
 	public static String[] listDiscoverer(){
-		String[] retval = new String[]{"emptylist"};
-		try{
-			retval = discovererPool.keySet().toArray(retval);
-		}catch(Exception e){}
-		return retval ;
+		ArrayList<String> list = new ArrayList<>();
+		for(IfDsicoverer next:discovererPool.values()) {
+			String e = next.host+":"+next.community+":"+next.ifDescr+":"+next.numOID+":::"+next.getProgressStatus() +"%";
+			list.add(e );
+		}
+		return list.toArray(new String  []{});
 	}
 	
 	private void setKey(String key) {

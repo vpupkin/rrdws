@@ -465,10 +465,10 @@ public class LServlet extends HttpServlet {
 	    		}else{
 	    			System.out.println(headTmp);
 	    		}
-	    		HTMLNode bodyTmp = documentTmp.getRoot().getChild(1);
+	    		HTMLNode bodyTmp = documentTmp.getRoot().getChild(0); // HEAD-modi!
 				HTMLDocument htmlTmp = buildToolbar(urlStr, parser2);
-				HTMLNode myIFrame = htmlTmp.getRoot().getChild(1).getChild(0);
-				bodyTmp.addChild(myIFrame);
+				HTMLNode myIFrame = htmlTmp.getRoot().getChild(1).getChild(0); 
+				bodyTmp.addChild(0,myIFrame);
 	    	}catch(Exception e){
 	    		if (TRACE) log.trace("wrap",e);
 	    		include(resp, "L.jspX");
