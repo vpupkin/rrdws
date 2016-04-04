@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 import net.percederberg.mibble.Mib;
@@ -63,7 +64,7 @@ public class IfDsicoverer implements Runnable{
 	 * @return
 	 */
 	public int getProgressStatus(){
-		return checkCounter / MAX_CHECK_QUEUE * 100;
+		return 100 * checkCounter / MAX_CHECK_QUEUE;
 	}
 	
 	boolean isAlive = true;
@@ -110,7 +111,7 @@ public class IfDsicoverer implements Runnable{
 			}
 			if (lastSymbol==null){
 				try{// TODO lets statrt from start ?
-					commPar.getNextSNMPv2( commPar.getNumericOid( "jvmMgtMIB"));
+					this.numOID = commPar.getNextSNMPv2( this.numOID ); //commPar.getNextSNMPv2( commPar.getNumericOid( "jvmMgtMIB"));
 					lastSymbol = commPar.getLastSymbol();
 				}catch(Throwable e){e.printStackTrace();}
 			}
@@ -121,7 +122,7 @@ public class IfDsicoverer implements Runnable{
 			String lastKey = null;
 			int retcode = -1;
 			for (String retvLTmp = commPar.getNextSNMPv2( numOID);lastKey !=""+commPar.getLastOID();numOID = ""+commPar.getLastOID()){
-				String iPrefixTmp = ifDescr.substring(0, ifDescr.lastIndexOf("/"));
+				String iPrefixTmp =  ifDescr.lastIndexOf("/") >=0?ifDescr.substring(0, ifDescr.lastIndexOf("/")):"";
 				String ifPathTmp = iPrefixTmp+"/"+descr;
 				String chk_OID_tmp = commPar.toNumericOID(ifPathTmp);
 				numOID = ""+commPar.getLastOID();
@@ -129,7 +130,7 @@ public class IfDsicoverer implements Runnable{
 					double valTmp = Double.parseDouble( retvLTmp );
 					String pathToAddTmp = toXName(commPar);
 					// store discovered link
-					retcode = instanceTmp.addLink(host, pathToAddTmp, 2, numOID, samplingInterval, active );
+					retcode = addDiscoveredLink(instanceTmp, samplingInterval, active, pathToAddTmp);
 					
 					while (retcode ==-255){// // there are ling with path BUT! diff OID
 					// try to combite path+OID as a new path...
@@ -144,14 +145,15 @@ public class IfDsicoverer implements Runnable{
 						int pLengthTmp = prefixTmp.length();
 						String suffixTmp = numOID.substring(pLengthTmp) ;
 						pathToAddTmp = pathToAddTmp +"/["+suffixTmp+"]"; 
-						retcode = instanceTmp.addLink(host, pathToAddTmp, 2, numOID, samplingInterval, active ); 
+						retcode = addDiscoveredLink(instanceTmp, samplingInterval, active,
+								pathToAddTmp); 
 					}
 					if (retcode ==0)
 						log.debug("+++ chkOID:{}=={}::{}[5:{}]4:{}3:{}2:{}1:{} ",new Object[]{chk_OID_tmp,retcode,retvLTmp, valTmp, numOID ,ifPathTmp});
 					else
 						log.trace( "... numOID:{} = {}" , numOID, retcode  );
 					
-				}catch(Throwable eDDD){
+				}catch(MrtgException eDDD){
 					log.trace( chk_OID_tmp, eDDD );					
 				}
 				// skip (1)
@@ -164,6 +166,21 @@ public class IfDsicoverer implements Runnable{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	private int addDiscoveredLink(Server instanceTmp, int samplingInterval,
+			boolean active, String pathToAddTmp) throws MrtgException {
+		
+		int addLink = -1;
+		try{
+			addLink = instanceTmp.addLink(host, pathToAddTmp, 2, numOID, samplingInterval, active );
+		}catch (NoRouterException e){
+			// assumes no 
+			instanceTmp.addRouter( host, community,  e.getMessage(),  active );
+			// try once more...
+			addLink = instanceTmp.addLink(host, pathToAddTmp, 2, numOID, samplingInterval, active );
+		}
+		
+		return addLink;
 	}
 	private String toXName(Poller commPar) throws IOException {
 		MibValueSymbol lastSymbol;
@@ -193,7 +210,7 @@ public class IfDsicoverer implements Runnable{
 	 * @throws IOException
 	 */
 	public static void startDiscoverer(ThreadGroup tgPar, String hostPar, String communityPar,	String numericOid, String ifDescrPar) throws IOException {
-		String keyTmp = hostPar +"::"+communityPar;
+		String keyTmp = hostPar +"::"+communityPar+":"+numericOid+"$"+ifDescrPar;
 		synchronized (discovererPool) {
 			IfDsicoverer theT  =  discovererPool.get(keyTmp );
 			if (theT  == null){
@@ -226,7 +243,7 @@ public class IfDsicoverer implements Runnable{
 	
 	
 	public static String[] listDiscoverer(){
-		ArrayList<String> list = new ArrayList<>();
+		List<String> list = new ArrayList<String>();
 		for(IfDsicoverer next:discovererPool.values()) {
 			String e = next.host+":"+next.community+":"+next.ifDescr+":"+next.numOID+":::"+next.getProgressStatus() +"%";
 			list.add(e );

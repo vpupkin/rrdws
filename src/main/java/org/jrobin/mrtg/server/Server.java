@@ -270,6 +270,8 @@ public class Server implements MrtgConstants {
 		int retCode = deviceList.addRouter(host, community, descr, active);
 		if(retCode == 0) {
 			saveHardware();
+		}else{
+			throw new MrtgException("ERROR: synchronized int addRouter(String host, String community, String descr, boolean active)");
 		}
 		return retCode;
 	}
@@ -309,11 +311,7 @@ public class Server implements MrtgConstants {
 	
 	synchronized int addLink(String host, String ifDescr, int snmpVer, String descr, int samplingInterval, boolean active)
 		throws MrtgException {
-		int retCode = deviceList.addLink(host, ifDescr, snmpVer, descr, samplingInterval, active);
-		if(retCode == 0) {
-			saveHardware();
-		}
-		return retCode;
+		return deviceList.addLink(host, ifDescr, snmpVer, descr, samplingInterval, active);
 	}
 
 	synchronized int updateLink(String host, String ifDescr, String descr,

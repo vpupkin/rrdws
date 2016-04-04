@@ -421,6 +421,7 @@ class Poller {
 	}
 
 	private static final Hashtable<String, SnmpContextv2c> contextV2Repo = new Hashtable<String, SnmpContextv2c>();
+	private static final MibValueSymbol EMPTY_MIB_SYMBOL = new MibValueSymbol(null,null,null,null,null);
 	
 	private synchronized SnmpContextv2c checkinContext() throws IOException {
 		String key = ""+host+","+ port+" ,"+ bindAddr+" ," +socketType+"";
@@ -638,14 +639,19 @@ class Poller {
 	}
 
 	/**
+	 * currently only load JVM-MANAGEMENT-MIB.mib for SUN/Oracle SNMP-protocol (onece per app-load)
+	 * TODO - provide multiple this.ifDescr-related MIBs
+	 * 
 	 * @author vipup
 	 * @param mibloader
 	 * @throws IOException
 	 */
-	private void checkMIB() throws IOException {
-		MibLoader mibloader = new MibLoader();
+	private synchronized void checkMIB() throws IOException {
+		
 		if (mib == null) {
+			MibLoader mibloader = new MibLoader(); 
 			try {
+				
 				String mibpath = "snmp/JVM-MANAGEMENT-MIB.mib";
 				ClassLoader classLoader = this.getClass().getClassLoader();
 				URL fi = classLoader.getResource(mibpath);
@@ -747,7 +753,13 @@ class Poller {
 
 	public MibValueSymbol getLastSymbol() throws IOException {
 		checkMIB();
-		return mib.getSymbolByOid("" + this.getLastOID());
+		MibValueSymbol retval = EMPTY_MIB_SYMBOL ; // prevent NPE
+		try{
+			retval = mib.getSymbolByOid( this.getLastOID().toString() );  
+		}catch(NullPointerException e){
+			retval = null;
+		}
+		return retval;
 	}
 
 

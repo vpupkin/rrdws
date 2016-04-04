@@ -26,6 +26,8 @@ package org.jrobin.mrtg.server;
 
 import java.util.Vector;
 
+import org.jrobin.mrtg.MrtgException;
+
 class DeviceList {
 	private Vector routers = new Vector();
 
@@ -47,7 +49,7 @@ class DeviceList {
 		return buff.toString();
 	}
 
-	Device getRouterByHost(String host) {
+	Device getRouterByHost(String host) throws MrtgException {
         for(int i = 0; i < routers.size(); i++) {
 			Device router = (Device) routers.get(i);
 			if(router.getHost().equalsIgnoreCase(host)) {
@@ -57,7 +59,7 @@ class DeviceList {
 		return null;
 	}
 
-	int addRouter(String host, String community, String descr, boolean active) {
+	int addRouter(String host, String community, String descr, boolean active) throws MrtgException {
 		Device router = getRouterByHost(host);
 		if(router == null) {
 			// not found
@@ -74,7 +76,7 @@ class DeviceList {
 		return -1;
 	}
 
-    int updateRouter(String host, String community, String descr, boolean active) {
+    int updateRouter(String host, String community, String descr, boolean active) throws MrtgException  {
         Device router = getRouterByHost(host);
 		if(router != null) {
 			router.setCommunity(community);
@@ -86,7 +88,7 @@ class DeviceList {
 		return -1;
 	}
 
-	int removeRouter(String host) {
+	int removeRouter(String host) throws MrtgException  {
 		Device router = getRouterByHost(host);
 		if(router == null) {
 			// not found, cannot remove
@@ -110,14 +112,14 @@ class DeviceList {
 	 * @param active
 	 * @return
 	 */
-	int addLink(String host, String ifDescr, String descr, int samplingInterval, boolean active) {
+	int addLink(String host, String ifDescr, String descr, int samplingInterval, boolean active) throws MrtgException  {
 		return addLink(host, ifDescr, 2, descr, samplingInterval, active); 
 	}
-	int addLink(String hostPar, String ifDescrPar, int snmpVersionPar, String descrPar, int samplingIntervalPar, boolean isActivePar) {
+	int addLink(String hostPar, String ifDescrPar, int snmpVersionPar, String descrPar, int samplingIntervalPar, boolean isActivePar) throws MrtgException {
         Device router = getRouterByHost(hostPar);
 		if(router == null) {
-			// router not found, link cannot be added
-            return -1;
+			// router not found ->> create new one...
+            throw new NoRouterException("no router for hostname:"+hostPar);
 		}
         Port link = null;
         try{
@@ -142,7 +144,7 @@ class DeviceList {
 		return 0;
 	}
 
-	int updateLink(String host, String ifDescr, String descr, int samplingInterval, boolean active) {
+	int updateLink(String host, String ifDescr, String descr, int samplingInterval, boolean active) throws MrtgException {
 		Device router = getRouterByHost(host);
 		if(router == null) {
 			// router not found, link cannot be updated
@@ -159,7 +161,7 @@ class DeviceList {
 		return 0;
 	}
 
-	int removeLink(String host, String ifDescr) {
+	int removeLink(String host, String ifDescr) throws MrtgException  {
 		Device router = getRouterByHost(host);
 		if(router == null) {
 			// router not found, link cannot be removed
