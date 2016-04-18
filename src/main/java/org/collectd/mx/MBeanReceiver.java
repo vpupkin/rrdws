@@ -40,7 +40,7 @@ public class MBeanReceiver
 
     private static final String MX = "com.sun.management.jmxremote";
     private static final String DMX = "-D" + MX;
-	private static final Logger _log = LoggerFactory.getLogger(MBeanReceiver.class .getName());
+	private static final Logger _log = LoggerFactory.getLogger("org.collectd.mx.MBeanReceiver");
 
     public MBeanReceiver() throws Exception {
         CollectdMBeanRegistry collectdMBeanRegistry = new CollectdMBeanRegistry();
@@ -124,8 +124,7 @@ public class MBeanReceiver
 		}
     }
     
-    public static MBeanReceiver getInstance(){
-    	
+    public static MBeanReceiver getInstance(){    	
     	return me;
     }
     

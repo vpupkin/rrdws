@@ -116,6 +116,7 @@ public class UdpReceiver implements Mortal{
 						// e.  printStackTrace();
 					}catch(Throwable e){
 						_log.debug("run", e );
+						queue.clear();
 					}
     			}
     		}
